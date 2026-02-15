@@ -1,0 +1,44 @@
+{
+  "generatedAt": "2026-02-08T11:49:56.608708+00:00",
+  "sheet": "中国 | 义务教育 | 科学",
+  "rowRange": [
+    4,
+    322
+  ],
+  "rowsScanned": 319,
+  "requirementRows": 317,
+  "itemsGenerated": 319,
+  "multiGradeRowsCount": 2,
+  "multiGradeRows": [
+    {
+      "excelRow": 4,
+      "checkedGradeBands": [
+        "LP",
+        "MP"
+      ],
+      "ids": [
+        "PS-1.1-1-LP",
+        "PS-1.1-1-MP"
+      ]
+    },
+    {
+      "excelRow": 154,
+      "checkedGradeBands": [
+        "LP",
+        "MS"
+      ],
+      "ids": [
+        "LS-5.1-3-LP",
+        "LS-5.1-3-MS"
+      ]
+    }
+  ],
+  "warningsCount": 1,
+  "warnings": [
+    {
+      "excelRow": 281,
+      "type": "missing_grade_band",
+      "message": "G-J列未检测到任何勾选"
+    }
+  ]
+}

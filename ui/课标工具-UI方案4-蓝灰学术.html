@@ -1,0 +1,1040 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>课标工具</title>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700&family=Noto+Sans+SC:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg-canvas: #f0f2f5;
+    --bg-warm: #f7f6f3;
+    --bg-panel: #ffffff;
+    --bg-row-hover: #f5f7fa;
+    --bg-row-selected: #eef3fb;
+    --bg-filter: #f8f9fb;
+    --bg-chat: #fafbfc;
+    --bg-ai-bubble: #f9f8f6;
+
+    --border: #dde1e6;
+    --border-light: #e8ebef;
+
+    --text-primary: #1e2a3a;
+    --text-secondary: #526070;
+    --text-tertiary: #8a95a3;
+    --text-warm: #3d3530;
+
+    --accent: #3b6fc0;
+    --accent-light: #eef3fb;
+    --accent-dark: #2d5699;
+    --accent-soft: #7da2d4;
+
+    --tag-ngss: #2b6cb0;
+    --tag-ngss-bg: #dbeafe;
+    --tag-cn: #92600a;
+    --tag-cn-bg: #fef3c7;
+    --tag-cnhs: #6d28d9;
+    --tag-cnhs-bg: #ede9fe;
+
+    --match-green: #276749;
+    --match-green-bg: #f0fff4;
+    --match-green-border: #c6f6d5;
+
+    --remove-red: #c53030;
+
+    --font: 'DM Sans', 'Noto Sans SC', -apple-system, sans-serif;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    font-family: var(--font);
+    background: var(--bg-canvas);
+    color: var(--text-primary);
+    font-size: 13.5px;
+    line-height: 1.6;
+    height: 100vh;
+    overflow: hidden;
+  }
+
+  /* ===== Top Navigation ===== */
+  .top-nav {
+    height: 52px;
+    background: var(--text-primary);
+    display: flex;
+    align-items: center;
+    padding: 0 24px;
+    flex-shrink: 0;
+  }
+
+  .app-title {
+    font-size: 15px;
+    font-weight: 700;
+    color: #ffffff;
+    margin-right: 32px;
+    letter-spacing: -0.01em;
+  }
+
+  .app-title-sub {
+    font-size: 10.5px;
+    font-weight: 400;
+    color: rgba(255,255,255,0.4);
+    margin-left: 8px;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+  }
+
+  .nav-tabs { display: flex; height: 100%; }
+
+  .nav-tab {
+    padding: 0 20px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    font-size: 13px;
+    font-weight: 500;
+    color: rgba(255,255,255,0.5);
+    cursor: pointer;
+    transition: color 0.15s;
+    user-select: none;
+    position: relative;
+  }
+
+  .nav-tab:hover { color: rgba(255,255,255,0.8); }
+  .nav-tab.active { color: #ffffff; }
+
+  .nav-tab.active::after {
+    content: '';
+    position: absolute;
+    bottom: 0; left: 20px; right: 20px;
+    height: 2px;
+    background: var(--accent-soft);
+    border-radius: 1px 1px 0 0;
+  }
+
+  .nav-right {
+    margin-left: auto;
+    font-size: 11px;
+    color: rgba(255,255,255,0.25);
+  }
+
+  /* ===== Browser Page ===== */
+  .page { display: none; flex-direction: column; height: calc(100vh - 52px); }
+  .page.active { display: flex; }
+
+  /* Search Bar */
+  .search-bar {
+    padding: 14px 24px;
+    background: var(--bg-panel);
+    border-bottom: 1px solid var(--border-light);
+    flex-shrink: 0;
+  }
+
+  .search-wrapper { position: relative; }
+
+  .search-icon {
+    position: absolute;
+    left: 14px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--text-tertiary);
+    pointer-events: none;
+  }
+
+  .search-row {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+  }
+
+  .search-input-wrap {
+    position: relative;
+    flex: 1;
+    max-width: 640px;
+  }
+
+  .search-input {
+    width: 100%;
+    height: 40px;
+    padding: 0 14px 0 40px;
+    border: 1.5px solid var(--border);
+    border-radius: 8px;
+    font-size: 14px;
+    font-family: var(--font);
+    background: var(--bg-warm);
+    color: var(--text-primary);
+    outline: none;
+    transition: border-color 0.15s, background 0.15s, box-shadow 0.15s;
+  }
+
+  .search-input:focus {
+    border-color: var(--accent);
+    background: var(--bg-panel);
+    box-shadow: 0 0 0 3px rgba(59,111,192,0.1);
+  }
+
+  .search-input::placeholder { color: var(--text-tertiary); font-size: 13px; }
+
+  .search-input-long {
+    min-height: 40px;
+    max-height: 100px;
+    padding: 9px 14px 9px 40px;
+    resize: none;
+    display: block;
+    width: 100%;
+    border: 1.5px solid var(--border);
+    border-radius: 8px;
+    font-size: 14px;
+    font-family: var(--font);
+    background: var(--bg-warm);
+    color: var(--text-primary);
+    outline: none;
+    line-height: 1.5;
+    transition: border-color 0.15s, background 0.15s, box-shadow 0.15s;
+  }
+
+  .search-input-long:focus {
+    border-color: var(--accent);
+    background: var(--bg-panel);
+    box-shadow: 0 0 0 3px rgba(59,111,192,0.1);
+  }
+
+  .search-input-long::placeholder { color: var(--text-tertiary); font-size: 13px; }
+
+  .btn-match {
+    height: 40px;
+    padding: 0 18px;
+    background: var(--accent);
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    font-size: 13px;
+    font-weight: 600;
+    font-family: var(--font);
+    cursor: pointer;
+    white-space: nowrap;
+    transition: background 0.15s;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+  }
+
+  .btn-match:hover { background: var(--accent-dark); }
+
+  .btn-match svg { width: 15px; height: 15px; }
+
+  .search-mode-toggle {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-top: 10px;
+  }
+
+  .mode-btn {
+    font-size: 12px;
+    font-weight: 500;
+    color: var(--text-tertiary);
+    cursor: pointer;
+    padding: 4px 0;
+    border: none;
+    background: none;
+    font-family: var(--font);
+    border-bottom: 2px solid transparent;
+    transition: all 0.12s;
+  }
+
+  .mode-btn:hover { color: var(--text-secondary); }
+
+  .mode-btn.active {
+    color: var(--accent);
+    border-bottom-color: var(--accent);
+  }
+
+  .browser-body { display: flex; flex: 1; overflow: hidden; }
+
+  /* ===== Filter Panel ===== */
+  .filter-panel {
+    width: 232px;
+    min-width: 232px;
+    background: var(--bg-filter);
+    border-right: 1px solid var(--border-light);
+    overflow-y: auto;
+    flex-shrink: 0;
+  }
+
+  .filter-group {
+    padding: 14px 16px 12px;
+    border-bottom: 1px solid var(--border-light);
+  }
+
+  .filter-group:last-child { border-bottom: none; }
+
+  .filter-group-title {
+    font-size: 11.5px;
+    font-weight: 700;
+    color: var(--text-secondary);
+    margin-bottom: 10px;
+  }
+
+  .filter-item {
+    display: flex;
+    align-items: center;
+    gap: 9px;
+    padding: 5px 0;
+    cursor: pointer;
+    user-select: none;
+  }
+
+  .cb-custom {
+    width: 16px; height: 16px;
+    border: 1.5px solid var(--border);
+    border-radius: 3px;
+    background: var(--bg-panel);
+    display: flex; align-items: center; justify-content: center;
+    flex-shrink: 0;
+    transition: all 0.12s;
+    position: relative;
+  }
+
+  .filter-item input { display: none; }
+
+  .filter-item input:checked + .cb-custom {
+    background: var(--accent);
+    border-color: var(--accent);
+  }
+
+  .filter-item input:checked + .cb-custom::after {
+    content: '';
+    width: 8px; height: 5px;
+    border-left: 1.5px solid #fff;
+    border-bottom: 1.5px solid #fff;
+    transform: rotate(-45deg);
+    position: absolute;
+    top: 3px;
+  }
+
+  .filter-label { font-size: 13px; color: var(--text-primary); flex: 1; line-height: 1.3; }
+
+  .filter-count {
+    font-size: 11px; color: var(--text-tertiary);
+    background: var(--bg-panel); border: 1px solid var(--border-light);
+    padding: 0 6px; border-radius: 8px;
+    font-variant-numeric: tabular-nums; line-height: 18px;
+  }
+
+  /* ===== Results Table ===== */
+  .results-area { flex: 1; overflow-y: auto; background: var(--bg-panel); }
+
+  .results-count {
+    padding: 10px 20px;
+    font-size: 12px;
+    color: var(--text-tertiary);
+    background: var(--bg-filter);
+    border-bottom: 1px solid var(--border);
+  }
+  .results-count strong { color: var(--text-secondary); }
+
+  .results-header-row {
+    display: flex; align-items: center;
+    padding: 10px 20px;
+    background: var(--bg-filter);
+    border-bottom: 1px solid var(--border);
+    position: sticky; top: 0; z-index: 2;
+    font-size: 11px; font-weight: 600;
+    color: var(--text-tertiary);
+    text-transform: uppercase; letter-spacing: 0.04em;
+  }
+
+  .col-check { width: 36px; flex-shrink: 0; }
+  .col-source { width: 140px; flex-shrink: 0; }
+  .col-grade { width: 80px; flex-shrink: 0; }
+  .col-topic { width: 180px; flex-shrink: 0; }
+  .col-text { flex: 1; min-width: 0; }
+
+  .result-row {
+    display: flex; align-items: flex-start;
+    padding: 12px 20px;
+    border-bottom: 1px solid var(--border-light);
+    cursor: pointer;
+    transition: background 0.1s;
+    border-left: 3px solid transparent;
+  }
+
+  .result-row:hover { background: var(--bg-row-hover); }
+
+  .result-row.selected {
+    background: var(--bg-row-selected);
+    border-left-color: var(--accent);
+    padding-left: 17px;
+  }
+
+  .result-row .col-check { padding-top: 2px; }
+  .result-row .col-check .cb-custom { width: 15px; height: 15px; }
+  .result-row .col-check input:checked + .cb-custom::after { width: 7px; height: 4px; top: 3px; }
+  .result-row .col-source { padding-top: 1px; }
+
+  .tag {
+    font-size: 11px; font-weight: 600;
+    padding: 2px 8px; border-radius: 3px;
+    letter-spacing: 0.01em; white-space: nowrap;
+    line-height: 1.4; display: inline-block;
+  }
+
+  .tag-ngss { color: var(--tag-ngss); background: var(--tag-ngss-bg); }
+  .tag-cn { color: var(--tag-cn); background: var(--tag-cn-bg); }
+  .tag-cnhs { color: var(--tag-cnhs); background: var(--tag-cnhs-bg); }
+
+  .result-row .col-grade { font-size: 12.5px; color: var(--text-secondary); font-weight: 500; padding-top: 2px; }
+  .result-row .col-topic { font-size: 13px; font-weight: 600; color: var(--text-primary); padding-top: 1px; line-height: 1.45; }
+
+  .result-row .col-text {
+    font-size: 12.5px; color: var(--text-secondary); line-height: 1.55;
+    display: -webkit-box; -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical; overflow: hidden;
+  }
+
+  /* Match reason line */
+  .match-reason {
+    font-size: 11.5px;
+    color: var(--match-green);
+    margin-top: 4px;
+    line-height: 1.45;
+    display: flex;
+    align-items: flex-start;
+    gap: 5px;
+  }
+
+  .match-reason-icon {
+    flex-shrink: 0;
+    margin-top: 1px;
+  }
+
+  .result-row.match-result {
+    border-left-color: #68d391;
+    background: var(--match-green-bg);
+    padding-left: 17px;
+  }
+
+  .result-row.match-result:hover {
+    background: #e6ffed;
+  }
+
+  /* Match banner */
+  .match-banner {
+    padding: 10px 20px;
+    background: var(--match-green-bg);
+    border-bottom: 1px solid var(--match-green-border);
+    font-size: 12.5px;
+    color: var(--match-green);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+
+  .match-banner-icon {
+    flex-shrink: 0;
+  }
+
+  .match-banner strong {
+    font-weight: 600;
+  }
+
+  .match-query {
+    background: #fff;
+    border: 1px solid var(--match-green-border);
+    padding: 1px 8px;
+    border-radius: 4px;
+    font-weight: 500;
+    color: var(--text-primary);
+    margin: 0 2px;
+  }
+
+  /* ===== Bottom Bar ===== */
+  .selection-bar {
+    height: 52px;
+    background: var(--bg-panel);
+    border-top: 1px solid var(--border);
+    display: flex; align-items: center; justify-content: space-between;
+    padding: 0 24px;
+    flex-shrink: 0;
+  }
+
+  .selection-info { display: flex; align-items: center; gap: 10px; }
+
+  .selection-badge {
+    background: var(--accent); color: #fff;
+    font-size: 12px; font-weight: 600;
+    width: 22px; height: 22px; border-radius: 11px;
+    display: flex; align-items: center; justify-content: center;
+  }
+
+  .selection-text { font-size: 13px; color: var(--text-secondary); }
+
+  .btn-primary {
+    height: 34px; padding: 0 20px;
+    background: var(--accent); color: #fff; border: none;
+    border-radius: 7px; font-size: 13px; font-weight: 500;
+    font-family: var(--font); cursor: pointer;
+    transition: background 0.15s;
+    display: flex; align-items: center; gap: 8px;
+  }
+
+  .btn-primary:hover { background: var(--accent-dark); }
+  .btn-primary .arrow { font-size: 16px; opacity: 0.8; }
+
+  /* ===== Workbench Page ===== */
+  .wb-left {
+    width: 330px; min-width: 330px;
+    background: var(--bg-warm);
+    border-right: 1px solid var(--border);
+    display: flex; flex-direction: column; flex-shrink: 0;
+  }
+
+  .wb-left-header {
+    padding: 16px 18px 12px;
+    border-bottom: 1px solid var(--border-light);
+    display: flex; align-items: baseline; justify-content: space-between;
+  }
+
+  .wb-left-title { font-size: 13px; font-weight: 700; color: var(--text-primary); }
+  .wb-left-count { font-size: 11px; color: var(--text-tertiary); }
+
+  .wb-left-body { flex: 1; overflow-y: auto; padding: 12px 14px; }
+
+  .wb-item {
+    background: var(--bg-panel);
+    border: 1px solid var(--border-light); border-radius: 8px;
+    padding: 12px 14px; margin-bottom: 10px;
+    position: relative; transition: border-color 0.12s;
+  }
+
+  .wb-item:hover { border-color: var(--border); }
+
+  .wb-item-header { display: flex; align-items: center; gap: 8px; margin-bottom: 6px; }
+  .wb-item-grade { font-size: 11px; color: var(--text-tertiary); font-weight: 500; }
+
+  .wb-item-remove {
+    position: absolute; top: 10px; right: 10px;
+    width: 22px; height: 22px;
+    border: none; background: none;
+    color: var(--text-tertiary); cursor: pointer;
+    border-radius: 4px;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 17px;
+    transition: color 0.12s, background 0.12s;
+  }
+
+  .wb-item-remove:hover { color: var(--remove-red); background: #fff5f5; }
+
+  .wb-item-topic { font-size: 12.5px; font-weight: 600; color: var(--text-primary); margin-bottom: 4px; }
+  .wb-item-text { font-size: 12px; color: var(--text-secondary); line-height: 1.55; }
+
+  .wb-left-footer {
+    padding: 12px 14px; border-top: 1px solid var(--border-light); flex-shrink: 0;
+  }
+
+  .btn-add {
+    width: 100%; height: 34px;
+    border: 1.5px dashed var(--border); border-radius: 7px;
+    background: none; color: var(--text-secondary);
+    font-size: 12.5px; font-family: var(--font); cursor: pointer;
+    transition: border-color 0.12s, color 0.12s;
+    display: flex; align-items: center; justify-content: center; gap: 5px;
+  }
+
+  .btn-add:hover { border-color: var(--accent); color: var(--accent); }
+
+  /* Right Panel */
+  .wb-right {
+    flex: 1; display: flex; flex-direction: column;
+    background: var(--bg-chat); min-width: 0;
+  }
+
+  .intent-bar {
+    padding: 12px 24px;
+    background: var(--bg-panel);
+    border-bottom: 1px solid var(--border-light);
+    display: flex; gap: 8px; flex-wrap: wrap;
+    flex-shrink: 0; align-items: center;
+  }
+
+  .intent-label { font-size: 11.5px; color: var(--text-tertiary); margin-right: 4px; font-weight: 500; }
+
+  .intent-btn {
+    height: 30px; padding: 0 14px;
+    border: 1.5px solid var(--border); border-radius: 6px;
+    background: var(--bg-panel); color: var(--text-secondary);
+    font-size: 12.5px; font-weight: 500; font-family: var(--font);
+    cursor: pointer; transition: all 0.12s; white-space: nowrap;
+  }
+
+  .intent-btn:hover { border-color: var(--accent); color: var(--accent); background: var(--accent-light); }
+  .intent-btn.active { border-color: var(--accent); color: #fff; background: var(--accent); }
+
+  .intent-context-hint {
+    font-size: 11px; color: var(--text-tertiary);
+    margin-left: auto; font-style: italic;
+  }
+
+  /* Chat */
+  .chat-area { flex: 1; overflow-y: auto; padding: 24px 28px; }
+
+  .chat-message { margin-bottom: 24px; max-width: 700px; }
+
+  .chat-message.user {
+    margin-left: auto;
+    display: flex; flex-direction: column; align-items: flex-end;
+  }
+
+  .chat-avatar-row { display: flex; align-items: center; gap: 8px; margin-bottom: 6px; }
+
+  .chat-avatar {
+    width: 24px; height: 24px; border-radius: 12px;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 11px; font-weight: 600; flex-shrink: 0;
+  }
+
+  .avatar-user { background: var(--accent); color: #fff; }
+  .avatar-ai { background: #e8ddd4; color: var(--text-warm); }
+
+  .chat-sender-name { font-size: 11.5px; font-weight: 600; color: var(--text-tertiary); }
+
+  .chat-bubble-user {
+    background: var(--accent); color: #fff;
+    padding: 10px 16px; border-radius: 14px 14px 4px 14px;
+    font-size: 13.5px; line-height: 1.6;
+    display: inline-block; max-width: 480px;
+  }
+
+  .chat-bubble-ai {
+    background: var(--bg-ai-bubble);
+    border: 1px solid var(--border-light);
+    padding: 18px 20px; border-radius: 4px 14px 14px 14px;
+    font-size: 13.5px; line-height: 1.75;
+  }
+
+  .chat-bubble-ai h4 { font-size: 13.5px; font-weight: 700; color: var(--text-primary); margin-bottom: 6px; margin-top: 16px; }
+  .chat-bubble-ai h4:first-child { margin-top: 0; }
+  .chat-bubble-ai p { margin-bottom: 10px; color: var(--text-secondary); }
+  .chat-bubble-ai p:last-child { margin-bottom: 0; }
+
+  .chat-bubble-ai ul { margin: 6px 0 12px 0; padding: 0; list-style: none; }
+
+  .chat-bubble-ai li {
+    margin-bottom: 8px; color: var(--text-secondary);
+    padding-left: 16px; position: relative; line-height: 1.65;
+  }
+
+  .chat-bubble-ai li::before {
+    content: ''; position: absolute; left: 0; top: 9px;
+    width: 6px; height: 6px; border-radius: 3px; background: var(--accent-soft);
+  }
+
+  .chat-bubble-ai strong { font-weight: 600; color: var(--text-primary); }
+
+  .chat-bubble-ai .highlight-box {
+    background: var(--accent-light);
+    border-left: 3px solid var(--accent);
+    padding: 10px 14px; border-radius: 0 6px 6px 0;
+    margin: 12px 0; font-size: 13px;
+    color: var(--text-primary); line-height: 1.6;
+  }
+
+  /* Chat Input */
+  .chat-input-area {
+    padding: 14px 24px 18px;
+    background: var(--bg-panel);
+    border-top: 1px solid var(--border-light);
+    flex-shrink: 0;
+  }
+
+  .chat-input-wrapper {
+    display: flex; gap: 10px; align-items: flex-end; max-width: 700px;
+  }
+
+  .chat-input {
+    flex: 1; min-height: 40px; max-height: 120px;
+    padding: 9px 14px;
+    border: 1.5px solid var(--border); border-radius: 10px;
+    font-size: 13.5px; font-family: var(--font); line-height: 1.5;
+    resize: none; outline: none;
+    background: var(--bg-warm); color: var(--text-primary);
+    transition: border-color 0.15s, box-shadow 0.15s;
+  }
+
+  .chat-input:focus { border-color: var(--accent); box-shadow: 0 0 0 3px rgba(59,111,192,0.08); }
+  .chat-input::placeholder { color: var(--text-tertiary); }
+
+  .btn-send {
+    height: 40px; width: 40px;
+    border: none; border-radius: 10px;
+    background: var(--accent); color: #fff;
+    cursor: pointer;
+    display: flex; align-items: center; justify-content: center;
+    flex-shrink: 0; transition: background 0.15s;
+  }
+
+  .btn-send:hover { background: var(--accent-dark); }
+  .btn-send svg { width: 17px; height: 17px; }
+
+  /* Scrollbar */
+  ::-webkit-scrollbar { width: 6px; }
+  ::-webkit-scrollbar-track { background: transparent; }
+  ::-webkit-scrollbar-thumb { background: #d5d8dd; border-radius: 3px; }
+  ::-webkit-scrollbar-thumb:hover { background: #bfc3c9; }
+
+  /* Tab content visibility */
+  .tab-content { display: none; }
+  .tab-content.active { display: block; }
+</style>
+</head>
+<body>
+
+<nav class="top-nav">
+  <div class="app-title">课标工具<span class="app-title-sub">Curriculum Standards</span></div>
+  <div class="nav-tabs">
+    <div class="nav-tab active" onclick="switchPage('browser-keyword')">课标浏览器</div>
+    <div class="nav-tab" onclick="switchPage('browser-match')">课标浏览器 · 智能匹配</div>
+    <div class="nav-tab" onclick="switchPage('workbench')">AI 工作台</div>
+  </div>
+  <div class="nav-right">内部工具 · v1.0</div>
+</nav>
+
+<!-- ===== Browser: Keyword Search Mode ===== -->
+<div class="page active" id="page-browser-keyword">
+
+  <div class="search-bar">
+    <div class="search-row">
+      <div class="search-input-wrap">
+        <svg class="search-icon" width="17" height="17" viewBox="0 0 16 16" fill="none">
+          <circle cx="7" cy="7" r="5.5" stroke="currentColor" stroke-width="1.5"/>
+          <path d="M11 11L14 14" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+        </svg>
+        <input type="text" class="search-input" placeholder="输入关键词搜索课标..." value="力">
+      </div>
+    </div>
+    <div class="search-mode-toggle">
+      <button class="mode-btn active" onclick="switchPage('browser-keyword')">关键词搜索</button>
+      <button class="mode-btn" onclick="switchPage('browser-match')">智能匹配</button>
+    </div>
+  </div>
+
+  <div class="browser-body">
+    <aside class="filter-panel">
+      <div class="filter-group">
+        <div class="filter-group-title">课标来源</div>
+        <label class="filter-item"><input type="checkbox" checked><span class="cb-custom"></span><span class="filter-label">NGSS</span><span class="filter-count">3</span></label>
+        <label class="filter-item"><input type="checkbox" checked><span class="cb-custom"></span><span class="filter-label">中国义务教育科学</span><span class="filter-count">1</span></label>
+        <label class="filter-item"><input type="checkbox" checked><span class="cb-custom"></span><span class="filter-label">中国高中物理</span><span class="filter-count">1</span></label>
+      </div>
+      <div class="filter-group">
+        <div class="filter-group-title">领域</div>
+        <label class="filter-item"><input type="checkbox" checked><span class="cb-custom"></span><span class="filter-label">Physical Science</span><span class="filter-count">3</span></label>
+        <label class="filter-item"><input type="checkbox" checked><span class="cb-custom"></span><span class="filter-label">物质科学</span><span class="filter-count">1</span></label>
+        <label class="filter-item"><input type="checkbox" checked><span class="cb-custom"></span><span class="filter-label">力学</span><span class="filter-count">1</span></label>
+        <label class="filter-item"><input type="checkbox"><span class="cb-custom"></span><span class="filter-label">Life Science</span><span class="filter-count">0</span></label>
+      </div>
+      <div class="filter-group">
+        <div class="filter-group-title">年级</div>
+        <label class="filter-item"><input type="checkbox" checked><span class="cb-custom"></span><span class="filter-label">K-2</span><span class="filter-count">1</span></label>
+        <label class="filter-item"><input type="checkbox" checked><span class="cb-custom"></span><span class="filter-label">3-5</span><span class="filter-count">1</span></label>
+        <label class="filter-item"><input type="checkbox" checked><span class="cb-custom"></span><span class="filter-label">6-8</span><span class="filter-count">1</span></label>
+        <label class="filter-item"><input type="checkbox" checked><span class="cb-custom"></span><span class="filter-label">3-4年级</span><span class="filter-count">1</span></label>
+        <label class="filter-item"><input type="checkbox" checked><span class="cb-custom"></span><span class="filter-label">高一</span><span class="filter-count">1</span></label>
+      </div>
+    </aside>
+
+    <div class="results-area">
+      <div class="results-count">找到 <strong>5</strong> 条课标条目 · 搜索「力」</div>
+      <div class="results-header-row">
+        <div class="col-check"></div>
+        <div class="col-source">来源</div>
+        <div class="col-grade">年级</div>
+        <div class="col-topic">主题</div>
+        <div class="col-text">课标原文</div>
+      </div>
+
+      <div class="result-row selected">
+        <div class="col-check"><label class="filter-item" style="padding:0;"><input type="checkbox" checked><span class="cb-custom"></span></label></div>
+        <div class="col-source"><span class="tag tag-ngss">NGSS PE</span></div>
+        <div class="col-grade">3-5</div>
+        <div class="col-topic">Forces and Interactions</div>
+        <div class="col-text">Plan and conduct an investigation to provide evidence of the effects of balanced and unbalanced forces on the motion of an object.</div>
+      </div>
+
+      <div class="result-row selected">
+        <div class="col-check"><label class="filter-item" style="padding:0;"><input type="checkbox" checked><span class="cb-custom"></span></label></div>
+        <div class="col-source"><span class="tag tag-cn">中国义教科学</span></div>
+        <div class="col-grade">3-4年级</div>
+        <div class="col-topic">力与运动</div>
+        <div class="col-text">知道推和拉可以改变物体运动的快慢和方向，知道力可以改变物体的形状。</div>
+      </div>
+
+      <div class="result-row selected">
+        <div class="col-check"><label class="filter-item" style="padding:0;"><input type="checkbox" checked><span class="cb-custom"></span></label></div>
+        <div class="col-source"><span class="tag tag-ngss">NGSS DCI</span></div>
+        <div class="col-grade">K-2</div>
+        <div class="col-topic">Forces and Motion</div>
+        <div class="col-text">Pushes and pulls can have different strengths and directions. Pushing or pulling on an object can change the speed or direction of its motion and can start or stop it.</div>
+      </div>
+
+      <div class="result-row">
+        <div class="col-check"><label class="filter-item" style="padding:0;"><input type="checkbox"><span class="cb-custom"></span></label></div>
+        <div class="col-source"><span class="tag tag-cnhs">中国高中物理</span></div>
+        <div class="col-grade">高一</div>
+        <div class="col-topic">牛顿运动定律</div>
+        <div class="col-text">理解牛顿第二定律，能用牛顿第二定律解释有关现象和解决有关问题。</div>
+      </div>
+
+      <div class="result-row">
+        <div class="col-check"><label class="filter-item" style="padding:0;"><input type="checkbox"><span class="cb-custom"></span></label></div>
+        <div class="col-source"><span class="tag tag-ngss">NGSS PE</span></div>
+        <div class="col-grade">6-8</div>
+        <div class="col-topic">Forces and Motion</div>
+        <div class="col-text">Apply Newton's Third Law to design a solution to a problem involving the motion of two colliding objects.</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="selection-bar">
+    <div class="selection-info">
+      <span class="selection-badge">3</span>
+      <span class="selection-text">条课标已选中</span>
+    </div>
+    <button class="btn-primary" onclick="switchPage('workbench')">进入工作台 <span class="arrow">→</span></button>
+  </div>
+</div>
+
+<!-- ===== Browser: Smart Match Mode ===== -->
+<div class="page" id="page-browser-match">
+
+  <div class="search-bar">
+    <div class="search-row">
+      <div class="search-input-wrap">
+        <svg class="search-icon" width="17" height="17" viewBox="0 0 16 16" fill="none">
+          <circle cx="7" cy="7" r="5.5" stroke="currentColor" stroke-width="1.5"/>
+          <path d="M11 11L14 14" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+        </svg>
+        <textarea class="search-input-long" rows="2" placeholder="描述你想讲的知识或已设计的活动，AI 将匹配对应课标...">用弹簧秤测量不同物体受到的重力，记录数据并画出重力与质量的关系图</textarea>
+      </div>
+      <button class="btn-match">
+        <svg viewBox="0 0 16 16" fill="none"><path d="M2 8h12M10 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        匹配课标
+      </button>
+    </div>
+    <div class="search-mode-toggle">
+      <button class="mode-btn" onclick="switchPage('browser-keyword')">关键词搜索</button>
+      <button class="mode-btn active" onclick="switchPage('browser-match')">智能匹配</button>
+    </div>
+  </div>
+
+  <div class="browser-body">
+    <aside class="filter-panel">
+      <div class="filter-group">
+        <div class="filter-group-title">课标来源</div>
+        <label class="filter-item"><input type="checkbox" checked><span class="cb-custom"></span><span class="filter-label">NGSS</span><span class="filter-count">2</span></label>
+        <label class="filter-item"><input type="checkbox" checked><span class="cb-custom"></span><span class="filter-label">中国义务教育科学</span><span class="filter-count">1</span></label>
+        <label class="filter-item"><input type="checkbox" checked><span class="cb-custom"></span><span class="filter-label">中国高中物理</span><span class="filter-count">1</span></label>
+      </div>
+      <div class="filter-group">
+        <div class="filter-group-title">领域</div>
+        <label class="filter-item"><input type="checkbox" checked><span class="cb-custom"></span><span class="filter-label">Physical Science</span><span class="filter-count">2</span></label>
+        <label class="filter-item"><input type="checkbox" checked><span class="cb-custom"></span><span class="filter-label">物质科学</span><span class="filter-count">1</span></label>
+        <label class="filter-item"><input type="checkbox" checked><span class="cb-custom"></span><span class="filter-label">力学</span><span class="filter-count">1</span></label>
+      </div>
+      <div class="filter-group">
+        <div class="filter-group-title">年级</div>
+        <label class="filter-item"><input type="checkbox" checked><span class="cb-custom"></span><span class="filter-label">3-5</span><span class="filter-count">1</span></label>
+        <label class="filter-item"><input type="checkbox" checked><span class="cb-custom"></span><span class="filter-label">6-8</span><span class="filter-count">1</span></label>
+        <label class="filter-item"><input type="checkbox" checked><span class="cb-custom"></span><span class="filter-label">3-4年级</span><span class="filter-count">1</span></label>
+        <label class="filter-item"><input type="checkbox" checked><span class="cb-custom"></span><span class="filter-label">高一</span><span class="filter-count">1</span></label>
+      </div>
+    </aside>
+
+    <div class="results-area">
+      <div class="match-banner">
+        <svg class="match-banner-icon" width="16" height="16" viewBox="0 0 16 16" fill="none">
+          <circle cx="8" cy="8" r="7" stroke="currentColor" stroke-width="1.5"/>
+          <path d="M5 8l2 2 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+        为 <span class="match-query">弹簧秤测量重力，记录数据并画关系图</span> 匹配到 <strong>4</strong> 条相关课标
+      </div>
+
+      <div class="results-header-row">
+        <div class="col-check"></div>
+        <div class="col-source">来源</div>
+        <div class="col-grade">年级</div>
+        <div class="col-topic">主题</div>
+        <div class="col-text">课标原文 · 匹配理由</div>
+      </div>
+
+      <div class="result-row match-result">
+        <div class="col-check"><label class="filter-item" style="padding:0;"><input type="checkbox"><span class="cb-custom"></span></label></div>
+        <div class="col-source"><span class="tag tag-cnhs">中国高中物理</span></div>
+        <div class="col-grade">高一</div>
+        <div class="col-topic">牛顿运动定律</div>
+        <div class="col-text">
+          理解牛顿第二定律，能用牛顿第二定律解释有关现象和解决有关问题。
+          <div class="match-reason">
+            <svg class="match-reason-icon" width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M2 6h8M6 2v8" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/></svg>
+            重力与质量关系（G=mg）是牛顿第二定律的直接应用，该活动帮助学生建立定量关系
+          </div>
+        </div>
+      </div>
+
+      <div class="result-row match-result">
+        <div class="col-check"><label class="filter-item" style="padding:0;"><input type="checkbox"><span class="cb-custom"></span></label></div>
+        <div class="col-source"><span class="tag tag-ngss">NGSS PE</span></div>
+        <div class="col-grade">3-5</div>
+        <div class="col-topic">Forces and Interactions</div>
+        <div class="col-text">
+          Plan and conduct an investigation to provide evidence of the effects of balanced and unbalanced forces on the motion of an object.
+          <div class="match-reason">
+            <svg class="match-reason-icon" width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M2 6h8M6 2v8" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/></svg>
+            使用弹簧秤测量属于「计划并实施调查」，收集数据作为力的作用效果的证据
+          </div>
+        </div>
+      </div>
+
+      <div class="result-row match-result">
+        <div class="col-check"><label class="filter-item" style="padding:0;"><input type="checkbox"><span class="cb-custom"></span></label></div>
+        <div class="col-source"><span class="tag tag-cn">中国义教科学</span></div>
+        <div class="col-grade">3-4年级</div>
+        <div class="col-topic">力与运动</div>
+        <div class="col-text">
+          知道推和拉可以改变物体运动的快慢和方向，知道力可以改变物体的形状。
+          <div class="match-reason">
+            <svg class="match-reason-icon" width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M2 6h8M6 2v8" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/></svg>
+            弹簧秤测量涉及力的感知，但该活动的定量分析超出此年级段「知道」层次的要求
+          </div>
+        </div>
+      </div>
+
+      <div class="result-row match-result">
+        <div class="col-check"><label class="filter-item" style="padding:0;"><input type="checkbox"><span class="cb-custom"></span></label></div>
+        <div class="col-source"><span class="tag tag-ngss">NGSS PE</span></div>
+        <div class="col-grade">6-8</div>
+        <div class="col-topic">Forces and Motion</div>
+        <div class="col-text">
+          Apply Newton's Third Law to design a solution to a problem involving the motion of two colliding objects.
+          <div class="match-reason">
+            <svg class="match-reason-icon" width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M2 6h8M6 2v8" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/></svg>
+            弹簧秤使用牛顿三定律原理（施力与反作用力），但该活动重心不在碰撞问题上，相关度较低
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="selection-bar">
+    <div class="selection-info">
+      <span class="selection-badge" style="background:var(--text-tertiary);">0</span>
+      <span class="selection-text">条课标已选中</span>
+    </div>
+    <button class="btn-primary" style="opacity:0.5;">进入工作台 <span class="arrow">→</span></button>
+  </div>
+</div>
+
+<!-- ===== Workbench ===== -->
+<div class="page" id="page-workbench" style="flex-direction:row;">
+
+  <div class="wb-left">
+    <div class="wb-left-header">
+      <div class="wb-left-title">当前课标上下文</div>
+      <div class="wb-left-count">3 条</div>
+    </div>
+    <div class="wb-left-body">
+      <div class="wb-item">
+        <div class="wb-item-header"><span class="tag tag-ngss" style="font-size:10px;">NGSS PE</span><span class="wb-item-grade">3-5</span></div>
+        <button class="wb-item-remove" title="移除">×</button>
+        <div class="wb-item-topic">Forces and Interactions</div>
+        <div class="wb-item-text">Plan and conduct an investigation to provide evidence of the effects of balanced and unbalanced forces on the motion of an object.</div>
+      </div>
+      <div class="wb-item">
+        <div class="wb-item-header"><span class="tag tag-cn" style="font-size:10px;">中国义教科学</span><span class="wb-item-grade">3-4年级</span></div>
+        <button class="wb-item-remove" title="移除">×</button>
+        <div class="wb-item-topic">力与运动</div>
+        <div class="wb-item-text">知道推和拉可以改变物体运动的快慢和方向，知道力可以改变物体的形状。</div>
+      </div>
+      <div class="wb-item">
+        <div class="wb-item-header"><span class="tag tag-ngss" style="font-size:10px;">NGSS DCI</span><span class="wb-item-grade">K-2</span></div>
+        <button class="wb-item-remove" title="移除">×</button>
+        <div class="wb-item-topic">Forces and Motion</div>
+        <div class="wb-item-text">Pushes and pulls can have different strengths and directions. Pushing or pulling on an object can change the speed or direction of its motion and can start or stop it.</div>
+      </div>
+    </div>
+    <div class="wb-left-footer">
+      <button class="btn-add" onclick="switchPage('browser-keyword')">+ 添加更多条目</button>
+    </div>
+  </div>
+
+  <div class="wb-right">
+    <div class="intent-bar">
+      <span class="intent-label">基于已选课标</span>
+      <button class="intent-btn active">比较</button>
+      <button class="intent-btn">提炼</button>
+      <button class="intent-btn">找知识</button>
+      <button class="intent-btn">找活动</button>
+      <span class="intent-context-hint">基于左侧 3 条课标条目</span>
+    </div>
+
+    <div class="chat-area">
+      <div class="chat-message user">
+        <div class="chat-avatar-row" style="justify-content:flex-end;">
+          <span class="chat-sender-name">你</span>
+          <span class="chat-avatar avatar-user">Y</span>
+        </div>
+        <div class="chat-bubble-user">请比较这三条课标的要求，分析共性和差异</div>
+      </div>
+
+      <div class="chat-message">
+        <div class="chat-avatar-row">
+          <span class="chat-avatar avatar-ai">AI</span>
+          <span class="chat-sender-name">课标助手</span>
+        </div>
+        <div class="chat-bubble-ai">
+          <h4>共性</h4>
+          <p>三条课标均围绕「力改变运动状态」这一核心概念，要求学生理解推和拉对物体运动的影响。这是物理学中最基础的因果关系之一：力是改变运动状态的原因。</p>
+          <h4>关键差异</h4>
+          <ul>
+            <li><strong>NGSS PE 3-5</strong> —— 强调「证据」和「调查」，要求学生通过实验获取证据，体现科学实践导向。同时区分了 balanced 与 unbalanced forces，概念粒度更细</li>
+            <li><strong>中国义教科学 3-4年级</strong> —— 侧重知识性表述（「知道...」），要求层次为了解与记忆。额外包含了「力改变物体形状」这一维度，覆盖面更广</li>
+            <li><strong>NGSS DCI K-2</strong> —— 作为低年级概念基础，表述最具体直观（pushes and pulls），不涉及平衡/不平衡等抽象概念，聚焦于可直接观察的现象</li>
+          </ul>
+          <h4>进阶关系</h4>
+          <div class="highlight-box">
+            K-2（NGSS DCI）→ 3-4年级（中国义教）→ 3-5（NGSS PE）<br>
+            从<strong>具体经验</strong>到<strong>知识概括</strong>再到<strong>探究验证</strong>的能力进阶
+          </div>
+          <p>值得注意的是，中国课标在相近年级段的认知要求（「知道」）低于 NGSS 3-5 的要求（「计划并开展调查」），反映出两套课标在科学实践能力培养节奏上的差异。</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="chat-input-area">
+      <div class="chat-input-wrapper">
+        <textarea class="chat-input" rows="1" placeholder="基于已选课标继续提问..."></textarea>
+        <button class="btn-send">
+          <svg viewBox="0 0 16 16" fill="none"><path d="M2 8L14 8M14 8L9 3M14 8L9 13" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+function switchPage(page) {
+  document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
+  document.getElementById('page-' + page).classList.add('active');
+
+  document.querySelectorAll('.nav-tab').forEach((tab, i) => {
+    const map = ['browser-keyword', 'browser-match', 'workbench'];
+    tab.classList.toggle('active', map[i] === page);
+  });
+}
+</script>
+
+</body>
+</html>

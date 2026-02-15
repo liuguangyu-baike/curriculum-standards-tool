@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>数据加载测试</title>
+    <script src="https://cdn.jsdelivr.net/npm/fuse.js@7.0.0"></script>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            background: #f5f5f5;
+        }
+        .section {
+            background: white;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        .status {
+            display: inline-block;
+            padding: 4px 12px;
+            border-radius: 4px;
+            font-size: 14px;
+            font-weight: 600;
+        }
+        .status.success { background: #d4edda; color: #155724; }
+        .status.error { background: #f8d7da; color: #721c24; }
+        .test-result {
+            margin: 10px 0;
+            padding: 10px;
+            border-left: 4px solid #007bff;
+            background: #f8f9fa;
+        }
+        pre {
+            background: #282c34;
+            color: #abb2bf;
+            padding: 15px;
+            border-radius: 4px;
+            overflow-x: auto;
+            font-size: 13px;
+        }
+        button {
+            background: #007bff;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 4px;
+            cursor: pointer;
+            margin: 5px;
+        }
+        button:hover {
+            background: #0056b3;
+        }
+        .log {
+            max-height: 300px;
+            overflow-y: auto;
+            font-family: monospace;
+            font-size: 12px;
+            line-height: 1.5;
+        }
+    </style>
+</head>
+<body>
+    <h1>课标数据加载测试页面</h1>
+
+    <div class="section">
+        <h2>测试状态</h2>
+        <div id="status">
+            <span class="status">等待测试...</span>
+        </div>
+    </div>
+
+    <div class="section">
+        <h2>数据加载统计</h2>
+        <div id="stats">
+            <p>正在加载数据...</p>
+        </div>
+    </div>
+
+    <div class="section">
+        <h2>Grade映射验证</h2>
+        <div id="gradeTest">
+            <button onclick="testGradeMapping()">运行Grade映射测试</button>
+            <div id="gradeResults"></div>
+        </div>
+    </div>
+
+    <div class="section">
+        <h2>搜索功能测试</h2>
+        <div>
+            <input type="text" id="searchInput" placeholder="输入搜索关键词（例如：物质、力）" style="width: 300px; padding: 8px;">
+            <button onclick="testSearch()">搜索</button>
+        </div>
+        <div id="searchResults"></div>
+    </div>
+
+    <div class="section">
+        <h2>数据样本</h2>
+        <button onclick="showSamples()">显示各数据源样本</button>
+        <div id="samples"></div>
+    </div>
+
+    <div class="section">
+        <h2>控制台日志</h2>
+        <div id="console" class="log"></div>
+    </div>
+
+    <script src="js/data.js"></script>
+    <script>
+        // 拦截console.log输出到页面
+        const consoleDiv = document.getElementById('console');
+        const originalLog = console.log;
+        console.log = function(...args) {
+            originalLog.apply(console, args);
+            const message = args.map(arg =>
+                typeof arg === 'object' ? JSON.stringify(arg, null, 2) : String(arg)
+            ).join(' ');
+            consoleDiv.innerHTML += `<div>${new Date().toLocaleTimeString()}: ${message}</div>`;
+            consoleDiv.scrollTop = consoleDiv.scrollHeight;
+        };
+
+        // 监听数据加载完成事件
+        document.addEventListener('dataLoaded', (event) => {
+            const data = event.detail;
+            updateStatus(true);
+            updateStats(data);
+        });
+
+        function updateStatus(success) {
+            const statusDiv = document.getElementById('status');
+            if (success) {
+                statusDiv.innerHTML = '<span class="status success">✓ 数据加载成功</span>';
+            } else {
+                statusDiv.innerHTML = '<span class="status error">✗ 数据加载失败</span>';
+            }
+        }
+
+        function updateStats(data) {
+            const statsDiv = document.getElementById('stats');
+            const dciCount = data.allStandards.filter(s => s.source === 'NGSS-DCI').length;
+            const peCount = data.allStandards.filter(s => s.source === 'NGSS-PE').length;
+            const cnCount = data.allStandards.filter(s => s.source === '中国义务教育科学课标').length;
+
+            statsDiv.innerHTML = `
+                <div class="test-result">
+                    <strong>总条目数：</strong>${data.allStandards.length}<br>
+                    <strong>DCI条目：</strong>${dciCount}<br>
+                    <strong>PE条目：</strong>${peCount}<br>
+                    <strong>CN条目：</strong>${cnCount}<br>
+                    <strong>搜索索引：</strong>${data.searchIndex ? '已创建 ✓' : '未创建 ✗'}
+                </div>
+            `;
+        }
+
+        function testGradeMapping() {
+            const resultsDiv = document.getElementById('gradeResults');
+            const testCases = [
+                { source: 'NGSS-DCI', original: '1', expected: '1-2' },
+                { source: 'NGSS-DCI', original: '2', expected: '1-2' },
+                { source: 'NGSS-DCI', original: '3', expected: '3-4' },
+                { source: 'NGSS-DCI', original: '5', expected: '5-6' },
+                { source: 'NGSS-PE', original: 'K', expected: 'K' },
+                { source: 'NGSS-PE', original: 'MS', expected: 'MS' },
+                { source: '中国义务教育科学课标', original: 'LP', expected: '1-2' },
+                { source: '中国义务教育科学课标', original: 'MP', expected: '3-4' },
+                { source: '中国义务教育科学课标', original: 'HP', expected: '5-6' },
+            ];
+
+            let results = '<h3>Grade映射测试结果</h3>';
+            let allPassed = true;
+
+            for (const testCase of testCases) {
+                // 在实际数据中查找对应条目
+                const items = standardsData.allStandards.filter(item => {
+                    return item.source === testCase.source &&
+                           item._raw &&
+                           (item._raw.grade === testCase.original || item._raw.gradeBand === testCase.original);
+                });
+
+                if (items.length > 0) {
+                    const actualGrade = items[0].grade_band;
+                    const passed = actualGrade === testCase.expected;
+                    allPassed = allPassed && passed;
+                    results += `<div class="test-result">
+                        ${passed ? '✓' : '✗'} ${testCase.source} - 原始: ${testCase.original} → 映射: ${actualGrade}
+                        (期望: ${testCase.expected})
+                    </div>`;
+                } else {
+                    results += `<div class="test-result">⚠️ 未找到 ${testCase.source} 中 grade=${testCase.original} 的条目</div>`;
+                }
+            }
+
+            results += `<p><strong>测试结果：${allPassed ? '全部通过 ✓' : '部分失败 ✗'}</strong></p>`;
+            resultsDiv.innerHTML = results;
+        }
+
+        function testSearch() {
+            const query = document.getElementById('searchInput').value;
+            if (!query) {
+                alert('请输入搜索关键词');
+                return;
+            }
+
+            const results = searchStandards(query);
+            const resultsDiv = document.getElementById('searchResults');
+
+            resultsDiv.innerHTML = `
+                <h3>搜索 "${query}" 的结果 (${results.length} 条)</h3>
+                ${results.slice(0, 5).map(item => `
+                    <div class="test-result">
+                        <strong>ID:</strong> ${item.id}<br>
+                        <strong>来源:</strong> ${item.source}<br>
+                        <strong>年级:</strong> ${item.grade_band}<br>
+                        <strong>主题:</strong> ${item.topic}<br>
+                        <strong>内容:</strong> ${item.text.substring(0, 150)}...
+                    </div>
+                `).join('')}
+                ${results.length > 5 ? `<p>还有 ${results.length - 5} 条结果...</p>` : ''}
+            `;
+        }
+
+        function showSamples() {
+            const samplesDiv = document.getElementById('samples');
+            const dciSample = standardsData.allStandards.find(s => s.source === 'NGSS-DCI');
+            const peSample = standardsData.allStandards.find(s => s.source === 'NGSS-PE');
+            const cnSample = standardsData.allStandards.find(s => s.source === '中国义务教育科学课标');
+
+            samplesDiv.innerHTML = `
+                <h3>DCI数据样本</h3>
+                <pre>${JSON.stringify(dciSample, null, 2)}</pre>
+
+                <h3>PE数据样本</h3>
+                <pre>${JSON.stringify(peSample, null, 2)}</pre>
+
+                <h3>CN数据样本</h3>
+                <pre>${JSON.stringify(cnSample, null, 2)}</pre>
+            `;
+        }
+    </script>
+</body>
+</html>

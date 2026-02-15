@@ -1,0 +1,4400 @@
+{
+  "dcis": [
+    {
+      "id": "DCI-PS1.A-2-1",
+      "domain": "PS",
+      "coreConceptNumber": 1,
+      "coreConceptTitle": "Matter and Its Interactions",
+      "coreConceptTitleZH": "物质及其相互作用",
+      "subConceptLetter": "A",
+      "subConceptTitle": "Structure and Properties of Matter",
+      "subConceptTitleZH": "物质的结构与性质",
+      "grade": "2",
+      "bulletNumber": 1,
+      "content": "Different kinds of matter exist and many of them can be either solid or liquid, depending on temperature. Matter can be described and classified by its observable properties.",
+      "contentZH": "存在不同种类的物质，其中许多可以是固体或液体，具体取决于温度。物质可以通过其可观察的属性来描述和分类。",
+      "relatedPEs": [
+        "2-PS1-1"
+      ]
+    },
+    {
+      "id": "DCI-PS1.A-2-2",
+      "domain": "PS",
+      "coreConceptNumber": 1,
+      "coreConceptTitle": "Matter and Its Interactions",
+      "coreConceptTitleZH": "物质及其相互作用",
+      "subConceptLetter": "A",
+      "subConceptTitle": "Structure and Properties of Matter",
+      "subConceptTitleZH": "物质的结构与性质",
+      "grade": "2",
+      "bulletNumber": 2,
+      "content": "Different properties are suited to different purposes.",
+      "contentZH": "不同的属性适合不同的目的。",
+      "relatedPEs": [
+        "2-PS1-3",
+        "2-PS1-2"
+      ]
+    },
+    {
+      "id": "DCI-PS1.A-2-3",
+      "domain": "PS",
+      "coreConceptNumber": 1,
+      "coreConceptTitle": "Matter and Its Interactions",
+      "coreConceptTitleZH": "物质及其相互作用",
+      "subConceptLetter": "A",
+      "subConceptTitle": "Structure and Properties of Matter",
+      "subConceptTitleZH": "物质的结构与性质",
+      "grade": "2",
+      "bulletNumber": 3,
+      "content": "A great variety of objects can be built up from a small set of pieces.",
+      "contentZH": "可以用一小部分部件构建出各种各样的物体。",
+      "relatedPEs": [
+        "2-PS1-3"
+      ]
+    },
+    {
+      "id": "DCI-PS1.A-MS-1",
+      "domain": "PS",
+      "coreConceptNumber": 1,
+      "coreConceptTitle": "Matter and Its Interactions",
+      "coreConceptTitleZH": "物质及其相互作用",
+      "subConceptLetter": "A",
+      "subConceptTitle": "Structure and Properties of Matter",
+      "subConceptTitleZH": "物质的结构与性质",
+      "grade": "MS",
+      "bulletNumber": 1,
+      "content": "Substances are made from different types of atoms, which combine with one another in various ways. Atoms form molecules that range in size from two to thousands of atoms.",
+      "contentZH": "物质由不同类型的原子组成，这些原子以各种方式相互结合。原子形成分子，分子大小从两个到数千个原子不等。",
+      "relatedPEs": [
+        "MS-PS1-1"
+      ]
+    },
+    {
+      "id": "DCI-PS1.A-MS-2",
+      "domain": "PS",
+      "coreConceptNumber": 1,
+      "coreConceptTitle": "Matter and Its Interactions",
+      "coreConceptTitleZH": "物质及其相互作用",
+      "subConceptLetter": "A",
+      "subConceptTitle": "Structure and Properties of Matter",
+      "subConceptTitleZH": "物质的结构与性质",
+      "grade": "MS",
+      "bulletNumber": 2,
+      "content": "Each pure substance has characteristic physical and chemical properties (for any bulk quantity under given conditions) that can be used to identify it.",
+      "contentZH": "每种纯物质都具有可用于识别的特征物理和化学性质（对于给定条件下的任何散装数量）。",
+      "relatedPEs": [
+        "MS-PS1-2",
+        "MS-PS1-3"
+      ]
+    },
+    {
+      "id": "DCI-PS1.A-MS-3",
+      "domain": "PS",
+      "coreConceptNumber": 1,
+      "coreConceptTitle": "Matter and Its Interactions",
+      "coreConceptTitleZH": "物质及其相互作用",
+      "subConceptLetter": "A",
+      "subConceptTitle": "Structure and Properties of Matter",
+      "subConceptTitleZH": "物质的结构与性质",
+      "grade": "MS",
+      "bulletNumber": 3,
+      "content": "Gases and liquids are made of molecules or inert atoms that are moving about relative to each other.",
+      "contentZH": "气体和液体由彼此相对运动的分子或惰性原子组成。",
+      "relatedPEs": [
+        "MS-PS1-4"
+      ]
+    },
+    {
+      "id": "DCI-PS1.A-MS-4",
+      "domain": "PS",
+      "coreConceptNumber": 1,
+      "coreConceptTitle": "Matter and Its Interactions",
+      "coreConceptTitleZH": "物质及其相互作用",
+      "subConceptLetter": "A",
+      "subConceptTitle": "Structure and Properties of Matter",
+      "subConceptTitleZH": "物质的结构与性质",
+      "grade": "MS",
+      "bulletNumber": 4,
+      "content": "In a liquid, the molecules are constantly in contact with others; in a gas, they are widely spaced except when they happen to collide. In a solid, atoms are closely spaced and may vibrate in position but do not change relative locations.",
+      "contentZH": "在液体中，分子不断地与其他分子接触。在气体中，除非它们发生碰撞，否则它们的间距很大。在固体中，原子间隔很近，可以在位置上振动，但不会改变相对位置。",
+      "relatedPEs": [
+        "MS-PS1-4"
+      ]
+    },
+    {
+      "id": "DCI-PS1.A-MS-5",
+      "domain": "PS",
+      "coreConceptNumber": 1,
+      "coreConceptTitle": "Matter and Its Interactions",
+      "coreConceptTitleZH": "物质及其相互作用",
+      "subConceptLetter": "A",
+      "subConceptTitle": "Structure and Properties of Matter",
+      "subConceptTitleZH": "物质的结构与性质",
+      "grade": "MS",
+      "bulletNumber": 5,
+      "content": "Solids may be formed from molecules, or they may be extended structures with repeating subunits (e.g., crystals).",
+      "contentZH": "固体可以由分子形成，也可以是具有重复亚基的延伸结构（例如晶体）。",
+      "relatedPEs": [
+        "MS-PS1-1"
+      ]
+    },
+    {
+      "id": "DCI-PS1.A-MS-6",
+      "domain": "PS",
+      "coreConceptNumber": 1,
+      "coreConceptTitle": "Matter and Its Interactions",
+      "coreConceptTitleZH": "物质及其相互作用",
+      "subConceptLetter": "A",
+      "subConceptTitle": "Structure and Properties of Matter",
+      "subConceptTitleZH": "物质的结构与性质",
+      "grade": "MS",
+      "bulletNumber": 6,
+      "content": "The changes of state that occur with variations in temperature or pressure can be described and predicted using these models of matter.",
+      "contentZH": "可以使用这些物质模型来描述和预测随温度或压力变化而发生的状态变化。",
+      "relatedPEs": [
+        "MS-PS1-4"
+      ]
+    },
+    {
+      "id": "DCI-PS1.A-HS-1",
+      "domain": "PS",
+      "coreConceptNumber": 1,
+      "coreConceptTitle": "Matter and Its Interactions",
+      "coreConceptTitleZH": "物质及其相互作用",
+      "subConceptLetter": "A",
+      "subConceptTitle": "Structure and Properties of Matter",
+      "subConceptTitleZH": "物质的结构与性质",
+      "grade": "HS",
+      "bulletNumber": 1,
+      "content": "Each atom has a charged substructure consisting of a nucleus, which is made of protons and neutrons, surrounded by electrons.",
+      "contentZH": "每个原子都有一个带电的子结构，由原子核组成，原子核由质子和中子组成，周围被电子包围。",
+      "relatedPEs": [
+        "HS-PS1-1"
+      ]
+    },
+    {
+      "id": "DCI-PS1.A-HS-2",
+      "domain": "PS",
+      "coreConceptNumber": 1,
+      "coreConceptTitle": "Matter and Its Interactions",
+      "coreConceptTitleZH": "物质及其相互作用",
+      "subConceptLetter": "A",
+      "subConceptTitle": "Structure and Properties of Matter",
+      "subConceptTitleZH": "物质的结构与性质",
+      "grade": "HS",
+      "bulletNumber": 2,
+      "content": "The periodic table orders elements horizontally by the number of protons in the atom’s nucleus and places those with similar chemical properties in columns. The repeating patterns of this table reflect patterns of outer electron states.",
+      "contentZH": "元素周期表按照原子核中质子的数量对元素进行水平排序，并将具有相似化学性质的元素放在列中。该表的重复图案反映了外层电子态的图案。",
+      "relatedPEs": [
+        "HS-PS1-1"
+      ]
+    },
+    {
+      "id": "DCI-PS1.A-HS-3",
+      "domain": "PS",
+      "coreConceptNumber": 1,
+      "coreConceptTitle": "Matter and Its Interactions",
+      "coreConceptTitleZH": "物质及其相互作用",
+      "subConceptLetter": "A",
+      "subConceptTitle": "Structure and Properties of Matter",
+      "subConceptTitleZH": "物质的结构与性质",
+      "grade": "HS",
+      "bulletNumber": 3,
+      "content": "The structure and interactions of matter at the bulk scale are determined by electrical forces within and between atoms.",
+      "contentZH": "大尺度物质的结构和相互作用由原子内部和原子之间的电力决定。",
+      "relatedPEs": [
+        "HS-PS1-3",
+        "HS-PS2-6"
+      ]
+    },
+    {
+      "id": "DCI-PS1.A-HS-4",
+      "domain": "PS",
+      "coreConceptNumber": 1,
+      "coreConceptTitle": "Matter and Its Interactions",
+      "coreConceptTitleZH": "物质及其相互作用",
+      "subConceptLetter": "A",
+      "subConceptTitle": "Structure and Properties of Matter",
+      "subConceptTitleZH": "物质的结构与性质",
+      "grade": "HS",
+      "bulletNumber": 4,
+      "content": "A stable molecule has less energy than the same set of atoms separated; one must provide at least this energy in order to take the molecule apart.",
+      "contentZH": "稳定的分子比同一组分离的原子具有更少的能量；人们必须至少提供这种能量才能将分子分开。",
+      "relatedPEs": [
+        "HS-PS1-4"
+      ]
+    },
+    {
+      "id": "DCI-PS1.B-2-1",
+      "domain": "PS",
+      "coreConceptNumber": 1,
+      "coreConceptTitle": "Matter and Its Interactions",
+      "coreConceptTitleZH": "物质及其相互作用",
+      "subConceptLetter": "B",
+      "subConceptTitle": "Chemical Reactions",
+      "subConceptTitleZH": "化学反应",
+      "grade": "2",
+      "bulletNumber": 1,
+      "content": "Heating or cooling a substance may cause changes that can be observed. Sometimes these changes are reversible, and sometimes they are not.",
+      "contentZH": "加热或冷却物质可能会引起可观察到的变化。有时这些变化是可逆的，有时则不可逆。",
+      "relatedPEs": [
+        "2-PS1-4"
+      ]
+    },
+    {
+      "id": "DCI-PS1.B-5-1",
+      "domain": "PS",
+      "coreConceptNumber": 1,
+      "coreConceptTitle": "Matter and Its Interactions",
+      "coreConceptTitleZH": "物质及其相互作用",
+      "subConceptLetter": "B",
+      "subConceptTitle": "Chemical Reactions",
+      "subConceptTitleZH": "化学反应",
+      "grade": "5",
+      "bulletNumber": 1,
+      "content": "When two or more different substances are mixed, a new and Consistency in Natural Systems explanation of a phenomenon. substance with different properties may be formed.",
+      "contentZH": "当两种或多种不同物质混合时，对一种现象的新的、自然系统的一致性解释。可以形成具有不同性质的物质。",
+      "relatedPEs": [
+        "5-PS1-3",
+        "5-PS1-4"
+      ]
+    },
+    {
+      "id": "DCI-PS1.B-5-2",
+      "domain": "PS",
+      "coreConceptNumber": 1,
+      "coreConceptTitle": "Matter and Its Interactions",
+      "coreConceptTitleZH": "物质及其相互作用",
+      "subConceptLetter": "B",
+      "subConceptTitle": "Chemical Reactions",
+      "subConceptTitleZH": "化学反应",
+      "grade": "5",
+      "bulletNumber": 2,
+      "content": "No matter what reaction or change in properties occurs, the total weight of the substances does not change. (Boundary: Mass and weight are not distinguished at this grade level.)",
+      "contentZH": "无论发生什么反应或性质变化，物质的总重量都不会改变。 （边界：该年级不区分质量和重量。）",
+      "relatedPEs": [
+        "5-PS1-2"
+      ]
+    },
+    {
+      "id": "DCI-PS1.B-MS-1",
+      "domain": "PS",
+      "coreConceptNumber": 1,
+      "coreConceptTitle": "Matter and Its Interactions",
+      "coreConceptTitleZH": "物质及其相互作用",
+      "subConceptLetter": "B",
+      "subConceptTitle": "Chemical Reactions",
+      "subConceptTitleZH": "化学反应",
+      "grade": "MS",
+      "bulletNumber": 1,
+      "content": "Substances react chemically in characteristic ways. In a chemical process, the atoms that make up the original substances are regrouped into different molecules, and these new substances have different properties from those of the reactants.",
+      "contentZH": "物质以特有的方式发生化学反应。在化学过程中，组成原始物质的原子重新组合成不同的分子，这些新物质具有与反应物不同的性质。",
+      "relatedPEs": [
+        "MS-PS1-2",
+        "MS-PS1-3",
+        "MS-PS1-5"
+      ]
+    },
+    {
+      "id": "DCI-PS1.B-MS-2",
+      "domain": "PS",
+      "coreConceptNumber": 1,
+      "coreConceptTitle": "Matter and Its Interactions",
+      "coreConceptTitleZH": "物质及其相互作用",
+      "subConceptLetter": "B",
+      "subConceptTitle": "Chemical Reactions",
+      "subConceptTitleZH": "化学反应",
+      "grade": "MS",
+      "bulletNumber": 2,
+      "content": "The total number of each type of atom is conserved, and thus the mass does not change.",
+      "contentZH": "每种类型原子的总数是守恒的，因此质量不会改变。",
+      "relatedPEs": [
+        "MS-PS1-5"
+      ]
+    },
+    {
+      "id": "DCI-PS1.B-MS-3",
+      "domain": "PS",
+      "coreConceptNumber": 1,
+      "coreConceptTitle": "Matter and Its Interactions",
+      "coreConceptTitleZH": "物质及其相互作用",
+      "subConceptLetter": "B",
+      "subConceptTitle": "Chemical Reactions",
+      "subConceptTitleZH": "化学反应",
+      "grade": "MS",
+      "bulletNumber": 3,
+      "content": "Some chemical reactions release energy, others store energy.",
+      "contentZH": "一些化学反应释放能量，另一些则储存能量。",
+      "relatedPEs": [
+        "MS-PS1-6"
+      ]
+    },
+    {
+      "id": "DCI-PS1.B-HS-1",
+      "domain": "PS",
+      "coreConceptNumber": 1,
+      "coreConceptTitle": "Matter and Its Interactions",
+      "coreConceptTitleZH": "物质及其相互作用",
+      "subConceptLetter": "B",
+      "subConceptTitle": "Chemical Reactions",
+      "subConceptTitleZH": "化学反应",
+      "grade": "HS",
+      "bulletNumber": 1,
+      "content": "Chemical processes, their rates, and whether or not energy is stored or released can be understood in terms of the collisions of molecules and the rearrangements of atoms into new molecules, with consequent changes in the sum of all bond energies in the set of molecules that are matched by changes in kinetic energy.",
+      "contentZH": "化学过程、它们的速率以及是否储存或释放能量可以通过分子碰撞和原子重新排列成新分子来理解，从而导致分子组中所有键能总和的变化，与动能的变化相匹配。",
+      "relatedPEs": [
+        "HS-PS1-5"
+      ]
+    },
+    {
+      "id": "DCI-PS1.B-HS-2",
+      "domain": "PS",
+      "coreConceptNumber": 1,
+      "coreConceptTitle": "Matter and Its Interactions",
+      "coreConceptTitleZH": "物质及其相互作用",
+      "subConceptLetter": "B",
+      "subConceptTitle": "Chemical Reactions",
+      "subConceptTitleZH": "化学反应",
+      "grade": "HS",
+      "bulletNumber": 2,
+      "content": "In many situations, a dynamic and condition-dependent balance between a reaction and the reverse reaction determines the numbers of all types of molecules present.",
+      "contentZH": "在许多情况下，反应和逆反应之间的动态且依赖于条件的平衡决定了存在的所有类型分子的数量。",
+      "relatedPEs": [
+        "HS-PS1-6"
+      ]
+    },
+    {
+      "id": "DCI-PS1.B-HS-3",
+      "domain": "PS",
+      "coreConceptNumber": 1,
+      "coreConceptTitle": "Matter and Its Interactions",
+      "coreConceptTitleZH": "物质及其相互作用",
+      "subConceptLetter": "B",
+      "subConceptTitle": "Chemical Reactions",
+      "subConceptTitleZH": "化学反应",
+      "grade": "HS",
+      "bulletNumber": 3,
+      "content": "The fact that atoms are conserved, together with knowledge of the chemical properties of the elements involved, can be used to describe and predict chemical reactions.",
+      "contentZH": "原子守恒的事实以及有关元素化学性质的知识可以用来描述和预测化学反应。",
+      "relatedPEs": [
+        "HS-PS1-2",
+        "HS-PS1-7"
+      ]
+    },
+    {
+      "id": "DCI-PS1.C-HS-1",
+      "domain": "PS",
+      "coreConceptNumber": 1,
+      "coreConceptTitle": "Matter and Its Interactions",
+      "coreConceptTitleZH": "物质及其相互作用",
+      "subConceptLetter": "C",
+      "subConceptTitle": "Nuclear Processes",
+      "subConceptTitleZH": "核过程",
+      "grade": "HS",
+      "bulletNumber": 1,
+      "content": "Nuclear processes, including fusion, fission, and radioactive decays of unstable nuclei, involve release or absorption of energy. The total number of neutrons plus protons does not change in any nuclear process",
+      "contentZH": "核过程，包括不稳定核的聚变、裂变和放射性衰变，涉及能量的释放或吸收。中子加质子的总数在任何核过程中都不会改变",
+      "relatedPEs": [
+        "HS-PS1-8"
+      ]
+    },
+    {
+      "id": "DCI-PS1.C-HS-2",
+      "domain": "PS",
+      "coreConceptNumber": 1,
+      "coreConceptTitle": "Matter and Its Interactions",
+      "coreConceptTitleZH": "物质及其相互作用",
+      "subConceptLetter": "C",
+      "subConceptTitle": "Nuclear Processes",
+      "subConceptTitleZH": "核过程",
+      "grade": "HS",
+      "bulletNumber": 2,
+      "content": "Spontaneous radioactive decays follow a characteristic exponential decay law. Nuclear lifetimes allow radiometric dating to be used to determine the ages of rocks and other materials.",
+      "contentZH": "自发放射性衰变遵循特征指数衰变定律。核寿命允许使用放射性测年法来确定岩石和其他材料的年龄。",
+      "relatedPEs": [
+        "HS-ESS1-5",
+        "HS-ESS1-1"
+      ]
+    },
+    {
+      "id": "DCI-PS2.A-K-1",
+      "domain": "PS",
+      "coreConceptNumber": 2,
+      "coreConceptTitle": "Motion and Stability: Forces and Interactions",
+      "coreConceptTitleZH": "运动与稳定性：力与相互作用",
+      "subConceptLetter": "A",
+      "subConceptTitle": "Forces and Motion",
+      "subConceptTitleZH": "力与运动",
+      "grade": "K",
+      "bulletNumber": 1,
+      "content": "Pushes and pulls can have different strengths and directions.",
+      "contentZH": "推和拉可以有不同的强度和方向。",
+      "relatedPEs": [
+        "K-PS2-2",
+        "K-PS2-1"
+      ]
+    },
+    {
+      "id": "DCI-PS2.A-K-2",
+      "domain": "PS",
+      "coreConceptNumber": 2,
+      "coreConceptTitle": "Motion and Stability: Forces and Interactions",
+      "coreConceptTitleZH": "运动与稳定性：力与相互作用",
+      "subConceptLetter": "A",
+      "subConceptTitle": "Forces and Motion",
+      "subConceptTitleZH": "力与运动",
+      "grade": "K",
+      "bulletNumber": 2,
+      "content": "Pushing or pulling on an object can change the speed or direction of its motion and can start or stop it.",
+      "contentZH": "推或拉物体可以改变其运动的速度或方向，并可以启动或停止它。",
+      "relatedPEs": [
+        "K-PS2-1",
+        "K-PS2-2"
+      ]
+    },
+    {
+      "id": "DCI-PS2.A-3-1",
+      "domain": "PS",
+      "coreConceptNumber": 2,
+      "coreConceptTitle": "Motion and Stability: Forces and Interactions",
+      "coreConceptTitleZH": "运动与稳定性：力与相互作用",
+      "subConceptLetter": "A",
+      "subConceptTitle": "Forces and Motion",
+      "subConceptTitleZH": "力与运动",
+      "grade": "3",
+      "bulletNumber": 1,
+      "content": "Each force acts on one particular object and has both strength and a direction. An object at rest typically has multiple forces acting on it, but they add to give zero net force on the object. Forces that do not sum to zero can cause changes in the object’s speed or direction of motion.",
+      "contentZH": "每一种力都作用在一个特定的物体上，并且具有强度和方向。静止的物体通常有多个力作用在其上，但它们相加后使物体上的净力为零。总和不为零的力可能会导致物体的速度或运动方向发生变化。",
+      "relatedPEs": [
+        "3-PS2-1"
+      ]
+    },
+    {
+      "id": "DCI-PS2.A-3-2",
+      "domain": "PS",
+      "coreConceptNumber": 2,
+      "coreConceptTitle": "Motion and Stability: Forces and Interactions",
+      "coreConceptTitleZH": "运动与稳定性：力与相互作用",
+      "subConceptLetter": "A",
+      "subConceptTitle": "Forces and Motion",
+      "subConceptTitleZH": "力与运动",
+      "grade": "3",
+      "bulletNumber": 2,
+      "content": "The patterns of an object’s motion in various situations can be observed and measured; when that past motion exhibits a regular pattern, future motion can be predicted from it.",
+      "contentZH": "可以观察和测量物体在各种情况下的运动模式；当过去的运动呈现出规则模式时，可以从中预测未来的运动。",
+      "relatedPEs": [
+        "3-PS2-2"
+      ]
+    },
+    {
+      "id": "DCI-PS2.A-MS-1",
+      "domain": "PS",
+      "coreConceptNumber": 2,
+      "coreConceptTitle": "Motion and Stability: Forces and Interactions",
+      "coreConceptTitleZH": "运动与稳定性：力与相互作用",
+      "subConceptLetter": "A",
+      "subConceptTitle": "Forces and Motion",
+      "subConceptTitleZH": "力与运动",
+      "grade": "MS",
+      "bulletNumber": 1,
+      "content": "For any pair of interacting objects, the force exerted by the first object on the second object is equal in strength to the force that the second object exerts on the first, but in the opposite direction (Newton’s third law).",
+      "contentZH": "对于任何一对相互作用的物体，第一个物体对第二个物体施加的力的强度等于第二个物体对第一个物体施加的力，但方向相反（牛顿第三定律）。",
+      "relatedPEs": [
+        "MS-PS2-1"
+      ]
+    },
+    {
+      "id": "DCI-PS2.A-MS-2",
+      "domain": "PS",
+      "coreConceptNumber": 2,
+      "coreConceptTitle": "Motion and Stability: Forces and Interactions",
+      "coreConceptTitleZH": "运动与稳定性：力与相互作用",
+      "subConceptLetter": "A",
+      "subConceptTitle": "Forces and Motion",
+      "subConceptTitleZH": "力与运动",
+      "grade": "MS",
+      "bulletNumber": 2,
+      "content": "The motion of an object is determined by the sum of the forces acting on it; if the total force on the object is not zero, its motion will change. The greater the mass of the object, the greater the force needed to achieve the same change in motion. For any given object, a larger force causes a larger change in motion.",
+      "contentZH": "物体的运动由作用在其上的力的总和决定；如果物体上的总力不为零，它的运动就会改变。物体的质量越大，达到相同运动变化所需的力就越大。对于任何给定的物体，较大的力会导致较大的运动变化。",
+      "relatedPEs": [
+        "MS-PS2-2"
+      ]
+    },
+    {
+      "id": "DCI-PS2.A-HS-1",
+      "domain": "PS",
+      "coreConceptNumber": 2,
+      "coreConceptTitle": "Motion and Stability: Forces and Interactions",
+      "coreConceptTitleZH": "运动与稳定性：力与相互作用",
+      "subConceptLetter": "A",
+      "subConceptTitle": "Forces and Motion",
+      "subConceptTitleZH": "力与运动",
+      "grade": "HS",
+      "bulletNumber": 1,
+      "content": "Newton’s second law accurately predicts changes in the motion of macroscopic objects.",
+      "contentZH": "牛顿第二定律准确地预测了宏观物体运动的变化。",
+      "relatedPEs": [
+        "HS-PS2-1"
+      ]
+    },
+    {
+      "id": "DCI-PS2.A-HS-2",
+      "domain": "PS",
+      "coreConceptNumber": 2,
+      "coreConceptTitle": "Motion and Stability: Forces and Interactions",
+      "coreConceptTitleZH": "运动与稳定性：力与相互作用",
+      "subConceptLetter": "A",
+      "subConceptTitle": "Forces and Motion",
+      "subConceptTitleZH": "力与运动",
+      "grade": "HS",
+      "bulletNumber": 2,
+      "content": "Momentum is defined for a particular frame of reference; it is the mass times the velocity of the object.",
+      "contentZH": "动量是针对特定的参考系定义的；它是物体的质量乘以速度。",
+      "relatedPEs": [
+        "HS-PS2-2"
+      ]
+    },
+    {
+      "id": "DCI-PS2.A-HS-3",
+      "domain": "PS",
+      "coreConceptNumber": 2,
+      "coreConceptTitle": "Motion and Stability: Forces and Interactions",
+      "coreConceptTitleZH": "运动与稳定性：力与相互作用",
+      "subConceptLetter": "A",
+      "subConceptTitle": "Forces and Motion",
+      "subConceptTitleZH": "力与运动",
+      "grade": "HS",
+      "bulletNumber": 3,
+      "content": "If a system interacts with objects outside itself, the total momentum of the system can change; however, any such change is balanced by changes in the momentum of objects outside the system.",
+      "contentZH": "如果一个系统与外部物体相互作用，系统的总动量就会发生变化；然而，任何此类变化都会被系统外部物体动量的变化所平衡。",
+      "relatedPEs": [
+        "HS-PS2-2",
+        "HS-PS2-3"
+      ]
+    },
+    {
+      "id": "DCI-PS2.B-K-1",
+      "domain": "PS",
+      "coreConceptNumber": 2,
+      "coreConceptTitle": "Motion and Stability: Forces and Interactions",
+      "coreConceptTitleZH": "运动与稳定性：力与相互作用",
+      "subConceptLetter": "B",
+      "subConceptTitle": "Types of Interactions",
+      "subConceptTitleZH": "相互作用的类型",
+      "grade": "K",
+      "bulletNumber": 1,
+      "content": "When objects touch or collide, they push on one another and can change motion.",
+      "contentZH": "当物体接触或碰撞时，它们会相互推动并改变运动。",
+      "relatedPEs": [
+        "K-PS2-1"
+      ]
+    },
+    {
+      "id": "DCI-PS2.B-3-1",
+      "domain": "PS",
+      "coreConceptNumber": 2,
+      "coreConceptTitle": "Motion and Stability: Forces and Interactions",
+      "coreConceptTitleZH": "运动与稳定性：力与相互作用",
+      "subConceptLetter": "B",
+      "subConceptTitle": "Types of Interactions",
+      "subConceptTitleZH": "相互作用的类型",
+      "grade": "3",
+      "bulletNumber": 1,
+      "content": "Objects in contact exert forces on each other.",
+      "contentZH": "接触的物体相互施加力。",
+      "relatedPEs": [
+        "3-PS2-1"
+      ]
+    },
+    {
+      "id": "DCI-PS2.B-3-2",
+      "domain": "PS",
+      "coreConceptNumber": 2,
+      "coreConceptTitle": "Motion and Stability: Forces and Interactions",
+      "coreConceptTitleZH": "运动与稳定性：力与相互作用",
+      "subConceptLetter": "B",
+      "subConceptTitle": "Types of Interactions",
+      "subConceptTitleZH": "相互作用的类型",
+      "grade": "3",
+      "bulletNumber": 2,
+      "content": "Electric, and magnetic forces between a pair of objects do not require that the objects be in contact. The sizes of the forces in each situation depend on the properties of the objects and their distances apart and, for forces between two magnets, on their orientation relative to each other.",
+      "contentZH": "一对物体之间的电力和磁力不需要物体接触。每种情况下力的大小取决于物体的特性和它们之间的距离，对于两个磁铁之间的力，取决于它们相对于彼此的方向。",
+      "relatedPEs": [
+        "3-PS2-3",
+        "3-PS2-4"
+      ]
+    },
+    {
+      "id": "DCI-PS2.B-5-1",
+      "domain": "PS",
+      "coreConceptNumber": 2,
+      "coreConceptTitle": "Motion and Stability: Forces and Interactions",
+      "coreConceptTitleZH": "运动与稳定性：力与相互作用",
+      "subConceptLetter": "B",
+      "subConceptTitle": "Types of Interactions",
+      "subConceptTitleZH": "相互作用的类型",
+      "grade": "5",
+      "bulletNumber": 1,
+      "content": "The gravitational force of Earth acting on an object near Earth’s surface pulls that object toward the planet’s center.",
+      "contentZH": "作用在地球表面附近物体上的地球引力将该物体拉向地球中心。",
+      "relatedPEs": [
+        "5-PS2-1"
+      ]
+    },
+    {
+      "id": "DCI-PS2.B-MS-1",
+      "domain": "PS",
+      "coreConceptNumber": 2,
+      "coreConceptTitle": "Motion and Stability: Forces and Interactions",
+      "coreConceptTitleZH": "运动与稳定性：力与相互作用",
+      "subConceptLetter": "B",
+      "subConceptTitle": "Types of Interactions",
+      "subConceptTitleZH": "相互作用的类型",
+      "grade": "MS",
+      "bulletNumber": 1,
+      "content": "Electric and magnetic (electromagnetic) forces can be attractive or repulsive, and their sizes depend on the magnitudes of the charges, currents, or magnetic strengths involved and on the distances between the interacting objects.",
+      "contentZH": "电力和磁力（电磁）力可以是吸引力或排斥力，它们的大小取决于所涉及的电荷、电流或磁场强度的大小以及相互作用的物体之间的距离。",
+      "relatedPEs": [
+        "MS-PS2-3"
+      ]
+    },
+    {
+      "id": "DCI-PS2.B-MS-2",
+      "domain": "PS",
+      "coreConceptNumber": 2,
+      "coreConceptTitle": "Motion and Stability: Forces and Interactions",
+      "coreConceptTitleZH": "运动与稳定性：力与相互作用",
+      "subConceptLetter": "B",
+      "subConceptTitle": "Types of Interactions",
+      "subConceptTitleZH": "相互作用的类型",
+      "grade": "MS",
+      "bulletNumber": 2,
+      "content": "Gravitational forces are always attractive. There is a gravitational force between any two masses, but it is very small except when one or both of the objects have large mass—e.g., Earth and the sun.",
+      "contentZH": "万有引力总是具有吸引力。任何两个质量之间都存在引力，但引力非常小，除非其中一个或两个物体具有较大质量（例如地球和太阳）。",
+      "relatedPEs": [
+        "MS-PS2-4"
+      ]
+    },
+    {
+      "id": "DCI-PS2.B-MS-3",
+      "domain": "PS",
+      "coreConceptNumber": 2,
+      "coreConceptTitle": "Motion and Stability: Forces and Interactions",
+      "coreConceptTitleZH": "运动与稳定性：力与相互作用",
+      "subConceptLetter": "B",
+      "subConceptTitle": "Types of Interactions",
+      "subConceptTitleZH": "相互作用的类型",
+      "grade": "MS",
+      "bulletNumber": 3,
+      "content": "Forces that act at a distance (electric, magnetic, and gravitational) can be explained by fields that extend through space and can be mapped by their effect on a test object (a charged object, or a ball, respectively).",
+      "contentZH": "远距离作用的力（电力、磁力和重力）可以用穿过空间的场来解释，并且可以通过它们对测试对象（分别是带电物体或球）的影响来映射。",
+      "relatedPEs": [
+        "MS-PS2-5"
+      ]
+    },
+    {
+      "id": "DCI-PS2.B-HS-1",
+      "domain": "PS",
+      "coreConceptNumber": 2,
+      "coreConceptTitle": "Motion and Stability: Forces and Interactions",
+      "coreConceptTitleZH": "运动与稳定性：力与相互作用",
+      "subConceptLetter": "B",
+      "subConceptTitle": "Types of Interactions",
+      "subConceptTitleZH": "相互作用的类型",
+      "grade": "HS",
+      "bulletNumber": 1,
+      "content": "Attraction and repulsion between electric charges at the atomic scale explain the structure, properties, and transformations of matter, as well as the contact forces between material objects.",
+      "contentZH": "原子尺度上电荷之间的吸引力和排斥力解释了物质的结构、性质和转变，以及物质对象之间的接触力。",
+      "relatedPEs": [
+        "HS-PS1-1",
+        "HS-PS1-3"
+      ]
+    },
+    {
+      "id": "DCI-PS2.B-HS-2",
+      "domain": "PS",
+      "coreConceptNumber": 2,
+      "coreConceptTitle": "Motion and Stability: Forces and Interactions",
+      "coreConceptTitleZH": "运动与稳定性：力与相互作用",
+      "subConceptLetter": "B",
+      "subConceptTitle": "Types of Interactions",
+      "subConceptTitleZH": "相互作用的类型",
+      "grade": "HS",
+      "bulletNumber": 2,
+      "content": "Newton’s law of universal gravitation and Coulomb’s law provide the mathematical models to describe and predict the effects of gravitational and electrostatic forces between distant objects.",
+      "contentZH": "牛顿万有引力定律和库仑定律提供了数学模型来描述和预测遥远物体之间的引力和静电力的影响。",
+      "relatedPEs": [
+        "HS-PS2-4"
+      ]
+    },
+    {
+      "id": "DCI-PS2.B-HS-3",
+      "domain": "PS",
+      "coreConceptNumber": 2,
+      "coreConceptTitle": "Motion and Stability: Forces and Interactions",
+      "coreConceptTitleZH": "运动与稳定性：力与相互作用",
+      "subConceptLetter": "B",
+      "subConceptTitle": "Types of Interactions",
+      "subConceptTitleZH": "相互作用的类型",
+      "grade": "HS",
+      "bulletNumber": 3,
+      "content": "Forces at a distance are explained by fields (gravitational, electric, and magnetic) permeating space that can transfer energy through space. Magnets or electric currents cause magnetic fields; electric charges or changing magnetic fields cause electric fields.",
+      "contentZH": "远距离力可以用渗透空间的场（引力、电场和磁力）来解释，这些场可以通过空间传递能量。磁铁或电流会产生磁场；电荷或变化的磁场会产生电场。",
+      "relatedPEs": [
+        "HS-PS2-4",
+        "HS-PS2-5"
+      ]
+    },
+    {
+      "id": "DCI-PS2.B-HS-4",
+      "domain": "PS",
+      "coreConceptNumber": 2,
+      "coreConceptTitle": "Motion and Stability: Forces and Interactions",
+      "coreConceptTitleZH": "运动与稳定性：力与相互作用",
+      "subConceptLetter": "B",
+      "subConceptTitle": "Types of Interactions",
+      "subConceptTitleZH": "相互作用的类型",
+      "grade": "HS",
+      "bulletNumber": 4,
+      "content": "Attraction and repulsion between electric charges at the atomic scale explain the structure, properties, and transformations of matter, as well as the contact forces between material objects.",
+      "contentZH": "原子尺度上电荷之间的吸引力和排斥力解释了物质的结构、性质和转变，以及物质对象之间的接触力。",
+      "relatedPEs": [
+        "HS-PS2-6",
+        "HS-PS1-1",
+        "HS-PS1-3"
+      ]
+    },
+    {
+      "id": "DCI-PS3.A-4-1",
+      "domain": "PS",
+      "coreConceptNumber": 3,
+      "coreConceptTitle": "Energy",
+      "coreConceptTitleZH": "能量",
+      "subConceptLetter": "A",
+      "subConceptTitle": "Definitions of Energy",
+      "subConceptTitleZH": "能量的定义",
+      "grade": "4",
+      "bulletNumber": 1,
+      "content": "The faster a given object is moving, the more energy it possesses.",
+      "contentZH": "给定物体运动得越快，它拥有的能量就越多。",
+      "relatedPEs": [
+        "4-PS3-1"
+      ]
+    },
+    {
+      "id": "DCI-PS3.A-4-2",
+      "domain": "PS",
+      "coreConceptNumber": 3,
+      "coreConceptTitle": "Energy",
+      "coreConceptTitleZH": "能量",
+      "subConceptLetter": "A",
+      "subConceptTitle": "Definitions of Energy",
+      "subConceptTitleZH": "能量的定义",
+      "grade": "4",
+      "bulletNumber": 2,
+      "content": "Energy can be moved from place to place by moving objects or through sound, light, or electric currents.",
+      "contentZH": "能量可以通过移动物体或通过声音、光或电流从一个地方转移到另一个地方。",
+      "relatedPEs": [
+        "4-PS3-2",
+        "4-PS3-3"
+      ]
+    },
+    {
+      "id": "DCI-PS3.A-MS-1",
+      "domain": "PS",
+      "coreConceptNumber": 3,
+      "coreConceptTitle": "Energy",
+      "coreConceptTitleZH": "能量",
+      "subConceptLetter": "A",
+      "subConceptTitle": "Definitions of Energy",
+      "subConceptTitleZH": "能量的定义",
+      "grade": "MS",
+      "bulletNumber": 1,
+      "content": "Motion energy is properly called kinetic energy; it is proportional to the mass of the moving object and grows with the square of its speed.",
+      "contentZH": "运动能量正确地称为动能；它与运动物体的质量成正比，并与其速度的平方成正比。",
+      "relatedPEs": [
+        "MS-PS3-1"
+      ]
+    },
+    {
+      "id": "DCI-PS3.A-MS-2",
+      "domain": "PS",
+      "coreConceptNumber": 3,
+      "coreConceptTitle": "Energy",
+      "coreConceptTitleZH": "能量",
+      "subConceptLetter": "A",
+      "subConceptTitle": "Definitions of Energy",
+      "subConceptTitleZH": "能量的定义",
+      "grade": "MS",
+      "bulletNumber": 2,
+      "content": "A system of objects may also contain stored (potential) energy, depending on their relative positions.",
+      "contentZH": "物体系统还可能包含存储的（潜在的）能量，具体取决于它们的相对位置。",
+      "relatedPEs": [
+        "MS-PS3-2"
+      ]
+    },
+    {
+      "id": "DCI-PS3.A-MS-3",
+      "domain": "PS",
+      "coreConceptNumber": 3,
+      "coreConceptTitle": "Energy",
+      "coreConceptTitleZH": "能量",
+      "subConceptLetter": "A",
+      "subConceptTitle": "Definitions of Energy",
+      "subConceptTitleZH": "能量的定义",
+      "grade": "MS",
+      "bulletNumber": 3,
+      "content": "Temperature is a measure of the average kinetic energy of particles of matter. The relationship between the temperature and the total energy of a system depends on the types, states, and amounts of matter present.",
+      "contentZH": "温度是物质粒子平均动能的量度。系统的温度和总能量之间的关系取决于存在的物质的类型、状态和数量。",
+      "relatedPEs": [
+        "MS-PS3-3",
+        "MS-PS3-4"
+      ]
+    },
+    {
+      "id": "DCI-PS3.A-HS-1",
+      "domain": "PS",
+      "coreConceptNumber": 3,
+      "coreConceptTitle": "Energy",
+      "coreConceptTitleZH": "能量",
+      "subConceptLetter": "A",
+      "subConceptTitle": "Definitions of Energy",
+      "subConceptTitleZH": "能量的定义",
+      "grade": "HS",
+      "bulletNumber": 1,
+      "content": "“Electrical energy” may mean energy stored in a battery or energy transmitted by electric currents.",
+      "contentZH": "“电能”可以指存储在电池中的能量或通过电流传输的能量。",
+      "relatedPEs": [
+        "HS-PS2-5"
+      ]
+    },
+    {
+      "id": "DCI-PS3.A-HS-2",
+      "domain": "PS",
+      "coreConceptNumber": 3,
+      "coreConceptTitle": "Energy",
+      "coreConceptTitleZH": "能量",
+      "subConceptLetter": "A",
+      "subConceptTitle": "Definitions of Energy",
+      "subConceptTitleZH": "能量的定义",
+      "grade": "HS",
+      "bulletNumber": 2,
+      "content": "Energy is a quantitative property of a system that depends on the motion and interactions of matter and radiation within that system. That there is a single quantity called energy is due to the fact that a system’s total energy is conserved, even as, within the system, energy is continually transferred from one object to another and between its various possible forms.",
+      "contentZH": "能量是系统的定量属性，取决于该系统内物质和辐射的运动和相互作用。之所以有一个称为能量的量，是因为系统的总能量是守恒的，即使在系统内，能量不断地从一个物体转移到另一个物体，并在其各种可能的形式之间转移。",
+      "relatedPEs": [
+        "HS-PS3-2"
+      ]
+    },
+    {
+      "id": "DCI-PS3.A-HS-3",
+      "domain": "PS",
+      "coreConceptNumber": 3,
+      "coreConceptTitle": "Energy",
+      "coreConceptTitleZH": "能量",
+      "subConceptLetter": "A",
+      "subConceptTitle": "Definitions of Energy",
+      "subConceptTitleZH": "能量的定义",
+      "grade": "HS",
+      "bulletNumber": 3,
+      "content": "At the macroscopic scale, energy manifests itself in multiple ways, such as in motion, sound, light, and thermal energy.",
+      "contentZH": "在宏观尺度上，能量以多种方式表现出来，例如运动、声音、光和热能。",
+      "relatedPEs": [
+        "HS-PS3-3"
+      ]
+    },
+    {
+      "id": "DCI-PS3.A-HS-4",
+      "domain": "PS",
+      "coreConceptNumber": 3,
+      "coreConceptTitle": "Energy",
+      "coreConceptTitleZH": "能量",
+      "subConceptLetter": "A",
+      "subConceptTitle": "Definitions of Energy",
+      "subConceptTitleZH": "能量的定义",
+      "grade": "HS",
+      "bulletNumber": 4,
+      "content": "These relationships are better understood at the microscopic scale, at which all of the different manifestations of energy can be modeled as a combination of energy associated with the motion of particles and energy associated with the configuration (relative position of the particles). In some cases the relative position energy can be thought of as stored in fields (which mediate interactions between particles). This last concept includes radiation, a phenomenon in which energy stored in fields moves across space.",
+      "contentZH": "这些关系在微观尺度上可以得到更好的理解，在微观尺度上，所有不同的能量表现形式都可以建模为与粒子运动相关的能量和与构型（粒子的相对位置）相关的能量的组合。在某些情况下，相对位置能量可以被认为存储在场中（介导粒子之间的相互作用）。最后一个概念包括辐射，这是一种存储在场中的能量在空间中移动的现象。",
+      "relatedPEs": [
+        "HS-PS3-2"
+      ]
+    },
+    {
+      "id": "DCI-PS3.B-K-1",
+      "domain": "PS",
+      "coreConceptNumber": 3,
+      "coreConceptTitle": "Energy",
+      "coreConceptTitleZH": "能量",
+      "subConceptLetter": "B",
+      "subConceptTitle": "Conservation of Energy and Energy Transfer",
+      "subConceptTitleZH": "能量守恒与能量传递",
+      "grade": "K",
+      "bulletNumber": 1,
+      "content": "Sunlight warms Earth’s surface.",
+      "contentZH": "阳光使地球表面变暖。",
+      "relatedPEs": [
+        "K-PS3-1",
+        "K-PS3-2"
+      ]
+    },
+    {
+      "id": "DCI-PS3.B-4-1",
+      "domain": "PS",
+      "coreConceptNumber": 3,
+      "coreConceptTitle": "Energy",
+      "coreConceptTitleZH": "能量",
+      "subConceptLetter": "B",
+      "subConceptTitle": "Conservation of Energy and Energy Transfer",
+      "subConceptTitleZH": "能量守恒与能量传递",
+      "grade": "4",
+      "bulletNumber": 1,
+      "content": "Energy is present whenever there are moving objects, sound, light, or heat. When objects collide, energy can be transferred from one object to another, thereby changing their motion. In such collisions, some energy is typically also transferred to the surrounding air; as a result, the air gets heated and sound is produced.",
+      "contentZH": "只要有移动的物体、声音、光或热，就会存在能量。当物体碰撞时，能量可以从一个物体转移到另一个物体，从而改变它们的运动。在这种碰撞中，一些能量通常也会转移到周围的空气中。结果，空气被加热并产生声音。",
+      "relatedPEs": [
+        "4-PS3-2",
+        "4-PS3-3"
+      ]
+    },
+    {
+      "id": "DCI-PS3.B-4-2",
+      "domain": "PS",
+      "coreConceptNumber": 3,
+      "coreConceptTitle": "Energy",
+      "coreConceptTitleZH": "能量",
+      "subConceptLetter": "B",
+      "subConceptTitle": "Conservation of Energy and Energy Transfer",
+      "subConceptTitleZH": "能量守恒与能量传递",
+      "grade": "4",
+      "bulletNumber": 2,
+      "content": "Light also transfers energy from place to place.",
+      "contentZH": "光还将能量从一个地方转移到另一个地方。",
+      "relatedPEs": [
+        "4-PS3-2"
+      ]
+    },
+    {
+      "id": "DCI-PS3.B-4-3",
+      "domain": "PS",
+      "coreConceptNumber": 3,
+      "coreConceptTitle": "Energy",
+      "coreConceptTitleZH": "能量",
+      "subConceptLetter": "B",
+      "subConceptTitle": "Conservation of Energy and Energy Transfer",
+      "subConceptTitleZH": "能量守恒与能量传递",
+      "grade": "4",
+      "bulletNumber": 3,
+      "content": "Energy can also be transferred from place to place by electric currents, which can then be used locally to produce motion, sound, heat, or light. The currents may have been produced to begin with by transforming the energy of motion into electrical energy.",
+      "contentZH": "能量也可以通过电流从一个地方转移到另一个地方，然后可以在当地使用以产生运动、声音、热量或光。电流可能是通过将运动能转化为电能而产生的。",
+      "relatedPEs": [
+        "4-PS3-2",
+        "4-PS3-4"
+      ]
+    },
+    {
+      "id": "DCI-PS3.B-MS-1",
+      "domain": "PS",
+      "coreConceptNumber": 3,
+      "coreConceptTitle": "Energy",
+      "coreConceptTitleZH": "能量",
+      "subConceptLetter": "B",
+      "subConceptTitle": "Conservation of Energy and Energy Transfer",
+      "subConceptTitleZH": "能量守恒与能量传递",
+      "grade": "MS",
+      "bulletNumber": 1,
+      "content": "When the motion energy of an object changes, there is inevitably some other change in energy at the same time.",
+      "contentZH": "当物体的运动能量发生变化时，不可避免地同时会出现其他一些能量的变化。",
+      "relatedPEs": [
+        "MS-PS3-5"
+      ]
+    },
+    {
+      "id": "DCI-PS3.B-MS-2",
+      "domain": "PS",
+      "coreConceptNumber": 3,
+      "coreConceptTitle": "Energy",
+      "coreConceptTitleZH": "能量",
+      "subConceptLetter": "B",
+      "subConceptTitle": "Conservation of Energy and Energy Transfer",
+      "subConceptTitleZH": "能量守恒与能量传递",
+      "grade": "MS",
+      "bulletNumber": 2,
+      "content": "The amount of energy transfer needed to change the temperature of a matter sample by a given amount depends on the nature of the matter, the size of the sample, and the environment.",
+      "contentZH": "将物质样本的温度改变给定量所需的能量转移量取决于物质的性质、样本的大小和环境。",
+      "relatedPEs": [
+        "MS-PS3-4"
+      ]
+    },
+    {
+      "id": "DCI-PS3.B-MS-3",
+      "domain": "PS",
+      "coreConceptNumber": 3,
+      "coreConceptTitle": "Energy",
+      "coreConceptTitleZH": "能量",
+      "subConceptLetter": "B",
+      "subConceptTitle": "Conservation of Energy and Energy Transfer",
+      "subConceptTitleZH": "能量守恒与能量传递",
+      "grade": "MS",
+      "bulletNumber": 3,
+      "content": "Energy is spontaneously transferred out of hotter regions or objects and into colder ones.",
+      "contentZH": "能量自发地从较热的区域或物体转移到较冷的区域或物体。",
+      "relatedPEs": [
+        "MS-PS3-3"
+      ]
+    },
+    {
+      "id": "DCI-PS3.B-HS-1",
+      "domain": "PS",
+      "coreConceptNumber": 3,
+      "coreConceptTitle": "Energy",
+      "coreConceptTitleZH": "能量",
+      "subConceptLetter": "B",
+      "subConceptTitle": "Conservation of Energy and Energy Transfer",
+      "subConceptTitleZH": "能量守恒与能量传递",
+      "grade": "HS",
+      "bulletNumber": 1,
+      "content": "Conservation of energy means that the total change of energy in any system is always equal to the total energy transferred into or out of the system.",
+      "contentZH": "能量守恒意味着任何系统中能量的总变化始终等于传入或传出系统的总能量。",
+      "relatedPEs": [
+        "HS-PS3-1"
+      ]
+    },
+    {
+      "id": "DCI-PS3.B-HS-2",
+      "domain": "PS",
+      "coreConceptNumber": 3,
+      "coreConceptTitle": "Energy",
+      "coreConceptTitleZH": "能量",
+      "subConceptLetter": "B",
+      "subConceptTitle": "Conservation of Energy and Energy Transfer",
+      "subConceptTitleZH": "能量守恒与能量传递",
+      "grade": "HS",
+      "bulletNumber": 2,
+      "content": "Energy cannot be created or destroyed, but it can be transported from one place to another and transferred between systems.",
+      "contentZH": "能量不能被创造或破坏，但它可以从一个地方传输到另一个地方并在系统之间转移。",
+      "relatedPEs": [
+        "HS-PS3-1",
+        "HS-PS3-4"
+      ]
+    },
+    {
+      "id": "DCI-PS3.B-HS-3",
+      "domain": "PS",
+      "coreConceptNumber": 3,
+      "coreConceptTitle": "Energy",
+      "coreConceptTitleZH": "能量",
+      "subConceptLetter": "B",
+      "subConceptTitle": "Conservation of Energy and Energy Transfer",
+      "subConceptTitleZH": "能量守恒与能量传递",
+      "grade": "HS",
+      "bulletNumber": 3,
+      "content": "Mathematical expressions, which quantify how the stored energy in a system depends on its configuration (e.g. relative positions of charged particles, compression of a spring) and how kinetic energy depends on mass and speed, allow the concept of conservation of energy to be used to predict and describe system behavior.",
+      "contentZH": "数学表达式量化了系统中存储的能量如何取决于其配置（例如带电粒子的相对位置、弹簧的压缩）以及动能如何取决于质量和速度，允许使用能量守恒的概念来预测和描述系统行为。",
+      "relatedPEs": [
+        "HS-PS3-1"
+      ]
+    },
+    {
+      "id": "DCI-PS3.B-HS-4",
+      "domain": "PS",
+      "coreConceptNumber": 3,
+      "coreConceptTitle": "Energy",
+      "coreConceptTitleZH": "能量",
+      "subConceptLetter": "B",
+      "subConceptTitle": "Conservation of Energy and Energy Transfer",
+      "subConceptTitleZH": "能量守恒与能量传递",
+      "grade": "HS",
+      "bulletNumber": 4,
+      "content": "The availability of energy limits what can occur in any system.",
+      "contentZH": "能量的可用性限制了任何系统中可能发生的事情。",
+      "relatedPEs": [
+        "HS-PS3-1"
+      ]
+    },
+    {
+      "id": "DCI-PS3.B-HS-5",
+      "domain": "PS",
+      "coreConceptNumber": 3,
+      "coreConceptTitle": "Energy",
+      "coreConceptTitleZH": "能量",
+      "subConceptLetter": "B",
+      "subConceptTitle": "Conservation of Energy and Energy Transfer",
+      "subConceptTitleZH": "能量守恒与能量传递",
+      "grade": "HS",
+      "bulletNumber": 5,
+      "content": "Uncontrolled systems always evolve toward more stable states— that is, toward more uniform energy distribution (e.g., water flows downhill, objects hotter than their surrounding environment cool down).",
+      "contentZH": "不受控制的系统总是朝着更稳定的状态发展，即朝着更均匀的能量分布发展（例如，水流向低处，比周围环境更热的物体冷却下来）。",
+      "relatedPEs": [
+        "HS-PS3-4"
+      ]
+    },
+    {
+      "id": "DCI-PS3.C-K-1",
+      "domain": "PS",
+      "coreConceptNumber": 3,
+      "coreConceptTitle": "Energy",
+      "coreConceptTitleZH": "能量",
+      "subConceptLetter": "C",
+      "subConceptTitle": "Relationship Between Energy and Forces",
+      "subConceptTitleZH": "能量与力的关系",
+      "grade": "K",
+      "bulletNumber": 1,
+      "content": "A bigger push or pull makes things speed up or slow down more quickly.",
+      "contentZH": "更大的推力或拉力会使事物加速或减慢得更快。",
+      "relatedPEs": [
+        "K-PS2-1"
+      ]
+    },
+    {
+      "id": "DCI-PS3.C-4-1",
+      "domain": "PS",
+      "coreConceptNumber": 3,
+      "coreConceptTitle": "Energy",
+      "coreConceptTitleZH": "能量",
+      "subConceptLetter": "C",
+      "subConceptTitle": "Relationship Between Energy and Forces",
+      "subConceptTitleZH": "能量与力的关系",
+      "grade": "4",
+      "bulletNumber": 1,
+      "content": "When objects collide, the contact forces transfer energy so as to change the objects’ motions.",
+      "contentZH": "当物体碰撞时，接触力会传递能量，从而改变物体的运动。",
+      "relatedPEs": [
+        "4-PS3-3"
+      ]
+    },
+    {
+      "id": "DCI-PS3.C-MS-1",
+      "domain": "PS",
+      "coreConceptNumber": 3,
+      "coreConceptTitle": "Energy",
+      "coreConceptTitleZH": "能量",
+      "subConceptLetter": "C",
+      "subConceptTitle": "Relationship Between Energy and Forces",
+      "subConceptTitleZH": "能量与力的关系",
+      "grade": "MS",
+      "bulletNumber": 1,
+      "content": "When two objects interact, each one exerts a force on the other that can cause energy to be transferred to or from the object.",
+      "contentZH": "当两个物体相互作用时，每个物体都会对另一个物体施加力，从而导致能量从物体传递到物体或从物体传递出去。",
+      "relatedPEs": [
+        "MS-PS3-2"
+      ]
+    },
+    {
+      "id": "DCI-PS3.C-HS-1",
+      "domain": "PS",
+      "coreConceptNumber": 3,
+      "coreConceptTitle": "Energy",
+      "coreConceptTitleZH": "能量",
+      "subConceptLetter": "C",
+      "subConceptTitle": "Relationship Between Energy and Forces",
+      "subConceptTitleZH": "能量与力的关系",
+      "grade": "HS",
+      "bulletNumber": 1,
+      "content": "When two objects interacting through a field change relative position, the energy stored in the field is changed.",
+      "contentZH": "当两个物体通过场相互作用改变相对位置时，场中存储的能量就会改变。",
+      "relatedPEs": [
+        "HS-PS3-5"
+      ]
+    },
+    {
+      "id": "DCI-PS3.D-4-1",
+      "domain": "PS",
+      "coreConceptNumber": 3,
+      "coreConceptTitle": "Energy",
+      "coreConceptTitleZH": "能量",
+      "subConceptLetter": "D",
+      "subConceptTitle": "Energy in Chemical Processes and Everyday Life",
+      "subConceptTitleZH": "化学过程与日常生活中的能量",
+      "grade": "4",
+      "bulletNumber": 1,
+      "content": "The expression “produce energy” typically refers to the conversion of stored energy into a desired form for practical use.",
+      "contentZH": "表述“产生能量”通常是指将存储的能量转换成实际使用所需的形式。",
+      "relatedPEs": [
+        "4-PS3-4"
+      ]
+    },
+    {
+      "id": "DCI-PS3.D-5-1",
+      "domain": "PS",
+      "coreConceptNumber": 3,
+      "coreConceptTitle": "Energy",
+      "coreConceptTitleZH": "能量",
+      "subConceptLetter": "D",
+      "subConceptTitle": "Energy in Chemical Processes and Everyday Life",
+      "subConceptTitleZH": "化学过程与日常生活中的能量",
+      "grade": "5",
+      "bulletNumber": 1,
+      "content": "The energy released [from] food was once energy from the sun that was captured by plants in the chemical process that forms plant matter (from air and water).",
+      "contentZH": "食物释放的能量曾经是来自太阳的能量，植物在形成植物物质（来自空气和水）的化学过程中捕获这些能量。",
+      "relatedPEs": [
+        "5-PS3-1"
+      ]
+    },
+    {
+      "id": "DCI-PS3.D-MS-1",
+      "domain": "PS",
+      "coreConceptNumber": 3,
+      "coreConceptTitle": "Energy",
+      "coreConceptTitleZH": "能量",
+      "subConceptLetter": "D",
+      "subConceptTitle": "Energy in Chemical Processes and Everyday Life",
+      "subConceptTitleZH": "化学过程与日常生活中的能量",
+      "grade": "MS",
+      "bulletNumber": 1,
+      "content": "The chemical reaction by which plants produce complex food molecules (sugars) requires an energy input (i.e., from sunlight) to occur. In this reaction, carbon dioxide and water combine to form carbon-based organic molecules and release oxygen.",
+      "contentZH": "植物产生复杂食物分子（糖）的化学反应需要能量输入（即来自阳光）才能发生。在此反应中，二氧化碳和水结合形成碳基有机分子并释放氧气。",
+      "relatedPEs": [
+        "MS-LS1-6"
+      ]
+    },
+    {
+      "id": "DCI-PS3.D-MS-2",
+      "domain": "PS",
+      "coreConceptNumber": 3,
+      "coreConceptTitle": "Energy",
+      "coreConceptTitleZH": "能量",
+      "subConceptLetter": "D",
+      "subConceptTitle": "Energy in Chemical Processes and Everyday Life",
+      "subConceptTitleZH": "化学过程与日常生活中的能量",
+      "grade": "MS",
+      "bulletNumber": 2,
+      "content": "Cellular respiration in plants and animals involve chemical reactions with oxygen that release stored energy. In these processes, complex molecules containing carbon react with oxygen to produce carbon dioxide and other materials.",
+      "contentZH": "植物和动物的细胞呼吸涉及与氧气的化学反应，释放储存的能量。在这些过程中，含碳的复杂分子与氧气发生反应，产生二氧化碳和其他物质。",
+      "relatedPEs": [
+        "MS-LS1-7"
+      ]
+    },
+    {
+      "id": "DCI-PS3.D-HS-1",
+      "domain": "PS",
+      "coreConceptNumber": 3,
+      "coreConceptTitle": "Energy",
+      "coreConceptTitleZH": "能量",
+      "subConceptLetter": "D",
+      "subConceptTitle": "Energy in Chemical Processes",
+      "subConceptTitleZH": "化学过程中的能量",
+      "grade": "HS",
+      "bulletNumber": 1,
+      "content": "Solar cells are human-made devices that likewise capture the sun’s energy and produce electrical energy.",
+      "contentZH": "太阳能电池是人造设备，同样可以捕获太阳能并产生电能。",
+      "relatedPEs": [
+        "HS-PS4-5"
+      ]
+    },
+    {
+      "id": "DCI-PS3.D-HS-2",
+      "domain": "PS",
+      "coreConceptNumber": 3,
+      "coreConceptTitle": "Energy",
+      "coreConceptTitleZH": "能量",
+      "subConceptLetter": "D",
+      "subConceptTitle": "Energy in Chemical Processes",
+      "subConceptTitleZH": "化学过程中的能量",
+      "grade": "HS",
+      "bulletNumber": 2,
+      "content": "Most scientific knowledge is quite durable, but is, in through the complex chemical process known as photosynthesis. principle, subject to change based on new evidence and/or reinterpretation of existing evidence. (HSETS1.B: Developing Possible Solutions LS2-2)",
+      "contentZH": "大多数科学知识都是相当持久的，但它们是通过称为光合作用的复杂化学过程实现的。原则，可能会根据新证据和/或现有证据的重新解释而发生变化。 （HSETS1.B：开发可能的解决方案 LS2-2）",
+      "relatedPEs": [
+        "HS-LS2-5",
+        "HS-LS2-3"
+      ]
+    },
+    {
+      "id": "DCI-PS3.D-HS-3",
+      "domain": "PS",
+      "coreConceptNumber": 3,
+      "coreConceptTitle": "Energy",
+      "coreConceptTitleZH": "能量",
+      "subConceptLetter": "D",
+      "subConceptTitle": "Energy in Chemical Processes",
+      "subConceptTitleZH": "化学过程中的能量",
+      "grade": "HS",
+      "bulletNumber": 3,
+      "content": "Scientific argumentation is a mode of logical range of constraints including cost, safety, reliability and aesthetics discourse used to clarify the strength of relationships and to consider social, cultural and environmental impacts. between ideas and evidence that may result in revision of an explanation.",
+      "contentZH": "科学论证是一种限制逻辑范围的模式，包括成本、安全性、可靠性和美学话语，用于阐明关系的强度并考虑社会、文化和环境影响。可能导致解释修改的想法和证据之间的关系。",
+      "relatedPEs": [
+        "HS-LS2-7",
+        "HS-LS2-6",
+        "HS-LS2-8"
+      ]
+    },
+    {
+      "id": "DCI-PS3.D-HS-4",
+      "domain": "PS",
+      "coreConceptNumber": 3,
+      "coreConceptTitle": "Energy",
+      "coreConceptTitleZH": "能量",
+      "subConceptLetter": "D",
+      "subConceptTitle": "Energy in Chemical Processes",
+      "subConceptTitleZH": "化学过程中的能量",
+      "grade": "HS",
+      "bulletNumber": 4,
+      "content": "Atoms of each element emit and absorb characteristic been repeatedly confirmed through observation and frequencies of light. These characteristics allow experiment and the science community validates each theory identification of the presence of an element, even in before it is accepted. If new evidence is discovered that the microscopic quantities. theory does not accommodate, the theory is generally modified in light of this new evidence.",
+      "contentZH": "各元素的原子的发射和吸收特性通过观察和光的频率被反复确认。这些特征允许实验和科学界验证元素存在的每个理论识别，甚至在它被接受之前。如果发现新的证据，那就是微观量。理论不适应，该理论通常会根据新的证据进行修改。",
+      "relatedPEs": [
+        "HS-ESS1-2",
+        "HS-ESS1-6"
+      ]
+    },
+    {
+      "id": "DCI-PS3.D-HS-5",
+      "domain": "PS",
+      "coreConceptNumber": 3,
+      "coreConceptTitle": "Energy",
+      "coreConceptTitleZH": "能量",
+      "subConceptLetter": "D",
+      "subConceptTitle": "Energy in Chemical Processes",
+      "subConceptTitleZH": "化学过程中的能量",
+      "grade": "HS",
+      "bulletNumber": 5,
+      "content": "Models, mechanisms, and explanations collectively serve as tools in the development of a scientific theory.",
+      "contentZH": "模型、机制和解释共同充当科学理论发展的工具。",
+      "relatedPEs": [
+        "HS-ESS1-6"
+      ]
+    },
+    {
+      "id": "DCI-PS4.A-1-1",
+      "domain": "PS",
+      "coreConceptNumber": 4,
+      "coreConceptTitle": "Waves and Their Applications in Technologies for Information Transfer",
+      "coreConceptTitleZH": "波及其在信息传递技术中的应用",
+      "subConceptLetter": "A",
+      "subConceptTitle": "Wave Properties",
+      "subConceptTitleZH": "波的性质",
+      "grade": "1",
+      "bulletNumber": 1,
+      "content": "Sound can make matter vibrate, and vibrating matter can make sound.",
+      "contentZH": "声音可以使物质振动，振动的物质可以发出声音。",
+      "relatedPEs": [
+        "1-PS4-1"
+      ]
+    },
+    {
+      "id": "DCI-PS4.A-4-1",
+      "domain": "PS",
+      "coreConceptNumber": 4,
+      "coreConceptTitle": "Waves and Their Applications in Technologies for Information Transfer",
+      "coreConceptTitleZH": "波及其在信息传递技术中的应用",
+      "subConceptLetter": "A",
+      "subConceptTitle": "Wave Properties",
+      "subConceptTitleZH": "波的性质",
+      "grade": "4",
+      "bulletNumber": 1,
+      "content": "Waves, which are regular patterns of motion, can be made in water by disturbing the surface. When waves move across the surface of deep water, the water goes up and down in place; there is no net motion in the direction of the wave except when the water meets a beach. (Note: This grade band endpoint was moved from K–2.)",
+      "contentZH": "波浪是一种有规律的运动模式，可以通过扰动水面在水中产生。当波浪穿过深水表面时，水会原地上下移动；除非水与海滩相遇，否则沿波浪方向没有净运动。 （注：该年级带端点已从 K–2 移至。）",
+      "relatedPEs": [
+        "4-PS4-1"
+      ]
+    },
+    {
+      "id": "DCI-PS4.A-4-2",
+      "domain": "PS",
+      "coreConceptNumber": 4,
+      "coreConceptTitle": "Waves and Their Applications in Technologies for Information Transfer",
+      "coreConceptTitleZH": "波及其在信息传递技术中的应用",
+      "subConceptLetter": "A",
+      "subConceptTitle": "Wave Properties",
+      "subConceptTitleZH": "波的性质",
+      "grade": "4",
+      "bulletNumber": 2,
+      "content": "Waves of the same type can differ in amplitude (height of the wave) and wavelength (spacing between wave peaks).",
+      "contentZH": "相同类型的波在振幅（波的高度）和波长（波峰之间的间距）上可能有所不同。",
+      "relatedPEs": [
+        "4-PS4-1"
+      ]
+    },
+    {
+      "id": "DCI-PS4.A-MS-1",
+      "domain": "PS",
+      "coreConceptNumber": 4,
+      "coreConceptTitle": "Waves and Their Applications in Technologies for Information Transfer",
+      "coreConceptTitleZH": "波及其在信息传递技术中的应用",
+      "subConceptLetter": "A",
+      "subConceptTitle": "Wave Properties",
+      "subConceptTitleZH": "波的性质",
+      "grade": "MS",
+      "bulletNumber": 1,
+      "content": "A simple wave has a repeating pattern with a specific wavelength, frequency, and amplitude.",
+      "contentZH": "简单波具有特定波长、频率和振幅的重复模式。",
+      "relatedPEs": [
+        "MS-PS4-1"
+      ]
+    },
+    {
+      "id": "DCI-PS4.A-MS-2",
+      "domain": "PS",
+      "coreConceptNumber": 4,
+      "coreConceptTitle": "Waves and Their Applications in Technologies for Information Transfer",
+      "coreConceptTitleZH": "波及其在信息传递技术中的应用",
+      "subConceptLetter": "A",
+      "subConceptTitle": "Wave Properties",
+      "subConceptTitleZH": "波的性质",
+      "grade": "MS",
+      "bulletNumber": 2,
+      "content": "A sound wave needs a medium through which it is transmitted.",
+      "contentZH": "声波需要通过其传播的介质。",
+      "relatedPEs": [
+        "MS-PS4-2"
+      ]
+    },
+    {
+      "id": "DCI-PS4.A-HS-1",
+      "domain": "PS",
+      "coreConceptNumber": 4,
+      "coreConceptTitle": "Waves and Their Applications in Technologies for Information Transfer",
+      "coreConceptTitleZH": "波及其在信息传递技术中的应用",
+      "subConceptLetter": "A",
+      "subConceptTitle": "Wave Properties",
+      "subConceptTitleZH": "波的性质",
+      "grade": "HS",
+      "bulletNumber": 1,
+      "content": "The wavelength and frequency of a wave are related to one another by the speed of travel of the wave, which depends on the type of wave and the medium through which it is passing.",
+      "contentZH": "波的波长和频率通过波的传播速度相互关联，这取决于波的类型及其所通过的介质。",
+      "relatedPEs": [
+        "HS-PS4-1"
+      ]
+    },
+    {
+      "id": "DCI-PS4.A-HS-2",
+      "domain": "PS",
+      "coreConceptNumber": 4,
+      "coreConceptTitle": "Waves and Their Applications in Technologies for Information Transfer",
+      "coreConceptTitleZH": "波及其在信息传递技术中的应用",
+      "subConceptLetter": "A",
+      "subConceptTitle": "Wave Properties",
+      "subConceptTitleZH": "波的性质",
+      "grade": "HS",
+      "bulletNumber": 2,
+      "content": "Information can be digitized (e.g., a picture stored as the values of an array of pixels); in this form, it can be stored reliably in computer memory and sent over long distances as a series of wave pulses.",
+      "contentZH": "信息可以数字化（例如，存储为像素数组值的图片）；以这种形式，它可以可靠地存储在计算机内存中，并作为一系列波脉冲远距离发送。",
+      "relatedPEs": [
+        "HS-PS4-2",
+        "HS-PS4-5"
+      ]
+    },
+    {
+      "id": "DCI-PS4.A-HS-3",
+      "domain": "PS",
+      "coreConceptNumber": 4,
+      "coreConceptTitle": "Waves and Their Applications in Technologies for Information Transfer",
+      "coreConceptTitleZH": "波及其在信息传递技术中的应用",
+      "subConceptLetter": "A",
+      "subConceptTitle": "Wave Properties",
+      "subConceptTitleZH": "波的性质",
+      "grade": "HS",
+      "bulletNumber": 3,
+      "content": "Waves can add or cancel one another as they cross, depending on their relative phase (i.e., relative position of peaks and troughs of the waves), but they emerge unaffected by each other. (Boundary: The discussion at this grade level is qualitative only; it can be based on the fact that two different sounds can pass a location in different directions without getting mixed up.)",
+      "contentZH": "波在交叉时可以相互叠加或抵消，具体取决于它们的相对相位（即波峰和波谷的相对位置），但它们的出现不受彼此影响。 （边界：这个年级的讨论只是定性的；它可以基于这样的事实：两种不同的声音可以通过不同方向的位置而不会混淆。）",
+      "relatedPEs": [
+        "HS-PS4-3"
+      ]
+    },
+    {
+      "id": "DCI-PS4.B-1-1",
+      "domain": "PS",
+      "coreConceptNumber": 4,
+      "coreConceptTitle": "Waves and Their Applications in Technologies for Information Transfer",
+      "coreConceptTitleZH": "波及其在信息传递技术中的应用",
+      "subConceptLetter": "B",
+      "subConceptTitle": "Electromagnetic Radiation",
+      "subConceptTitleZH": "电磁辐射",
+      "grade": "1",
+      "bulletNumber": 1,
+      "content": "Objects can be seen if light is available to illuminate them or if they give off their own light.",
+      "contentZH": "如果有光照亮物体或者物体发出自己的光，那么物体就可以被看到。",
+      "relatedPEs": [
+        "1-PS4-2"
+      ]
+    },
+    {
+      "id": "DCI-PS4.B-1-2",
+      "domain": "PS",
+      "coreConceptNumber": 4,
+      "coreConceptTitle": "Waves and Their Applications in Technologies for Information Transfer",
+      "coreConceptTitleZH": "波及其在信息传递技术中的应用",
+      "subConceptLetter": "B",
+      "subConceptTitle": "Electromagnetic Radiation",
+      "subConceptTitleZH": "电磁辐射",
+      "grade": "1",
+      "bulletNumber": 2,
+      "content": "Some materials allow light to pass through them, others allow only some light through and others block all the light and create a dark shadow on any surface beyond them, where the light cannot reach. Mirrors can be used to redirect a light beam.",
+      "contentZH": "有些材料允许光线穿过，有些材料只允许部分光线通过，还有一些则阻挡所有光线，并在光线无法到达的任何表面上产生暗影。镜子可用于改变光束的方向。",
+      "relatedPEs": [
+        "1-PS4-3"
+      ]
+    },
+    {
+      "id": "DCI-PS4.B-4-1",
+      "domain": "PS",
+      "coreConceptNumber": 4,
+      "coreConceptTitle": "Waves and Their Applications in Technologies for Information Transfer",
+      "coreConceptTitleZH": "波及其在信息传递技术中的应用",
+      "subConceptLetter": "B",
+      "subConceptTitle": "Electromagnetic Radiation",
+      "subConceptTitleZH": "电磁辐射",
+      "grade": "4",
+      "bulletNumber": 1,
+      "content": "An object can be seen when light reflected from its surface enters the eyes.",
+      "contentZH": "当物体表面反射的光进入眼睛时，就可以看到物体。",
+      "relatedPEs": [
+        "4-PS4-2"
+      ]
+    },
+    {
+      "id": "DCI-PS4.B-MS-1",
+      "domain": "PS",
+      "coreConceptNumber": 4,
+      "coreConceptTitle": "Waves and Their Applications in Technologies for Information Transfer",
+      "coreConceptTitleZH": "波及其在信息传递技术中的应用",
+      "subConceptLetter": "B",
+      "subConceptTitle": "Electromagnetic Radiation",
+      "subConceptTitleZH": "电磁辐射",
+      "grade": "MS",
+      "bulletNumber": 1,
+      "content": "When light shines on an object, it is reflected, absorbed, or transmitted through the object, depending on the object’s material and the frequency (color) of the light.",
+      "contentZH": "当光照射到物体上时，它会被反射、吸收或透射通过物体，具体取决于物体的材料和光的频率（颜色）。",
+      "relatedPEs": [
+        "MS-PS4-2"
+      ]
+    },
+    {
+      "id": "DCI-PS4.B-MS-2",
+      "domain": "PS",
+      "coreConceptNumber": 4,
+      "coreConceptTitle": "Waves and Their Applications in Technologies for Information Transfer",
+      "coreConceptTitleZH": "波及其在信息传递技术中的应用",
+      "subConceptLetter": "B",
+      "subConceptTitle": "Electromagnetic Radiation",
+      "subConceptTitleZH": "电磁辐射",
+      "grade": "MS",
+      "bulletNumber": 2,
+      "content": "The path that light travels can be traced as straight lines, except at surfaces between different transparent materials (e.g., air and water, air and glass) where the light path bends.",
+      "contentZH": "光传播的路径可以追踪为直线，但不同透明材料（例如空气和水、空气和玻璃）之间的表面除外，光路会弯曲。",
+      "relatedPEs": [
+        "MS-PS4-2"
+      ]
+    },
+    {
+      "id": "DCI-PS4.B-MS-3",
+      "domain": "PS",
+      "coreConceptNumber": 4,
+      "coreConceptTitle": "Waves and Their Applications in Technologies for Information Transfer",
+      "coreConceptTitleZH": "波及其在信息传递技术中的应用",
+      "subConceptLetter": "B",
+      "subConceptTitle": "Electromagnetic Radiation",
+      "subConceptTitleZH": "电磁辐射",
+      "grade": "MS",
+      "bulletNumber": 3,
+      "content": "A wave model of light is useful for explaining brightness, color, and the frequency-dependent bending of light at a surface between media.",
+      "contentZH": "光的波动模型对于解释介质之间表面上的亮度、颜色和光的频率相关弯曲非常有用。",
+      "relatedPEs": [
+        "MS-PS4-2"
+      ]
+    },
+    {
+      "id": "DCI-PS4.B-MS-4",
+      "domain": "PS",
+      "coreConceptNumber": 4,
+      "coreConceptTitle": "Waves and Their Applications in Technologies for Information Transfer",
+      "coreConceptTitleZH": "波及其在信息传递技术中的应用",
+      "subConceptLetter": "B",
+      "subConceptTitle": "Electromagnetic Radiation",
+      "subConceptTitleZH": "电磁辐射",
+      "grade": "MS",
+      "bulletNumber": 4,
+      "content": "However, because light can travel through space, it cannot be a matter wave, like sound or water waves.",
+      "contentZH": "然而，由于光可以在空间中传播，因此它不能像声波或水波那样成为物质波。",
+      "relatedPEs": [
+        "MS-PS4-2"
+      ]
+    },
+    {
+      "id": "DCI-PS4.B-HS-1",
+      "domain": "PS",
+      "coreConceptNumber": 4,
+      "coreConceptTitle": "Waves and Their Applications in Technologies for Information Transfer",
+      "coreConceptTitleZH": "波及其在信息传递技术中的应用",
+      "subConceptLetter": "B",
+      "subConceptTitle": "Electromagnetic Radiation",
+      "subConceptTitleZH": "电磁辐射",
+      "grade": "HS",
+      "bulletNumber": 1,
+      "content": "Electromagnetic radiation (e.g., radio, microwaves, light) can be modeled as a wave of changing electric and magnetic fields or as particles called photons. The wave model is useful for explaining many features of electromagnetic radiation, and the particle model explains other features.",
+      "contentZH": "电磁辐射（例如无线电、微波、光）可以建模为变化的电场和磁场的波或称为光子的粒子。波模型对于解释电磁辐射的许多特征很有用，而粒子模型则解释其他特征。",
+      "relatedPEs": [
+        "HS-PS4-3"
+      ]
+    },
+    {
+      "id": "DCI-PS4.B-HS-2",
+      "domain": "PS",
+      "coreConceptNumber": 4,
+      "coreConceptTitle": "Waves and Their Applications in Technologies for Information Transfer",
+      "coreConceptTitleZH": "波及其在信息传递技术中的应用",
+      "subConceptLetter": "B",
+      "subConceptTitle": "Electromagnetic Radiation",
+      "subConceptTitleZH": "电磁辐射",
+      "grade": "HS",
+      "bulletNumber": 2,
+      "content": "When light or longer wavelength electromagnetic radiation is absorbed in matter, it is generally converted into thermal energy (heat). Shorter wavelength radiation (ultraviolet, X-rays, gamma rays) can ionize atoms and cause damage to living cells.",
+      "contentZH": "当光或较长波长的电磁辐射被物质吸收时，通常会转化为热能（热量）。较短波长的辐射（紫外线、X 射线、伽马射线）可以电离原子并对活细胞造成损害。",
+      "relatedPEs": [
+        "HS-PS4-4"
+      ]
+    },
+    {
+      "id": "DCI-PS4.B-HS-3",
+      "domain": "PS",
+      "coreConceptNumber": 4,
+      "coreConceptTitle": "Waves and Their Applications in Technologies for Information Transfer",
+      "coreConceptTitleZH": "波及其在信息传递技术中的应用",
+      "subConceptLetter": "B",
+      "subConceptTitle": "Electromagnetic Radiation",
+      "subConceptTitleZH": "电磁辐射",
+      "grade": "HS",
+      "bulletNumber": 3,
+      "content": "Photoelectric materials emit electrons when they absorb light of a high-enough frequency.",
+      "contentZH": "当光电材料吸收足够高频率的光时，就会发射电子。",
+      "relatedPEs": [
+        "HS-PS4-5"
+      ]
+    },
+    {
+      "id": "DCI-PS4.C-1-1",
+      "domain": "PS",
+      "coreConceptNumber": 4,
+      "coreConceptTitle": "Waves and Their Applications in Technologies for Information Transfer",
+      "coreConceptTitleZH": "波及其在信息传递技术中的应用",
+      "subConceptLetter": "C",
+      "subConceptTitle": "Information Technologies and Instrumentation",
+      "subConceptTitleZH": "信息技术与仪器设备",
+      "grade": "1",
+      "bulletNumber": 1,
+      "content": "People also use a variety of devices to communicate (send and receive information) over long distances.",
+      "contentZH": "人们还使用各种设备进行长距离通信（发送和接收信息）。",
+      "relatedPEs": [
+        "1-PS4-4"
+      ]
+    },
+    {
+      "id": "DCI-PS4.C-4-1",
+      "domain": "PS",
+      "coreConceptNumber": 4,
+      "coreConceptTitle": "Waves and Their Applications in Technologies for Information Transfer",
+      "coreConceptTitleZH": "波及其在信息传递技术中的应用",
+      "subConceptLetter": "C",
+      "subConceptTitle": "Information Technologies and Instrumentation",
+      "subConceptTitleZH": "信息技术与仪器设备",
+      "grade": "4",
+      "bulletNumber": 1,
+      "content": "Digitized information can be transmitted over long distances without significant degradation. High-tech devices, such as computers or cell phones, can receive and decode information—convert it from digitized form to voice—and vice versa.",
+      "contentZH": "数字化信息可以长距离传输而不会出现明显的退化。计算机或手机等高科技设备可以接收和解码信息，将其从数字形式转换为语音，反之亦然。",
+      "relatedPEs": [
+        "4-PS4-3"
+      ]
+    },
+    {
+      "id": "DCI-PS4.C-MS-1",
+      "domain": "PS",
+      "coreConceptNumber": 4,
+      "coreConceptTitle": "Waves and Their Applications in Technologies for Information Transfer",
+      "coreConceptTitleZH": "波及其在信息传递技术中的应用",
+      "subConceptLetter": "C",
+      "subConceptTitle": "Information Technologies and Instrumentation",
+      "subConceptTitleZH": "信息技术与仪器设备",
+      "grade": "MS",
+      "bulletNumber": 1,
+      "content": "Digitized signals (sent as wave pulses) are a more reliable way to encode and transmit information.",
+      "contentZH": "数字化信号（作为波脉冲发送）是一种更可靠的编码和传输信息的方式。",
+      "relatedPEs": [
+        "MS-PS4-3"
+      ]
+    },
+    {
+      "id": "DCI-PS4.C-HS-1",
+      "domain": "PS",
+      "coreConceptNumber": 4,
+      "coreConceptTitle": "Waves and Their Applications in Technologies for Information Transfer",
+      "coreConceptTitleZH": "波及其在信息传递技术中的应用",
+      "subConceptLetter": "C",
+      "subConceptTitle": "Information Technologies and Instrumentation",
+      "subConceptTitleZH": "信息技术与仪器设备",
+      "grade": "HS",
+      "bulletNumber": 1,
+      "content": "Multiple technologies based on the understanding of waves and their properties are essential tools for the natural world. (e.g., medical imaging, communications, scanners) and in scientific research. They are essential tools for producing, transmitting, and capturing signals and for storing and interpreting the information contained in science.",
+      "contentZH": "基于对波浪及其特性的理解的多种技术是自然世界的重要工具。 （例如，医学成像、通信、扫描仪）和科学研究。它们是产生、传输和捕获信号以及存储和解释科学信息的重要工具。",
+      "relatedPEs": [
+        "HS-PS4-5"
+      ]
+    },
+    {
+      "id": "DCI-LS1.A-1-1",
+      "domain": "LS",
+      "coreConceptNumber": 1,
+      "coreConceptTitle": "From Molecules to Organisms: Structures and Processes",
+      "coreConceptTitleZH": "从分子到生物体：结构与过程",
+      "subConceptLetter": "A",
+      "subConceptTitle": "Structure and Function",
+      "subConceptTitleZH": "结构与功能",
+      "grade": "1",
+      "bulletNumber": 1,
+      "content": "All organisms have external parts. Different animals use their body parts in different ways to see, hear, grasp objects, protect themselves, move from place to place, and seek, find, and take in food, water and air. Plants also have different parts (roots, stems, leaves, flowers, fruits) that help them survive and grow.",
+      "contentZH": "所有生物体都有外部部分。不同的动物以不同的方式利用身体部位来看、听、抓握物体、保护自己、从一个地方移动到另一个地方，以及寻找、寻找和吸收食物、水和空气。植物也有不同的部分（根、茎、叶、花、果实）来帮助它们生存和生长。",
+      "relatedPEs": [
+        "1-LS1-1"
+      ]
+    },
+    {
+      "id": "DCI-LS1.A-MS-1",
+      "domain": "LS",
+      "coreConceptNumber": 1,
+      "coreConceptTitle": "From Molecules to Organisms: Structures and Processes",
+      "coreConceptTitleZH": "从分子到生物体：结构与过程",
+      "subConceptLetter": "A",
+      "subConceptTitle": "Structure and Function",
+      "subConceptTitleZH": "结构与功能",
+      "grade": "MS",
+      "bulletNumber": 1,
+      "content": "All living things are made up of cells, which is the smallest unit that can be said to be alive. An organism may consist of one single cell (unicellular) or many different numbers and types of cells (multicellular).",
+      "contentZH": "所有生物都是由细胞组成的，细胞是可以说是生命的最小单位。生物体可能由一个单细胞（单细胞）或许多不同数量和类型的细胞（多细胞）组成。",
+      "relatedPEs": [
+        "MS-LS1-1"
+      ]
+    },
+    {
+      "id": "DCI-LS1.A-MS-2",
+      "domain": "LS",
+      "coreConceptNumber": 1,
+      "coreConceptTitle": "From Molecules to Organisms: Structures and Processes",
+      "coreConceptTitleZH": "从分子到生物体：结构与过程",
+      "subConceptLetter": "A",
+      "subConceptTitle": "Structure and Function",
+      "subConceptTitleZH": "结构与功能",
+      "grade": "MS",
+      "bulletNumber": 2,
+      "content": "Within cells, special structures are responsible for particular functions, and the cell membrane forms the boundary that controls what enters and leaves the cell.",
+      "contentZH": "在细胞内，特殊的结构负责特定的功能，细胞膜形成控制进入和离开细胞的边界。",
+      "relatedPEs": [
+        "MS-LS1-2"
+      ]
+    },
+    {
+      "id": "DCI-LS1.A-MS-3",
+      "domain": "LS",
+      "coreConceptNumber": 1,
+      "coreConceptTitle": "From Molecules to Organisms: Structures and Processes",
+      "coreConceptTitleZH": "从分子到生物体：结构与过程",
+      "subConceptLetter": "A",
+      "subConceptTitle": "Structure and Function",
+      "subConceptTitleZH": "结构与功能",
+      "grade": "MS",
+      "bulletNumber": 3,
+      "content": "In multicellular organisms, the body is a system of multiple interacting subsystems. These subsystems are groups of cells that work together to form tissues and organs that are specialized for particular body functions.",
+      "contentZH": "在多细胞生物中，身体是一个由多个相互作用的子系统组成的系统。这些子系统是一组细胞，它们共同作用形成专门用于特定身体功能的组织和器官。",
+      "relatedPEs": [
+        "MS-LS1-3"
+      ]
+    },
+    {
+      "id": "DCI-LS1.A-HS-1",
+      "domain": "LS",
+      "coreConceptNumber": 1,
+      "coreConceptTitle": "From Molecules to Organisms: Structures and Processes",
+      "coreConceptTitleZH": "从分子到生物体：结构与过程",
+      "subConceptLetter": "A",
+      "subConceptTitle": "Structure and Function",
+      "subConceptTitleZH": "结构与功能",
+      "grade": "HS",
+      "bulletNumber": 1,
+      "content": "Systems of specialized cells within organisms help them perform the essential functions of life.",
+      "contentZH": "生物体内的特殊细胞系统帮助它们执行生命的基本功能。",
+      "relatedPEs": [
+        "HS-LS1-1"
+      ]
+    },
+    {
+      "id": "DCI-LS1.A-HS-2",
+      "domain": "LS",
+      "coreConceptNumber": 1,
+      "coreConceptTitle": "From Molecules to Organisms: Structures and Processes",
+      "coreConceptTitleZH": "从分子到生物体：结构与过程",
+      "subConceptLetter": "A",
+      "subConceptTitle": "Structure and Function",
+      "subConceptTitleZH": "结构与功能",
+      "grade": "HS",
+      "bulletNumber": 2,
+      "content": "All cells contain genetic information in the form of DNA molecules. Genes are regions in the DNA that contain the instructions that code for the formation of proteins, which carry out most of the work of cells.",
+      "contentZH": "所有细胞都含有 DNA 分子形式的遗传信息。基因是 DNA 中包含编码蛋白质形成指令的区域，蛋白质执行细胞的大部分工作。",
+      "relatedPEs": [
+        "HS-LS1-1"
+      ]
+    },
+    {
+      "id": "DCI-LS1.A-HS-3",
+      "domain": "LS",
+      "coreConceptNumber": 1,
+      "coreConceptTitle": "From Molecules to Organisms: Structures and Processes",
+      "coreConceptTitleZH": "从分子到生物体：结构与过程",
+      "subConceptLetter": "A",
+      "subConceptTitle": "Structure and Function",
+      "subConceptTitleZH": "结构与功能",
+      "grade": "HS",
+      "bulletNumber": 3,
+      "content": "Multicellular organisms have a hierarchical stuctural organization, in which any one system is made up of numerous parts and is itself a component of the next level",
+      "contentZH": "多细胞生物具有层次结构组织，其中任何一个系统都由许多部分组成，并且本身是下一个层次的组成部分",
+      "relatedPEs": [
+        "HS-LS1-2"
+      ]
+    },
+    {
+      "id": "DCI-LS1.A-HS-4",
+      "domain": "LS",
+      "coreConceptNumber": 1,
+      "coreConceptTitle": "From Molecules to Organisms: Structures and Processes",
+      "coreConceptTitleZH": "从分子到生物体：结构与过程",
+      "subConceptLetter": "A",
+      "subConceptTitle": "Structure and Function",
+      "subConceptTitleZH": "结构与功能",
+      "grade": "HS",
+      "bulletNumber": 4,
+      "content": "Feedback mechanisms maintain a living system's internal conditions within certain limits and mediate behaviors, allowing it to remain alive and functional even as external conditions change within some range. Feedback mechanisms can encourage (through positive feedback) or discourage (negative feedback) what is going on inside the living system",
+      "contentZH": "反馈机制将生命系统的内部条件维持在一定范围内并调节行为，使其即使在外部条件在一定范围内发生变化时也能保持活力和功能。反馈机制可以鼓励（通过积极反馈）或阻止（消极反馈）生命系统内部发生的事情",
+      "relatedPEs": [
+        "HS-LS1-3"
+      ]
+    },
+    {
+      "id": "DCI-LS1.B-1-1",
+      "domain": "LS",
+      "coreConceptNumber": 1,
+      "coreConceptTitle": "From Molecules to Organisms: Structures and Processes",
+      "coreConceptTitleZH": "从分子到生物体：结构与过程",
+      "subConceptLetter": "B",
+      "subConceptTitle": "Growth and Development of Organisms",
+      "subConceptTitleZH": "生物的生长与发育",
+      "grade": "1",
+      "bulletNumber": 1,
+      "content": "Adult plants and animals can have young. In many kinds of animals, parents and the offspring themselves engage in behaviors that help the offspring to survive.",
+      "contentZH": "成年植物和动物可以生育幼崽。在许多动物中，父母和后代本身都会做出有助于后代生存的行为。",
+      "relatedPEs": [
+        "1-LS1-2"
+      ]
+    },
+    {
+      "id": "DCI-LS1.B-3-1",
+      "domain": "LS",
+      "coreConceptNumber": 1,
+      "coreConceptTitle": "From Molecules to Organisms: Structures and Processes",
+      "coreConceptTitleZH": "从分子到生物体：结构与过程",
+      "subConceptLetter": "B",
+      "subConceptTitle": "Growth and Development of Organisms",
+      "subConceptTitleZH": "生物的生长与发育",
+      "grade": "3",
+      "bulletNumber": 1,
+      "content": "Reproduction is essential to the continued existence of every kind of organism. Plants and animals have unique and diverse life cycles.",
+      "contentZH": "繁殖对于每种有机体的持续存在至关重要。植物和动物具有独特且多样化的生命周期。",
+      "relatedPEs": [
+        "3-LS1-1"
+      ]
+    },
+    {
+      "id": "DCI-LS1.B-MS-1",
+      "domain": "LS",
+      "coreConceptNumber": 1,
+      "coreConceptTitle": "From Molecules to Organisms: Structures and Processes",
+      "coreConceptTitleZH": "从分子到生物体：结构与过程",
+      "subConceptLetter": "B",
+      "subConceptTitle": "Growth and Development of Organisms",
+      "subConceptTitleZH": "生物的生长与发育",
+      "grade": "MS",
+      "bulletNumber": 1,
+      "content": "Animals engage in characteristic behaviors that increase the odds of reproduction.",
+      "contentZH": "动物的特有行为会增加繁殖的几率。",
+      "relatedPEs": [
+        "MS-LS1-4"
+      ]
+    },
+    {
+      "id": "DCI-LS1.B-MS-2",
+      "domain": "LS",
+      "coreConceptNumber": 1,
+      "coreConceptTitle": "From Molecules to Organisms: Structures and Processes",
+      "coreConceptTitleZH": "从分子到生物体：结构与过程",
+      "subConceptLetter": "B",
+      "subConceptTitle": "Growth and Development of Organisms",
+      "subConceptTitleZH": "生物的生长与发育",
+      "grade": "MS",
+      "bulletNumber": 2,
+      "content": "Plants reproduce in a variety of ways, sometimes depending on animal behavior and specialized features for reproduction.",
+      "contentZH": "植物以多种方式繁殖，有时取决于动物的行为和繁殖的特殊特征。",
+      "relatedPEs": [
+        "MS-LS1-4"
+      ]
+    },
+    {
+      "id": "DCI-LS1.B-MS-3",
+      "domain": "LS",
+      "coreConceptNumber": 1,
+      "coreConceptTitle": "From Molecules to Organisms: Structures and Processes",
+      "coreConceptTitleZH": "从分子到生物体：结构与过程",
+      "subConceptLetter": "B",
+      "subConceptTitle": "Growth and Development of Organisms",
+      "subConceptTitleZH": "生物的生长与发育",
+      "grade": "MS",
+      "bulletNumber": 3,
+      "content": "Genetic factors as well as local conditions affect the growth of the adult plant.",
+      "contentZH": "遗传因素以及当地条件影响成年植物的生长。",
+      "relatedPEs": [
+        "MS-LS1-5"
+      ]
+    },
+    {
+      "id": "DCI-LS1.B-HS-1",
+      "domain": "LS",
+      "coreConceptNumber": 1,
+      "coreConceptTitle": "From Molecules to Organisms: Structures and Processes",
+      "coreConceptTitleZH": "从分子到生物体：结构与过程",
+      "subConceptLetter": "B",
+      "subConceptTitle": "Growth and Development of Organisms",
+      "subConceptTitleZH": "生物的生长与发育",
+      "grade": "HS",
+      "bulletNumber": 1,
+      "content": "In multicellular organisms individual cells grow and then divide via a process called mitosis, thereby allowing the organism to grow. The organism begins as a single cell (fertilized egg) that divides successively to produce many cells, with each parent cell passing identical genetic material (two variants of each chromosome pair) to both daughter cells. Cellular division and differentiation produce and maintain a complex organism, composed of systems of tissues and organs that work together to meet the needs of the whole organism.",
+      "contentZH": "在多细胞生物中，单个细胞生长，然后通过有丝分裂的过程分裂，从而使生物体生长。生物体始于单个细胞（受精卵），随后连续分裂产生许多细胞，每个亲代细胞将相同的遗传物质（每个染色体对的两个变体）传递给两个子细胞。细胞分裂和分化产生并维持一个复杂的有机体，该有机体由组织和器官系统组成，这些系统和器官协同工作以满足整个有机体的需要。",
+      "relatedPEs": [
+        "HS-LS1-4"
+      ]
+    },
+    {
+      "id": "DCI-LS1.C-K-1",
+      "domain": "LS",
+      "coreConceptNumber": 1,
+      "coreConceptTitle": "From Molecules to Organisms: Structures and Processes",
+      "coreConceptTitleZH": "从分子到生物体：结构与过程",
+      "subConceptLetter": "C",
+      "subConceptTitle": "Organization for Matter and Energy Flow in Organisms",
+      "subConceptTitleZH": "生物体中物质与能量流动的组织方式",
+      "grade": "K",
+      "bulletNumber": 1,
+      "content": "All animals need food in order to live and grow. They obtain their food from plants or from other animals. Plants need water and light to live and grow.",
+      "contentZH": "所有动物都需要食物才能生存和生长。他们从植物或其他动物中获取食物。植物需要水和光才能生存和生长。",
+      "relatedPEs": [
+        "K-LS1-1"
+      ]
+    },
+    {
+      "id": "DCI-LS1.C-5-1",
+      "domain": "LS",
+      "coreConceptNumber": 1,
+      "coreConceptTitle": "From Molecules to Organisms: Structures and Processes",
+      "coreConceptTitleZH": "从分子到生物体：结构与过程",
+      "subConceptLetter": "C",
+      "subConceptTitle": "Organization for Matter and Energy Flow in Organisms",
+      "subConceptTitleZH": "生物体中物质与能量流动的组织方式",
+      "grade": "5",
+      "bulletNumber": 1,
+      "content": "Food provides animals with the materials they need for body repair and growth and the energy they need to maintain body warmth and for motion.",
+      "contentZH": "食物为动物提供身体修复和生长所需的物质以及维持身体温暖和运动所需的能量。",
+      "relatedPEs": [
+        "5-PS3-1"
+      ]
+    },
+    {
+      "id": "DCI-LS1.C-5-2",
+      "domain": "LS",
+      "coreConceptNumber": 1,
+      "coreConceptTitle": "From Molecules to Organisms: Structures and Processes",
+      "coreConceptTitleZH": "从分子到生物体：结构与过程",
+      "subConceptLetter": "C",
+      "subConceptTitle": "Organization for Matter and Energy Flow in Organisms",
+      "subConceptTitleZH": "生物体中物质与能量流动的组织方式",
+      "grade": "5",
+      "bulletNumber": 2,
+      "content": "Plants acquire their material for growth chiefly from air and water.",
+      "contentZH": "植物主要从空气和水获取生长物质。",
+      "relatedPEs": [
+        "5-LS1-1"
+      ]
+    },
+    {
+      "id": "DCI-LS1.C-MS-1",
+      "domain": "LS",
+      "coreConceptNumber": 1,
+      "coreConceptTitle": "From Molecules to Organisms: Structures and Processes",
+      "coreConceptTitleZH": "从分子到生物体：结构与过程",
+      "subConceptLetter": "C",
+      "subConceptTitle": "Organization for Matter and Energy Flow in Organisms",
+      "subConceptTitleZH": "生物体中物质与能量流动的组织方式",
+      "grade": "MS",
+      "bulletNumber": 1,
+      "content": "Plants, algae (including phytoplankton), and many microorganisms use the energy from light to make sugars (food) from carbon dioxide from the atmosphere and water through the process of photosynthesis, which also releases oxygen. These sugars can be used immediately or stored for growth or later use.",
+      "contentZH": "植物、藻类（包括浮游植物）和许多微生物利用光能，通过光合作用过程将大气中的二氧化碳和水中的二氧化碳制成糖（食物），同时还释放氧气。这些糖可以立即使用或储存以供生长或以后使用。",
+      "relatedPEs": [
+        "MS-LS1-6"
+      ]
+    },
+    {
+      "id": "DCI-LS1.C-HS-1",
+      "domain": "LS",
+      "coreConceptNumber": 1,
+      "coreConceptTitle": "From Molecules to Organisms: Structures and Processes",
+      "coreConceptTitleZH": "从分子到生物体：结构与过程",
+      "subConceptLetter": "C",
+      "subConceptTitle": "Organization for Matter and Energy Flow in Organisms",
+      "subConceptTitleZH": "生物体中物质与能量流动的组织方式",
+      "grade": "HS",
+      "bulletNumber": 1,
+      "content": "The process of photosynthesis converts light energy to stored chemical energy by converting carbon dioxide plus water into sugars plus released oxygen.",
+      "contentZH": "光合作用的过程通过将二氧化碳和水转化为糖和释放的氧气，将光能转化为储存的化学能。",
+      "relatedPEs": [
+        "HS-LS1-5"
+      ]
+    },
+    {
+      "id": "DCI-LS1.C-HS-2",
+      "domain": "LS",
+      "coreConceptNumber": 1,
+      "coreConceptTitle": "From Molecules to Organisms: Structures and Processes",
+      "coreConceptTitleZH": "从分子到生物体：结构与过程",
+      "subConceptLetter": "C",
+      "subConceptTitle": "Organization for Matter and Energy Flow in Organisms",
+      "subConceptTitleZH": "生物体中物质与能量流动的组织方式",
+      "grade": "HS",
+      "bulletNumber": 2,
+      "content": "The sugar molecules thus formed contain carbon, hydrogen, and oxygen: their hydrocarbon backbones are used to make amino acids and other carbon-based molecules that can be assembled into larger molecules (such as proteins or DNA), used for example to form new cells.",
+      "contentZH": "由此形成的糖分子含有碳、氢和氧：它们的碳氢化合物主链用于制造氨基酸和其他碳基分子，这些分子可以组装成更大的分子（例如蛋白质或DNA），例如用于形成新细胞。",
+      "relatedPEs": [
+        "HS-LS1-6"
+      ]
+    },
+    {
+      "id": "DCI-LS1.D-1-1",
+      "domain": "LS",
+      "coreConceptNumber": 1,
+      "coreConceptTitle": "From Molecules to Organisms: Structures and Processes",
+      "coreConceptTitleZH": "从分子到生物体：结构与过程",
+      "subConceptLetter": "D",
+      "subConceptTitle": "Information Processing",
+      "subConceptTitleZH": "信息处理",
+      "grade": "1",
+      "bulletNumber": 1,
+      "content": "Animals have body parts that capture and convey different kinds of information needed for growth and survival. Animals respond to these inputs with behaviors that help them survive. Plants also respond to some external inputs.",
+      "contentZH": "动物的身体部位可以捕捉和传达生长和生存所需的不同类型的信息。动物对这些输入做出反应，做出有助于它们生存的行为。植物也会对一些外部输入做出反应。",
+      "relatedPEs": [
+        "1-LS1-1"
+      ]
+    },
+    {
+      "id": "DCI-LS1.D-4-1",
+      "domain": "LS",
+      "coreConceptNumber": 1,
+      "coreConceptTitle": "From Molecules to Organisms: Structures and Processes",
+      "coreConceptTitleZH": "从分子到生物体：结构与过程",
+      "subConceptLetter": "D",
+      "subConceptTitle": "Information Processing",
+      "subConceptTitleZH": "信息处理",
+      "grade": "4",
+      "bulletNumber": 1,
+      "content": "Different sense receptors are specialized for particular kinds of information, which may be then processed by the animal's brain. Animals are able to use their perceptions and memories to guide their actions.",
+      "contentZH": "不同的感觉受体专门针对特定类型的信息，然后由动物的大脑进行处理。动物能够利用它们的感知和记忆来指导它们的行动。",
+      "relatedPEs": [
+        "4-LS1-2"
+      ]
+    },
+    {
+      "id": "DCI-LS1.D-MS-1",
+      "domain": "LS",
+      "coreConceptNumber": 1,
+      "coreConceptTitle": "From Molecules to Organisms: Structures and Processes",
+      "coreConceptTitleZH": "从分子到生物体：结构与过程",
+      "subConceptLetter": "D",
+      "subConceptTitle": "Information Processing",
+      "subConceptTitleZH": "信息处理",
+      "grade": "MS",
+      "bulletNumber": 1,
+      "content": "Each sense receptor responds to different inputs (electromagnetic, mechanical, chemical), transmitting them as signals that travel along nerve cells to the brain. The signals are then processed in the brain, resulting in immediate behaviors or memories.",
+      "contentZH": "每个感觉受体对不同的输入（电磁、机械、化学）做出反应，将它们作为信号传输，沿着神经细胞传播到大脑。然后这些信号在大脑中进行处理，产生即时的行为或记忆。",
+      "relatedPEs": [
+        "MS-LS1-8"
+      ]
+    },
+    {
+      "id": "DCI-LS2.A-2-1",
+      "domain": "LS",
+      "coreConceptNumber": 2,
+      "coreConceptTitle": "Ecosystems: Interactions, Energy, and Dynamics",
+      "coreConceptTitleZH": "生态系统：相互作用、能量与动态",
+      "subConceptLetter": "A",
+      "subConceptTitle": "Interdependent Relationships in Ecosystems",
+      "subConceptTitleZH": "生态系统中的相互依存关系",
+      "grade": "2",
+      "bulletNumber": 1,
+      "content": "Plants depend on water and light to grow.",
+      "contentZH": "植物依靠水和光来生长。",
+      "relatedPEs": [
+        "2-LS2-1"
+      ]
+    },
+    {
+      "id": "DCI-LS2.A-2-2",
+      "domain": "LS",
+      "coreConceptNumber": 2,
+      "coreConceptTitle": "Ecosystems: Interactions, Energy, and Dynamics",
+      "coreConceptTitleZH": "生态系统：相互作用、能量与动态",
+      "subConceptLetter": "A",
+      "subConceptTitle": "Interdependent Relationships in Ecosystems",
+      "subConceptTitleZH": "生态系统中的相互依存关系",
+      "grade": "2",
+      "bulletNumber": 2,
+      "content": "Plants depend on animals for pollination or to move their seeds around.",
+      "contentZH": "植物依靠动物授粉或传播种子。",
+      "relatedPEs": [
+        "2-LS2-2"
+      ]
+    },
+    {
+      "id": "DCI-LS2.A-5-1",
+      "domain": "LS",
+      "coreConceptNumber": 2,
+      "coreConceptTitle": "Ecosystems: Interactions, Energy, and Dynamics",
+      "coreConceptTitleZH": "生态系统：相互作用、能量与动态",
+      "subConceptLetter": "A",
+      "subConceptTitle": "Interdependent Relationships in Ecosystems",
+      "subConceptTitleZH": "生态系统中的相互依存关系",
+      "grade": "5",
+      "bulletNumber": 1,
+      "content": "The food of almost any kind of animal can be traced back to plants. Organisms are related in food webs in which some animals eat plants for food and other animals eat the animals that eat plants. Some organisms, such as fungi and bacteria, break down dead organisms (both plants or plants parts and animals) and therefore operate as “decomposers.” Decomposition eventually restores (recycles) some materials back to the soil. Organisms can survive only in environments in which their particular needs are met. A healthy ecosystem is one in which multiple species of different types are each able to meet their needs in a relatively stable web of life. Newly introduced species can damage the balance of an ecosystem.",
+      "contentZH": "几乎所有动物的食物都可以追溯到植物。生物体在食物网中相互关联，其中一些动物以植物为食，而其他动物则以吃植物的动物为食。一些生物体，例如真菌和细菌，会分解死亡的生物体（植物或植物部分和动物），因此充当“分解者”。分解最终将一些物质恢复（回收）回土壤。生物体只有在满足其特殊需求的环境中才能生存。健康的生态系统是一个不同类型的多个物种各自能够在相对稳定的生命网络中满足其需求的生态系统。新引入的物种可能会破坏生态系统的平衡。",
+      "relatedPEs": [
+        "5-LS2-1"
+      ]
+    },
+    {
+      "id": "DCI-LS2.A-MS-1",
+      "domain": "LS",
+      "coreConceptNumber": 2,
+      "coreConceptTitle": "Ecosystems: Interactions, Energy, and Dynamics",
+      "coreConceptTitleZH": "生态系统：相互作用、能量与动态",
+      "subConceptLetter": "A",
+      "subConceptTitle": "Interdependent Relationships in Ecosystems",
+      "subConceptTitleZH": "生态系统中的相互依存关系",
+      "grade": "MS",
+      "bulletNumber": 1,
+      "content": "Organisms, and populations of organisms, are dependent on their environmental interactions both with other living things and with nonliving factors.",
+      "contentZH": "生物体和生物体种群依赖于它们与其他生物和非生物因素的环境相互作用。",
+      "relatedPEs": [
+        "MS-LS2-1"
+      ]
+    },
+    {
+      "id": "DCI-LS2.A-MS-2",
+      "domain": "LS",
+      "coreConceptNumber": 2,
+      "coreConceptTitle": "Ecosystems: Interactions, Energy, and Dynamics",
+      "coreConceptTitleZH": "生态系统：相互作用、能量与动态",
+      "subConceptLetter": "A",
+      "subConceptTitle": "Interdependent Relationships in Ecosystems",
+      "subConceptTitleZH": "生态系统中的相互依存关系",
+      "grade": "MS",
+      "bulletNumber": 2,
+      "content": "In any ecosystem, organisms and populations with similar requirements for food, water, oxygen, or other resources may compete with each other for limited resources, access to which consequently constrains their growth and reproduction. ",
+      "contentZH": "在任何生态系统中，对食物、水、氧气或其他资源具有相似需求的生物体和种群可能会相互竞争有限的资源，从而限制其生长和繁殖。",
+      "relatedPEs": [
+        "MS-LS2-1"
+      ]
+    },
+    {
+      "id": "DCI-LS2.A-MS-3",
+      "domain": "LS",
+      "coreConceptNumber": 2,
+      "coreConceptTitle": "Ecosystems: Interactions, Energy, and Dynamics",
+      "coreConceptTitleZH": "生态系统：相互作用、能量与动态",
+      "subConceptLetter": "A",
+      "subConceptTitle": "Interdependent Relationships in Ecosystems",
+      "subConceptTitleZH": "生态系统中的相互依存关系",
+      "grade": "MS",
+      "bulletNumber": 3,
+      "content": "Growth of organisms and population increases are limited by access to resources.",
+      "contentZH": "生物体的生长和人口的增长受到资源获取的限制。",
+      "relatedPEs": [
+        "MS-LS2-1"
+      ]
+    },
+    {
+      "id": "DCI-LS2.A-MS-4",
+      "domain": "LS",
+      "coreConceptNumber": 2,
+      "coreConceptTitle": "Ecosystems: Interactions, Energy, and Dynamics",
+      "coreConceptTitleZH": "生态系统：相互作用、能量与动态",
+      "subConceptLetter": "A",
+      "subConceptTitle": "Interdependent Relationships in Ecosystems",
+      "subConceptTitleZH": "生态系统中的相互依存关系",
+      "grade": "MS",
+      "bulletNumber": 4,
+      "content": "Similarly, predatory interactions may reduce the number of organisms or eliminate whole populations of organisms. Mutually beneficial interactions, in contrast, may become so interdependent that each organism requires the other for survival. Although the species involved in these competitive, predatory, and mutually beneficial interactions vary across ecosystems, the patterns of interactions of organisms with their environments, both living and nonliving, are shared.",
+      "contentZH": "同样，捕食性相互作用可能会减少生物体的数量或消除整个生物体种群。相反，互惠互利的相互作用可能变得如此相互依赖，以至于每个有机体都需要另一个有机体才能生存。尽管参与这些竞争性、掠夺性和互惠互利相互作用的物种在不同的生态系统中有所不同，但生物体与其环境（包括生物和非生物）相互作用的模式是相同的。",
+      "relatedPEs": [
+        "MS-LS2-2"
+      ]
+    },
+    {
+      "id": "DCI-LS2.A-HS-1",
+      "domain": "LS",
+      "coreConceptNumber": 2,
+      "coreConceptTitle": "Ecosystems: Interactions, Energy, and Dynamics",
+      "coreConceptTitleZH": "生态系统：相互作用、能量与动态",
+      "subConceptLetter": "A",
+      "subConceptTitle": "Interdependent Relationships in Ecosystems",
+      "subConceptTitleZH": "生态系统中的相互依存关系",
+      "grade": "HS",
+      "bulletNumber": 1,
+      "content": "Ecosystems have carrying capacities, which are limits to the numbers of organisms and populations they can support. These limits result from such factors as the availability of living and nonliving resources and from such challenges such as predation, competition, and disease. Organisms would have the capacity to produce populations of great size were it not for the fact that environments and resources are finite. This fundamental tension affects the abundance (number of individuals) of species in any given ecosystem.",
+      "contentZH": "生态系统具有承载能力，这限制了它们可以支持的生物体和种群的数量。这些限制是由生物和非生物资源的可用性等因素以及捕食、竞争和疾病等挑战造成的。如果环境和资源不是有限的，生物体就有能力产生大量的种群。这种基本的紧张关系会影响任何特定生态系统中物种的丰度（个体数量）。",
+      "relatedPEs": [
+        "HS-LS2-1"
+      ]
+    },
+    {
+      "id": "DCI-LS2.B-5-1",
+      "domain": "LS",
+      "coreConceptNumber": 2,
+      "coreConceptTitle": "Ecosystems: Interactions, Energy, and Dynamics",
+      "coreConceptTitleZH": "生态系统：相互作用、能量与动态",
+      "subConceptLetter": "B",
+      "subConceptTitle": "Cycles of Matter and Energy Transfer in Ecosystems",
+      "subConceptTitleZH": "生态系统中的物质循环与能量传递",
+      "grade": "5",
+      "bulletNumber": 1,
+      "content": "Matter cycles between the air and soil and among plants, animals, and microbes as these organisms live and die. Organisms obtain gases, and water, from the environment, and release waste matter (gas, liquid, or solid) back into the environment.",
+      "contentZH": "随着这些生物体的生存和死亡，物质在空气和土壤之间以及植物、动物和微生物之间循环。生物体从环境中获取气体和水，并将废物（气体、液体或固体）释放回环境中。",
+      "relatedPEs": [
+        "5-LS2-1"
+      ]
+    },
+    {
+      "id": "DCI-LS2.B-MS-1",
+      "domain": "LS",
+      "coreConceptNumber": 2,
+      "coreConceptTitle": "Ecosystems: Interactions, Energy, and Dynamics",
+      "coreConceptTitleZH": "生态系统：相互作用、能量与动态",
+      "subConceptLetter": "B",
+      "subConceptTitle": "Cycle of Matter and Energy Transfer in Ecosystems",
+      "subConceptTitleZH": "生态系统中的物质循环与能量传递",
+      "grade": "MS",
+      "bulletNumber": 1,
+      "content": "Food webs are models that demonstrate how matter and energy is transferred between producers, consumers, and decomposers as the three groups interact within an ecosystem. Transfers of matter into and out of the physical environment occur at every level. Decomposers recycle nutrients from dead plant or animal matter back to the soil in terrestrial environments or to the water in aquatic environments. The atoms that make up the organisms in an ecosystem are cycled repeatedly between the living and nonliving parts of the ecosystem.",
+      "contentZH": "食物网是展示生产者、消费者和分解者三个群体在生态系统中相互作用时物质和能量如何在这三个群体之间转移的模型。物质进出物理环境的转移发生在各个层面。分解者将死去的植物或动物物质中的养分回收回陆地环境中的土壤或水生环境中的水中。构成生态系统中生物体的原子在生态系统的生物部分和非生物部分之间反复循环。",
+      "relatedPEs": [
+        "MS-LS2-3"
+      ]
+    },
+    {
+      "id": "DCI-LS2.B-HS-1",
+      "domain": "LS",
+      "coreConceptNumber": 2,
+      "coreConceptTitle": "Ecosystems: Interactions, Energy, and Dynamics",
+      "coreConceptTitleZH": "生态系统：相互作用、能量与动态",
+      "subConceptLetter": "B",
+      "subConceptTitle": "Cycles of Matter and Energy Transfer in Ecosystems",
+      "subConceptTitleZH": "生态系统中的物质循环与能量传递",
+      "grade": "HS",
+      "bulletNumber": 1,
+      "content": "Photosynthesis and cellular respiration (including anaerobic processes) provide most of the energy for life processes.",
+      "contentZH": "光合作用和细胞呼吸（包括无氧过程）为生命过程提供大部分能量。",
+      "relatedPEs": [
+        "HS-LS2-3"
+      ]
+    },
+    {
+      "id": "DCI-LS2.B-HS-2",
+      "domain": "LS",
+      "coreConceptNumber": 2,
+      "coreConceptTitle": "Ecosystems: Interactions, Energy, and Dynamics",
+      "coreConceptTitleZH": "生态系统：相互作用、能量与动态",
+      "subConceptLetter": "B",
+      "subConceptTitle": "Cycles of Matter and Energy Transfer in Ecosystems",
+      "subConceptTitleZH": "生态系统中的物质循环与能量传递",
+      "grade": "HS",
+      "bulletNumber": 2,
+      "content": "Plants or algae form the lowest level of the food web. At each link upward in a food web, only a small fraction of the matter consumed at the lower level is transferred upward, to produce growth and release energy in cellular respiration at the higher level. Given this inefficiency, there are generally fewer organisms at higher levels of a food web. Some matter reacts to release energy for life functions, some matter is stored in newly made structures, and much is discarded. The chemical elements that make up the molecules of organisms pass through food webs and into and out of the atmosphere and soil, and they are combined and recombined in different ways. At each link in an ecosystem, matter and energy are conserved.",
+      "contentZH": "植物或藻类构成食物网的最低层。在食物网向上的每个环节，只有一小部分在较低水平消耗的物质向上转移，以在较高水平的细胞呼吸中产生生长并释放能量。鉴于这种低效率，食物网较高层的生物体通常较少。有些物质发生反应，释放生命功能所需的能量，有些物质被储存在新建造的结构中，还有很多物质被丢弃。构成生物体分子的化学元素穿过食物网，进出大气和土壤，并以不同的方式组合和重新组合。在生态系统的每个环节，物质和能量都是守恒的。",
+      "relatedPEs": [
+        "HS-LS2-4"
+      ]
+    },
+    {
+      "id": "DCI-LS2.B-HS-3",
+      "domain": "LS",
+      "coreConceptNumber": 2,
+      "coreConceptTitle": "Ecosystems: Interactions, Energy, and Dynamics",
+      "coreConceptTitleZH": "生态系统：相互作用、能量与动态",
+      "subConceptLetter": "B",
+      "subConceptTitle": "Cycles of Matter and Energy Transfer in Ecosystems",
+      "subConceptTitleZH": "生态系统中的物质循环与能量传递",
+      "grade": "HS",
+      "bulletNumber": 3,
+      "content": "Photosynthesis and cellular respiration are important components of the carbon cycle, in which carbon is exchanged among the biosphere, atmosphere, oceans, and geosphere through chemical, physical, geological, and biological processes.",
+      "contentZH": "光合作用和细胞呼吸是碳循环的重要组成部分，其中碳通过化学、物理、地质和生物过程在生物圈、大气、海洋和地圈之间交换。",
+      "relatedPEs": [
+        "HS-LS2-5"
+      ]
+    },
+    {
+      "id": "DCI-LS2.C-3-1",
+      "domain": "LS",
+      "coreConceptNumber": 2,
+      "coreConceptTitle": "Ecosystems: Interactions, Energy, and Dynamics",
+      "coreConceptTitleZH": "生态系统：相互作用、能量与动态",
+      "subConceptLetter": "C",
+      "subConceptTitle": "Ecosystem Dynamics, Functioning, and Resilience",
+      "subConceptTitleZH": "生态系统的动态、功能与韧性",
+      "grade": "3",
+      "bulletNumber": 1,
+      "content": "When the environment changes in ways that affect a place’s physical characteristics, temperature, or availability of resources, some organisms survive and reproduce, others move to new locations, yet others move into the transformed environment, and some die.",
+      "contentZH": "当环境的变化影响到一个地方的物理特征、温度或资源可用性时，一些生物体会生存并繁殖，另一些生物体会迁移到新的地点，而另一些则会进入改变的环境，还有一些会死亡。",
+      "relatedPEs": [
+        "3-LS4-4"
+      ]
+    },
+    {
+      "id": "DCI-LS2.C-MS-1",
+      "domain": "LS",
+      "coreConceptNumber": 2,
+      "coreConceptTitle": "Ecosystems: Interactions, Energy, and Dynamics",
+      "coreConceptTitleZH": "生态系统：相互作用、能量与动态",
+      "subConceptLetter": "C",
+      "subConceptTitle": "Ecosystem Dynamics, Functioning, and Resilience",
+      "subConceptTitleZH": "生态系统的动态、功能与韧性",
+      "grade": "MS",
+      "bulletNumber": 1,
+      "content": "Ecosystems are dynamic in nature; their characteristics can vary over time. Disruptions to any physical or biological component of an ecosystem can lead to shifts in all its populations.",
+      "contentZH": "生态系统本质上是动态的；它们的特征会随着时间的推移而变化。对生态系统任何物理或生物组成部分的破坏都可能导致其所有种群的变化。",
+      "relatedPEs": [
+        "MS-LS2-4"
+      ]
+    },
+    {
+      "id": "DCI-LS2.C-MS-2",
+      "domain": "LS",
+      "coreConceptNumber": 2,
+      "coreConceptTitle": "Ecosystems: Interactions, Energy, and Dynamics",
+      "coreConceptTitleZH": "生态系统：相互作用、能量与动态",
+      "subConceptLetter": "C",
+      "subConceptTitle": "Ecosystem Dynamics, Functioning, and Resilience",
+      "subConceptTitleZH": "生态系统的动态、功能与韧性",
+      "grade": "MS",
+      "bulletNumber": 2,
+      "content": "Biodiversity describes the variety of species found in Earth’s terrestrial and oceanic ecosystems. The completeness or integrity of an ecosystem’s biodiversity is often used as a measure of its health.",
+      "contentZH": "生物多样性描述了地球陆地和海洋生态系统中发现的物种多样性。生态系统生物多样性的完整性或完整性通常被用来衡量其健康状况。",
+      "relatedPEs": [
+        "MS-LS2-5"
+      ]
+    },
+    {
+      "id": "DCI-LS2.C-HS-1",
+      "domain": "LS",
+      "coreConceptNumber": 2,
+      "coreConceptTitle": "Ecosystems: Interactions, Energy, and Dynamics",
+      "coreConceptTitleZH": "生态系统：相互作用、能量与动态",
+      "subConceptLetter": "C",
+      "subConceptTitle": "Ecosystem Dynamics, Functioning, and Resilience",
+      "subConceptTitleZH": "生态系统的动态、功能与韧性",
+      "grade": "HS",
+      "bulletNumber": 1,
+      "content": "A complex set of interactions within an ecosystem can keep its numbers and types of organisms relatively constant over long periods of time under stable conditions. If a modest biological or physical disturbance to an ecosystem occurs, it may return to its more or less original status (i.e., the ecosystem is resilient), as opposed to becoming a very different ecosystem. Extreme fluctuations in conditions or the size of any population, however, can challenge the functioning of ecosystems in terms of resources and habitat availability.",
+      "contentZH": "生态系统内一系列复杂的相互作用可以在稳定的条件下长时间保持其生物体的数量和类型相对恒定。如果生态系统发生适度的生物或物理干扰，它可能会或多或少地恢复到其原始状态（即生态系统具有弹性），而不是成为一个非常不同的生态系统。然而，条件或人口规模的极端波动可能会在资源和栖息地可用性方面挑战生态系统的功能。",
+      "relatedPEs": [
+        "HS-LS2-2",
+        "HS-LS2-6"
+      ]
+    },
+    {
+      "id": "DCI-LS2.D-3-1",
+      "domain": "LS",
+      "coreConceptNumber": 2,
+      "coreConceptTitle": "Ecosystems: Interactions, Energy, and Dynamics",
+      "coreConceptTitleZH": "生态系统：相互作用、能量与动态",
+      "subConceptLetter": "D",
+      "subConceptTitle": "Social Interactions and Group Behavior",
+      "subConceptTitleZH": "社会互动与群体行为",
+      "grade": "3",
+      "bulletNumber": 1,
+      "content": "Being part of a group helps animals obtain food, defend experiences and progresses to critiquing the scientific themselves, and cope with changes. Groups may serve explanations or solutions proposed by peers by citing different functions and vary dramatically in size. from K–2).",
+      "contentZH": "成为群体的一员有助于动物获取食物、捍卫经验和进步以批判科学本身，并应对变化。小组可以通过引用不同的功能来提供同行提出的解释或解决方案，并且小组的规模差异很大。从 K–2)。",
+      "relatedPEs": [
+        "3-LS2-1"
+      ]
+    },
+    {
+      "id": "DCI-LS2.D-3-2",
+      "domain": "LS",
+      "coreConceptNumber": 2,
+      "coreConceptTitle": "Ecosystems: Interactions, Energy, and Dynamics",
+      "coreConceptTitleZH": "生态系统：相互作用、能量与动态",
+      "subConceptLetter": "D",
+      "subConceptTitle": "Social Interactions and Group Behavior",
+      "subConceptTitleZH": "社会互动与群体行为",
+      "grade": "3",
+      "bulletNumber": 2,
+      "content": "Construct an argument with evidence, data, and/or a model.",
+      "contentZH": "用证据、数据和/或模型构建论证。",
+      "relatedPEs": [
+        "3-LS2-1"
+      ]
+    },
+    {
+      "id": "DCI-LS3.A-MS-2",
+      "domain": "LS",
+      "coreConceptNumber": 3,
+      "coreConceptTitle": "Heredity: Inheritance and Variation of Traits",
+      "coreConceptTitleZH": "遗传：性状的继承与变异",
+      "subConceptLetter": "A",
+      "subConceptTitle": "Inheritance of Traits",
+      "subConceptTitleZH": "性状的遗传",
+      "grade": "MS",
+      "bulletNumber": 2,
+      "content": "Variations of inherited traits between parent and offspring arise from genetic differences that result from the subset of chromosomes (and therefore genes) inherited.",
+      "contentZH": "父母和后代之间遗传性状的变异是由遗传的染色体子集（以及基因）造成的遗传差异引起的。",
+      "relatedPEs": [
+        "MS-LS3-2"
+      ]
+    },
+    {
+      "id": "DCI-LS3.B-1-1",
+      "domain": "LS",
+      "coreConceptNumber": 3,
+      "coreConceptTitle": "Heredity: Inheritance and Variation of Traits",
+      "coreConceptTitleZH": "遗传：性状的继承与变异",
+      "subConceptLetter": "B",
+      "subConceptTitle": "Variation of Traits",
+      "subConceptTitleZH": "性状的变异",
+      "grade": "1",
+      "bulletNumber": 1,
+      "content": "Individuals of the same kind of plant or animal are recognizable as construct an evidence-based account for natural similar but can also vary in many ways. .",
+      "contentZH": "同类植物或动物的个体可以被认为构建了基于证据的自然相似性解释，但也可以在许多方面有所不同。 。",
+      "relatedPEs": [
+        "1-LS3-1"
+      ]
+    },
+    {
+      "id": "DCI-LS3.B-3-1",
+      "domain": "LS",
+      "coreConceptNumber": 3,
+      "coreConceptTitle": "Heredity: Inheritance and Variation of Traits",
+      "coreConceptTitleZH": "遗传：性状的继承与变异",
+      "subConceptLetter": "B",
+      "subConceptTitle": "Variation of Traits",
+      "subConceptTitleZH": "性状的变异",
+      "grade": "3",
+      "bulletNumber": 1,
+      "content": "Different organisms vary in how they look and function because they have different inherited information.",
+      "contentZH": "不同的生物体的外观和功能各不相同，因为它们具有不同的遗传信息。",
+      "relatedPEs": [
+        "3-LS3-1"
+      ]
+    },
+    {
+      "id": "DCI-LS3.B-3-2",
+      "domain": "LS",
+      "coreConceptNumber": 3,
+      "coreConceptTitle": "Heredity: Inheritance and Variation of Traits",
+      "coreConceptTitleZH": "遗传：性状的继承与变异",
+      "subConceptLetter": "B",
+      "subConceptTitle": "Variation of Traits",
+      "subConceptTitleZH": "性状的变异",
+      "grade": "3",
+      "bulletNumber": 2,
+      "content": "The environment also affects the traits that an organism develops.",
+      "contentZH": "环境也会影响有机体发育的特征。",
+      "relatedPEs": [
+        "3-LS3-2"
+      ]
+    },
+    {
+      "id": "DCI-LS3.B-MS-2",
+      "domain": "LS",
+      "coreConceptNumber": 3,
+      "coreConceptTitle": "Heredity: Inheritance and Variation of Traits",
+      "coreConceptTitleZH": "遗传：性状的继承与变异",
+      "subConceptLetter": "B",
+      "subConceptTitle": "Variation of Traits",
+      "subConceptTitleZH": "性状的变异",
+      "grade": "MS",
+      "bulletNumber": 2,
+      "content": "In addition to variations that arise from sexual reproduction, genetic information can be altered because of mutations. Though rare, mutations may result in changes to the structure and function of proteins. Some changes are beneficial, others harmful, and some neutral to the organism.",
+      "contentZH": "除了有性生殖产生的变异之外，遗传信息也可能因突变而改变。尽管罕见，但突变可能会导致蛋白质结构和功能的变化。有些变化对有机体是有益的，有些是有害的，有些是中性的。",
+      "relatedPEs": [
+        "MS-LS3-1"
+      ]
+    },
+    {
+      "id": "DCI-LS3.B-HS-1",
+      "domain": "LS",
+      "coreConceptNumber": 3,
+      "coreConceptTitle": "Heredity: Inheritance and Variation of Traits",
+      "coreConceptTitleZH": "遗传：性状的继承与变异",
+      "subConceptLetter": "B",
+      "subConceptTitle": "Variation of Traits",
+      "subConceptTitleZH": "性状的变异",
+      "grade": "HS",
+      "bulletNumber": 1,
+      "content": "In sexual reproduction, chromosomes can sometimes swap sections during the process of meiosis (cell division), thereby creating new genetic combinations and thus more genetic variation. Although DNA replication is tightly regulated and remarkably accurate, errors do occur and result in mutations, which are also a source of genetic variation. Environmental factors can also cause mutations in genes, and viable mutations are inherited.",
+      "contentZH": "在有性生殖中，染色体有时会在减数分裂（细胞分裂）过程中交换部分，从而产生新的遗传组合，从而产生更多的遗传变异。尽管 DNA 复制受到严格调控且非常准确，但错误确实会发生并导致突变，这也是遗传变异的一个来源。环境因素也会引起基因突变，而可行的突变是遗传的。",
+      "relatedPEs": [
+        "HS-LS3-2"
+      ]
+    },
+    {
+      "id": "DCI-LS3.B-HS-2",
+      "domain": "LS",
+      "coreConceptNumber": 3,
+      "coreConceptTitle": "Heredity: Inheritance and Variation of Traits",
+      "coreConceptTitleZH": "遗传：性状的继承与变异",
+      "subConceptLetter": "B",
+      "subConceptTitle": "Variation of Traits",
+      "subConceptTitleZH": "性状的变异",
+      "grade": "HS",
+      "bulletNumber": 2,
+      "content": "Environmental factors also affect expression of traits, and hence affect the probability of occurrences of traits in a population. Thus the variation and distribution of traits observed depends on both genetic and environmental factors.",
+      "contentZH": "环境因素也会影响性状的表达，从而影响性状在群体中出现的概率。因此，观察到的性状的变异和分布取决于遗传和环境因素。",
+      "relatedPEs": [
+        "HS-LS3-2",
+        "HS-LS3-3"
+      ]
+    },
+    {
+      "id": "DCI-LS4.A-3-1",
+      "domain": "LS",
+      "coreConceptNumber": 4,
+      "coreConceptTitle": "Biological Evolution: Unity and Diversity",
+      "coreConceptTitleZH": "生物进化：统一与多样性",
+      "subConceptLetter": "A",
+      "subConceptTitle": "Evidence of Common Ancestry and Diversity",
+      "subConceptTitleZH": "共同祖先与多样性的证据",
+      "grade": "3",
+      "bulletNumber": 1,
+      "content": "Some kinds of plants and animals that once lived on Earth are no longer found anywhere.",
+      "contentZH": "曾经生活在地球上的某些植物和动物已不再在任何地方被发现。",
+      "relatedPEs": [
+        "3-LS4-1"
+      ]
+    },
+    {
+      "id": "DCI-LS4.A-3-2",
+      "domain": "LS",
+      "coreConceptNumber": 4,
+      "coreConceptTitle": "Biological Evolution: Unity and Diversity",
+      "coreConceptTitleZH": "生物进化：统一与多样性",
+      "subConceptLetter": "A",
+      "subConceptTitle": "Evidence of Common Ancestry and Diversity",
+      "subConceptTitleZH": "共同祖先与多样性的证据",
+      "grade": "3",
+      "bulletNumber": 2,
+      "content": "Fossils provide evidence about the types of organisms that lived long ago and also about the nature of their environments.",
+      "contentZH": "化石提供了有关很久以前生活的生物类型及其环境性质的证据。",
+      "relatedPEs": [
+        "3-LS4-1"
+      ]
+    },
+    {
+      "id": "DCI-LS4.A-MS-1",
+      "domain": "LS",
+      "coreConceptNumber": 4,
+      "coreConceptTitle": "Biological Evolution: Unity and Diversity",
+      "coreConceptTitleZH": "生物进化：统一与多样性",
+      "subConceptLetter": "A",
+      "subConceptTitle": "Evidence of Common Ancestry and Diversity",
+      "subConceptTitleZH": "共同祖先与多样性的证据",
+      "grade": "MS",
+      "bulletNumber": 1,
+      "content": "The collection of fossils and their placement in chronological order (e.g., through the location of the sedimentary layers in which they are found or through radioactive dating) is known as the fossil record. It documents the existence, diversity, extinction, and change of many life forms throughout the history of life on Earth.",
+      "contentZH": "化石的收集及其按时间顺序排列的位置（例如，通过发现化石的沉积层的位置或通过放射性测年）被称为化石记录。它记录了地球生命史上许多生命形式的存在、多样性、灭绝和变化。",
+      "relatedPEs": [
+        "MS-LS4-1"
+      ]
+    },
+    {
+      "id": "DCI-LS4.A-MS-2",
+      "domain": "LS",
+      "coreConceptNumber": 4,
+      "coreConceptTitle": "Biological Evolution: Unity and Diversity",
+      "coreConceptTitleZH": "生物进化：统一与多样性",
+      "subConceptLetter": "A",
+      "subConceptTitle": "Evidence of Common Ancestry and Diversity",
+      "subConceptTitleZH": "共同祖先与多样性的证据",
+      "grade": "MS",
+      "bulletNumber": 2,
+      "content": "Anatomical similarities and differences between various organisms living today and between them and organisms in the fossil record, enable the reconstruction of evolutionary history and the inference of lines of evolutionary descent.",
+      "contentZH": "当今生活的各种生物之间以及它们与化石记录中的生物之间的解剖学相似性和差异使得能够重建进化历史并推断进化血统。",
+      "relatedPEs": [
+        "MS-LS4-2"
+      ]
+    },
+    {
+      "id": "DCI-LS4.A-MS-3",
+      "domain": "LS",
+      "coreConceptNumber": 4,
+      "coreConceptTitle": "Biological Evolution: Unity and Diversity",
+      "coreConceptTitleZH": "生物进化：统一与多样性",
+      "subConceptLetter": "A",
+      "subConceptTitle": "Evidence of Common Ancestry and Diversity",
+      "subConceptTitleZH": "共同祖先与多样性的证据",
+      "grade": "MS",
+      "bulletNumber": 3,
+      "content": "Comparison of the embryological development of different species also reveals similarities that show relationships not evident in the fully-formed anatomy.",
+      "contentZH": "不同物种胚胎发育的比较也揭示了相似之处，这些相似之处显示出在完全形成的解剖结构中并不明显的关系。",
+      "relatedPEs": [
+        "MS-LS4-3"
+      ]
+    },
+    {
+      "id": "DCI-LS4.A-HS-1",
+      "domain": "LS",
+      "coreConceptNumber": 4,
+      "coreConceptTitle": "Biological Evolution: Unity and Diversity",
+      "coreConceptTitleZH": "生物进化：统一与多样性",
+      "subConceptLetter": "A",
+      "subConceptTitle": "Evidence of Common Ancestry and Diversity",
+      "subConceptTitleZH": "共同祖先与多样性的证据",
+      "grade": "MS",
+      "bulletNumber": 3,
+      "content": "Genetic information provides evidence of evolution. DNA sequences vary among species, but there are many overlaps; in fact, the ongoing branching that produces multiple lines of descent can be inferred by comparing the DNA sequences of different organisms. Such information is also derivable from the similarities and differences in amino acid sequences and from anatomical and embryological evidence.",
+      "contentZH": "遗传信息提供了进化的证据。 DNA序列因物种而异，但也有很多重叠之处；事实上，通过比较不同生物体的 DNA 序列可以推断出产生多个血统的持续分支。这些信息还可以从氨基酸序列的相似性和差异以及解剖学和胚胎学证据中得出。",
+      "relatedPEs": [
+        "HS-LS4-1"
+      ]
+    },
+    {
+      "id": "DCI-LS4.B-3-1",
+      "domain": "LS",
+      "coreConceptNumber": 4,
+      "coreConceptTitle": "Biological Evolution: Unity and Diversity",
+      "coreConceptTitleZH": "生物进化：统一与多样性",
+      "subConceptLetter": "B",
+      "subConceptTitle": "Natural Selection",
+      "subConceptTitleZH": "自然选择",
+      "grade": "3",
+      "bulletNumber": 1,
+      "content": "Sometimes the differences in characteristics between individuals of the same species provide advantages in surviving, finding mates, and reproducing.",
+      "contentZH": "有时，同一物种个体之间的特征差异提供了生存、寻找配偶和繁殖的优势。",
+      "relatedPEs": [
+        "3-LS4-2"
+      ]
+    },
+    {
+      "id": "DCI-LS4.B-MS-1",
+      "domain": "LS",
+      "coreConceptNumber": 4,
+      "coreConceptTitle": "Biological Evolution: Unity and Diversity",
+      "coreConceptTitleZH": "生物进化：统一与多样性",
+      "subConceptLetter": "B",
+      "subConceptTitle": "Natural Selection",
+      "subConceptTitleZH": "自然选择",
+      "grade": "MS",
+      "bulletNumber": 1,
+      "content": "Natural selection leads to the predominance of certain traits in a population, and the suppression of others.",
+      "contentZH": "自然选择导致群体中某些特征占主导地位，而其他特征则受到抑制。",
+      "relatedPEs": [
+        "MS-LS4-4"
+      ]
+    },
+    {
+      "id": "DCI-LS4.B-MS-2",
+      "domain": "LS",
+      "coreConceptNumber": 4,
+      "coreConceptTitle": "Biological Evolution: Unity and Diversity",
+      "coreConceptTitleZH": "生物进化：统一与多样性",
+      "subConceptLetter": "B",
+      "subConceptTitle": "Natural Selection",
+      "subConceptTitleZH": "自然选择",
+      "grade": "MS",
+      "bulletNumber": 2,
+      "content": "In artificial selection, humans have the capacity to influence certain characteristics of organisms by selective breeding. One can choose desired parental traits determined by genes, which are then passed on to offspring.",
+      "contentZH": "在人工选择中，人类有能力通过选择性育种影响生物体的某些特征。人们可以选择由基因决定的所需亲本性状，然后将其遗传给后代。",
+      "relatedPEs": [
+        "MS-LS4-5"
+      ]
+    },
+    {
+      "id": "DCI-LS4.B-HS-1",
+      "domain": "LS",
+      "coreConceptNumber": 4,
+      "coreConceptTitle": "Biological Evolution: Unity and Diversity",
+      "coreConceptTitleZH": "生物进化：统一与多样性",
+      "subConceptLetter": "B",
+      "subConceptTitle": "Natural Selection",
+      "subConceptTitleZH": "自然选择",
+      "grade": "HS",
+      "bulletNumber": 1,
+      "content": "Natural selection occurs only if there is both (1) variation in the genetic information between organisms in a population and (2) variation in the expression of that genetic information—that is, trait variation—that leads to differences in performance among individuals.",
+      "contentZH": "只有当（1）群体中生物体之间的遗传信息存在变异，以及（2）该遗传信息的表达存在变异（即性状变异）并导致个体表现差异时，自然选择才会发生。",
+      "relatedPEs": [
+        "HS-LS4-2",
+        "HS-LS4-3"
+      ]
+    },
+    {
+      "id": "DCI-LS4.B-HS-2",
+      "domain": "LS",
+      "coreConceptNumber": 4,
+      "coreConceptTitle": "Biological Evolution: Unity and Diversity",
+      "coreConceptTitleZH": "生物进化：统一与多样性",
+      "subConceptLetter": "B",
+      "subConceptTitle": "Natural Selection",
+      "subConceptTitleZH": "自然选择",
+      "grade": "HS",
+      "bulletNumber": 1,
+      "content": "The traits that positively affect survival are more likely to be reproduced, and thus are more common in the population.",
+      "contentZH": "对生存产生积极影响的特征更有可能被复制，因此在人群中更常见。",
+      "relatedPEs": [
+        "HS-LS4-3"
+      ]
+    },
+    {
+      "id": "DCI-LS4.C-3-1",
+      "domain": "LS",
+      "coreConceptNumber": 4,
+      "coreConceptTitle": "Biological Evolution: Unity and Diversity",
+      "coreConceptTitleZH": "生物进化：统一与多样性",
+      "subConceptLetter": "C",
+      "subConceptTitle": "Adaptation",
+      "subConceptTitleZH": "适应",
+      "grade": "3",
+      "bulletNumber": 1,
+      "content": "For any particular environment, some kinds of organisms survive well, some survive less well, and some cannot survive at all.",
+      "contentZH": "对于任何特定的环境，有些种类的生物能够生存得很好，有些则生存得较差，有些则根本无法生存。",
+      "relatedPEs": [
+        "3-LS4-3"
+      ]
+    },
+    {
+      "id": "DCI-LS4.C-MS-1",
+      "domain": "LS",
+      "coreConceptNumber": 4,
+      "coreConceptTitle": "Biological Evolution: Unity and Diversity",
+      "coreConceptTitleZH": "生物进化：统一与多样性",
+      "subConceptLetter": "C",
+      "subConceptTitle": "Adaptation",
+      "subConceptTitleZH": "适应",
+      "grade": "MS",
+      "bulletNumber": 1,
+      "content": "Adaptation by natural selection acting over generations is one important process by which species change over time in response to changes in environmental conditions. Traits that support successful survival and reproduction in the new environment become more common; those that do not become less common. Thus, the distribution of traits in a population changes.",
+      "contentZH": "世代相传的自然选择适应是物种随时间变化以响应环境条件变化的一个重要过程。支持在新环境中成功生存和繁殖的特征变得更加普遍；那些并没有变得不那么常见的。因此，群体中性状的分布发生变化。",
+      "relatedPEs": [
+        "MS-LS4-6"
+      ]
+    },
+    {
+      "id": "DCI-LS4.C-HS-1",
+      "domain": "LS",
+      "coreConceptNumber": 4,
+      "coreConceptTitle": "Biological Evolution: Unity and Diversity",
+      "coreConceptTitleZH": "生物进化：统一与多样性",
+      "subConceptLetter": "C",
+      "subConceptTitle": "Adaptation",
+      "subConceptTitleZH": "适应",
+      "grade": "HS",
+      "bulletNumber": 1,
+      "content": "Evolution is a consequence of the interaction of four factors: (1) the potential for a species to increase in number, (2) the genetic variation of individuals in the species due to mutation and sexual reproduction, (3) competition for an environment’s limited supply of the resources that individuals need in order to survive and reproduce, and (4) the ensuing proliferation of those organisms that are better able to survive and reproduce in that environment.",
+      "contentZH": "进化是四个因素相互作用的结果：（1）物种数量增加的潜力，（2）由于突变和有性繁殖而导致物种中个体的遗传变异，（3）对环境中个体生存和繁殖所需的有限资源的竞争，以及（4）随后能够在该环境中生存和繁殖的生物体的增殖。",
+      "relatedPEs": [
+        "HS-LS4-2"
+      ]
+    },
+    {
+      "id": "DCI-LS4.C-HS-2",
+      "domain": "LS",
+      "coreConceptNumber": 4,
+      "coreConceptTitle": "Biological Evolution: Unity and Diversity",
+      "coreConceptTitleZH": "生物进化：统一与多样性",
+      "subConceptLetter": "C",
+      "subConceptTitle": "Adaptation",
+      "subConceptTitleZH": "适应",
+      "grade": "HS",
+      "bulletNumber": 2,
+      "content": "Natural selection leads to adaptation, that is, to a population dominated by organisms and are anatomically, behaviorally, and physiologically well suited to survive and reproduce in a specific environment. That is, the differential survival and reproduction of organisms in a population that have an advantageous heritable trait leads to an increase in the proportion of individuals in future generations that have the trait and to a decrease in the proportion of individuals that do not.",
+      "contentZH": "自然选择导致适应，即形成以生物体为主的种群，并且在解剖学、行为学和生理学上都非常适合在特定环境中生存和繁殖。也就是说，具有有利遗传性状的群体中生物体的差异性生存和繁殖导致后代中具有该性状的个体比例增加，并且导致不具有该性状的个体比例减少。",
+      "relatedPEs": [
+        "HS-LS4-3",
+        "HS-LS4-4"
+      ]
+    },
+    {
+      "id": "DCI-LS4.C-HS-3",
+      "domain": "LS",
+      "coreConceptNumber": 4,
+      "coreConceptTitle": "Biological Evolution: Unity and Diversity",
+      "coreConceptTitleZH": "生物进化：统一与多样性",
+      "subConceptLetter": "C",
+      "subConceptTitle": "Adaptation",
+      "subConceptTitleZH": "适应",
+      "grade": "HS",
+      "bulletNumber": 3,
+      "content": "Adaptation also means that the distribution of traits in a population can change when conditions change.",
+      "contentZH": "适应还意味着当条件发生变化时，种群中的性状分布也会发生变化。",
+      "relatedPEs": [
+        "HS-LS4-3"
+      ]
+    },
+    {
+      "id": "DCI-LS4.C-HS-4",
+      "domain": "LS",
+      "coreConceptNumber": 4,
+      "coreConceptTitle": "Biological Evolution: Unity and Diversity",
+      "coreConceptTitleZH": "生物进化：统一与多样性",
+      "subConceptLetter": "C",
+      "subConceptTitle": "Adaptation",
+      "subConceptTitleZH": "适应",
+      "grade": "HS",
+      "bulletNumber": 4,
+      "content": "Changes in the physical environment, whether naturally occurring or human induced, have thus contributed to the expansion of some species, the emergence of new distinct species as populations diverge under different conditions, and the decline and sometimes the extinction of some species.",
+      "contentZH": "因此，自然环境的变化，无论是自然发生的还是人为引起的，都导致了一些物种的扩张，随着种群在不同条件下的分化而出现新的独特物种，以及一些物种的衰落，有时甚至是灭绝。",
+      "relatedPEs": [
+        "HS-LS4-5",
+        "HS-LS4-6"
+      ]
+    },
+    {
+      "id": "DCI-LS4.C-HS-5",
+      "domain": "LS",
+      "coreConceptNumber": 4,
+      "coreConceptTitle": "Biological Evolution: Unity and Diversity",
+      "coreConceptTitleZH": "生物进化：统一与多样性",
+      "subConceptLetter": "C",
+      "subConceptTitle": "Adaptation",
+      "subConceptTitleZH": "适应",
+      "grade": "HS",
+      "bulletNumber": 5,
+      "content": "Species become extinct because they can no longer survive and reproduce in their altered environment. If members cannot adjust to change that is too fast or drastic, the opportunity for the species’ evolution is lost.",
+      "contentZH": "物种灭绝是因为它们无法再在改变的环境中生存和繁殖。如果成员无法适应太快或剧烈的变化，物种进化的机会就会丧失。",
+      "relatedPEs": [
+        "HS-LS4-5"
+      ]
+    },
+    {
+      "id": "DCI-LS4.D-2-1",
+      "domain": "LS",
+      "coreConceptNumber": 4,
+      "coreConceptTitle": "Biological Evolution: Unity and Diversity",
+      "coreConceptTitleZH": "生物进化：统一与多样性",
+      "subConceptLetter": "D",
+      "subConceptTitle": "Biodiversity and Humans",
+      "subConceptTitleZH": "生物多样性与人类",
+      "grade": "2",
+      "bulletNumber": 1,
+      "content": "There are many different kinds of living things in any area, and they exist in different places on land and in water.",
+      "contentZH": "任何地区都有许多不同种类的生物，它们存在于陆地和水中的不同地方。",
+      "relatedPEs": [
+        "2-LS4-1"
+      ]
+    },
+    {
+      "id": "DCI-LS4.D-3-1",
+      "domain": "LS",
+      "coreConceptNumber": 4,
+      "coreConceptTitle": "Biological Evolution: Unity and Diversity",
+      "coreConceptTitleZH": "生物进化：统一与多样性",
+      "subConceptLetter": "D",
+      "subConceptTitle": "Biodiversity and Humans",
+      "subConceptTitleZH": "生物多样性与人类",
+      "grade": "3",
+      "bulletNumber": 1,
+      "content": "Populations live in a variety of habitats, and change in those habitats affects the organisms living there.",
+      "contentZH": "种群生活在各种栖息地中，这些栖息地的变化会影响生活在那里的生物体。",
+      "relatedPEs": [
+        "3-LS4-4"
+      ]
+    },
+    {
+      "id": "DCI-LS4.D-MS-1",
+      "domain": "LS",
+      "coreConceptNumber": 4,
+      "coreConceptTitle": "Biological Evolution: Unity and Diversity",
+      "coreConceptTitleZH": "生物进化：统一与多样性",
+      "subConceptLetter": "D",
+      "subConceptTitle": "Biodiversity and Humans",
+      "subConceptTitleZH": "生物多样性与人类",
+      "grade": "MS",
+      "bulletNumber": 1,
+      "content": "Changes in biodiversity can influence humans’ resources, such as food, energy, and medicines, as well as ecosystem services that humans rely on—for example, water purification and recycling.",
+      "contentZH": "生物多样性的变化可以影响人类的资源，例如食物、能源和药品，以及人类依赖的生态系统服务，例如水的净化和回收。",
+      "relatedPEs": [
+        "MS-LS2-5"
+      ]
+    },
+    {
+      "id": "DCI-LS4.D-HS-1",
+      "domain": "LS",
+      "coreConceptNumber": 4,
+      "coreConceptTitle": "Biological Evolution: Unity and Diversity",
+      "coreConceptTitleZH": "生物进化：统一与多样性",
+      "subConceptLetter": "D",
+      "subConceptTitle": "Biodiversity and Humans",
+      "subConceptTitleZH": "生物多样性与人类",
+      "grade": "HS",
+      "bulletNumber": 1,
+      "content": "Humans depend on the living world for the resources and other benefits provided by biodiversity. But human activity is also having adverse impacts on biodiversity through overpopulation, overexploitation, habitat destruction, pollution, introduction of invasive species, and climate change. Thus sustaining biodiversity so that ecosystem functioning and productivity are maintained is essential to supporting and enhancing life on Earth. Sustaining biodiversity also aids humanity by preserving landscapes of recreational or inspirational value.",
+      "contentZH": "人类依赖生物世界获取生物多样性提供的资源和其他好处。但人类活动也通过人口过剩、过度开发、栖息地破坏、污染、入侵物种的引入和气候变化对生物多样性产生不利影响。因此，维持生物多样性以维持生态系统的功能和生产力对于支持和增强地球上的生命至关重要。维持生物多样性还可以通过保护具有娱乐或启发价值的景观来帮助人类。",
+      "relatedPEs": [
+        "HS-LS4-6"
+      ]
+    },
+    {
+      "id": "DCI-ESS1.A-5-1",
+      "domain": "ESS",
+      "coreConceptNumber": 1,
+      "coreConceptTitle": "Earth's Place in the Universe",
+      "coreConceptTitleZH": "地球在宇宙中的位置",
+      "subConceptLetter": "A",
+      "subConceptTitle": "The Universe and its Stars",
+      "subConceptTitleZH": "宇宙与恒星",
+      "grade": "5",
+      "bulletNumber": 1,
+      "content": "The sun is a star that appears larger and brighter than other stars because it is closer. Stars range greatly in their distance from Earth.",
+      "contentZH": "太阳是一颗比其他恒星显得更大、更亮的恒星，因为它距离更近。恒星与地球的距离相差很大。",
+      "relatedPEs": [
+        "5-ESS1-1"
+      ]
+    },
+    {
+      "id": "DCI-ESS1.A-MS-1",
+      "domain": "ESS",
+      "coreConceptNumber": 1,
+      "coreConceptTitle": "Earth's Place in the Universe",
+      "coreConceptTitleZH": "地球在宇宙中的位置",
+      "subConceptLetter": "A",
+      "subConceptTitle": "The Universe and Its Stars",
+      "subConceptTitleZH": "宇宙与恒星",
+      "grade": "MS",
+      "bulletNumber": 1,
+      "content": "Patterns of the apparent motion of the sun, the moon, and stars in the sky can be observed, described, predicted, and explained with models.",
+      "contentZH": "天空中太阳、月亮和星星的视运动模式可以通过模型来观察、描述、预测和解释。",
+      "relatedPEs": [
+        "MS-ESS1-1"
+      ]
+    },
+    {
+      "id": "DCI-ESS1.A-MS-2",
+      "domain": "ESS",
+      "coreConceptNumber": 1,
+      "coreConceptTitle": "Earth's Place in the Universe",
+      "coreConceptTitleZH": "地球在宇宙中的位置",
+      "subConceptLetter": "A",
+      "subConceptTitle": "The Universe and Its Stars",
+      "subConceptTitleZH": "宇宙与恒星",
+      "grade": "MS",
+      "bulletNumber": 2,
+      "content": "Earth and its solar system are part of the Milky Way galaxy, which is one of many galaxies in the universe.",
+      "contentZH": "地球及其太阳系是银河系的一部分，银河系是宇宙中众多星系之一。",
+      "relatedPEs": [
+        "MS-ESS1-2"
+      ]
+    },
+    {
+      "id": "DCI-ESS1.A-HS-1",
+      "domain": "ESS",
+      "coreConceptNumber": 1,
+      "coreConceptTitle": "Earth's Place in the Universe",
+      "coreConceptTitleZH": "地球在宇宙中的位置",
+      "subConceptLetter": "A",
+      "subConceptTitle": "The Universe and Its Stars",
+      "subConceptTitleZH": "宇宙与恒星",
+      "grade": "HS",
+      "bulletNumber": 1,
+      "content": "The star called the sun is changing and will burn out over a lifespan of approximately 10 billion years.",
+      "contentZH": "这颗被称为太阳的恒星正在发生变化，并且会在大约 100 亿年的寿命内燃烧殆尽。",
+      "relatedPEs": [
+        "HS-ESS1-1"
+      ]
+    },
+    {
+      "id": "DCI-ESS1.A-HS-2",
+      "domain": "ESS",
+      "coreConceptNumber": 1,
+      "coreConceptTitle": "Earth's Place in the Universe",
+      "coreConceptTitleZH": "地球在宇宙中的位置",
+      "subConceptLetter": "A",
+      "subConceptTitle": "The Universe and Its Stars",
+      "subConceptTitleZH": "宇宙与恒星",
+      "grade": "HS",
+      "bulletNumber": 2,
+      "content": "The study of stars’ light spectra and brightness is used to identify compositional elements of stars, their movements, and their distances from Earth.",
+      "contentZH": "对恒星光谱和亮度的研究用于识别恒星的组成元素、它们的运动以及它们与地球的距离。",
+      "relatedPEs": [
+        "HS-ESS1-3",
+        "HS-ESS1-2"
+      ]
+    },
+    {
+      "id": "DCI-ESS1.A-HS-3",
+      "domain": "ESS",
+      "coreConceptNumber": 1,
+      "coreConceptTitle": "Earth's Place in the Universe",
+      "coreConceptTitleZH": "地球在宇宙中的位置",
+      "subConceptLetter": "A",
+      "subConceptTitle": "The Universe and Its Stars",
+      "subConceptTitleZH": "宇宙与恒星",
+      "grade": "HS",
+      "bulletNumber": 3,
+      "content": "The Big Bang theory is supported by observations of distant galaxies receding from our own, of the measured composition of stars and non-stellar gases, and of the maps of spectra of the primordial radiation (cosmic microwave background) that still fills the universe.",
+      "contentZH": "大爆炸理论得到了对远离我们星系的观测、恒星和非恒星气体成分的测量以及仍然充满宇宙的原始辐射（宇宙微波背景）光谱图的支持。",
+      "relatedPEs": [
+        "HS-ESS1-2"
+      ]
+    },
+    {
+      "id": "DCI-ESS1.A-HS-4",
+      "domain": "ESS",
+      "coreConceptNumber": 1,
+      "coreConceptTitle": "Earth's Place in the Universe",
+      "coreConceptTitleZH": "地球在宇宙中的位置",
+      "subConceptLetter": "A",
+      "subConceptTitle": "The Universe and Its Stars",
+      "subConceptTitleZH": "宇宙与恒星",
+      "grade": "HS",
+      "bulletNumber": 4,
+      "content": "Other than the hydrogen and helium formed at the time of the Big Bang, nuclear fusion within stars produces all atomic nuclei lighter than and including iron, and the process releases electromagnetic energy. Heavier elements are produced when certain massive stars achieve a supernova stage and explode. ",
+      "contentZH": "除了大爆炸时形成的氢和氦之外，恒星内部的核聚变会产生所有比铁轻（包括铁）的原子核，并且该过程释放电磁能。当某些大质量恒星达到超新星阶段并爆炸时，就会产生较重的元素。",
+      "relatedPEs": [
+        "HS-ESS1-3",
+        "HS-ESS1-2"
+      ]
+    },
+    {
+      "id": "DCI-ESS1.B-1-1",
+      "domain": "ESS",
+      "coreConceptNumber": 1,
+      "coreConceptTitle": "Earth's Place in the Universe",
+      "coreConceptTitleZH": "地球在宇宙中的位置",
+      "subConceptLetter": "B",
+      "subConceptTitle": "Earth and the Solar System",
+      "subConceptTitleZH": "地球与太阳系",
+      "grade": "1",
+      "bulletNumber": 1,
+      "content": "Seasonal patterns of sunrise and sunset can be observed, described, and predicted.",
+      "contentZH": "日出和日落的季节模式可以被观察、描述和预测。",
+      "relatedPEs": [
+        "1-ESS1-2"
+      ]
+    },
+    {
+      "id": "DCI-ESS1.B-5-1",
+      "domain": "ESS",
+      "coreConceptNumber": 1,
+      "coreConceptTitle": "Earth's Place in the Universe",
+      "coreConceptTitleZH": "地球在宇宙中的位置",
+      "subConceptLetter": "B",
+      "subConceptTitle": "Earth and the Solar System",
+      "subConceptTitleZH": "地球与太阳系",
+      "grade": "5",
+      "bulletNumber": 1,
+      "content": "The orbits of Earth around the sun and of the moon around Earth, together with the rotation of Earth about an axis between its North and South poles, cause observable patterns. These include day and night; daily changes in the length and direction of shadows; and different positions of the sun, moon, and stars at different times of the day, month, and year.",
+      "contentZH": "地球围绕太阳的轨道和月球围绕地球的轨道，以及地球围绕北极和南极之间的轴的旋转，产生了可观察到的模式。其中包括白天和黑夜；阴影长度和方向的每日变化；以及太阳、月亮和星星在一天、一个月和一年的不同时间的不同位置。",
+      "relatedPEs": [
+        "5-ESS1-2"
+      ]
+    },
+    {
+      "id": "DCI-ESS1.B-MS-1",
+      "domain": "ESS",
+      "coreConceptNumber": 1,
+      "coreConceptTitle": "Earth's Place in the Universe",
+      "coreConceptTitleZH": "地球在宇宙中的位置",
+      "subConceptLetter": "B",
+      "subConceptTitle": "Earth and the Solar System",
+      "subConceptTitleZH": "地球与太阳系",
+      "grade": "MS",
+      "bulletNumber": 1,
+      "content": "The solar system consists of the sun and a collection of objects, including planets, their moons, and asteroids that are held in orbit around the sun by its gravitational pull on them.",
+      "contentZH": "太阳系由太阳和一系列物体组成，包括行星、卫星和小行星，它们通过太阳的引力而围绕太阳运行。",
+      "relatedPEs": [
+        "MS-ESS1-2",
+        "MS-ESS1-3"
+      ]
+    },
+    {
+      "id": "DCI-ESS1.B-MS-2",
+      "domain": "ESS",
+      "coreConceptNumber": 1,
+      "coreConceptTitle": "Earth's Place in the Universe",
+      "coreConceptTitleZH": "地球在宇宙中的位置",
+      "subConceptLetter": "B",
+      "subConceptTitle": "Earth and the Solar System",
+      "subConceptTitleZH": "地球与太阳系",
+      "grade": "MS",
+      "bulletNumber": 2,
+      "content": "This model of the solar system can explain eclipses of the sun and the moon. Earth's spin axis is fixed in direction over the short-term but tilted relative to its orbit around the sun. The seasons are a result of that tilt and are caused by the differential intensity of sunlight on different areas of Earth across the year.",
+      "contentZH": "这个太阳系模型可以解释日食和月食。地球自转轴的方向在短期内是固定的，但相对于其绕太阳的轨道是倾斜的。季节是这种倾斜的结果，是由一年中地球不同地区的阳光强度差异造成的。",
+      "relatedPEs": [
+        "MS-ESS1-1"
+      ]
+    },
+    {
+      "id": "DCI-ESS1.B-MS-3",
+      "domain": "ESS",
+      "coreConceptNumber": 1,
+      "coreConceptTitle": "Earth's Place in the Universe",
+      "coreConceptTitleZH": "地球在宇宙中的位置",
+      "subConceptLetter": "B",
+      "subConceptTitle": "Earth and the Solar System",
+      "subConceptTitleZH": "地球与太阳系",
+      "grade": "MS",
+      "bulletNumber": 3,
+      "content": "The solar system appears to have formed from a disk of dust and gas, drawn together by gravity.",
+      "contentZH": "太阳系似乎是由尘埃和气体组成的圆盘在重力作用下聚集在一起形成的。",
+      "relatedPEs": [
+        "MS-ESS1-2"
+      ]
+    },
+    {
+      "id": "DCI-ESS1.B-HS-1",
+      "domain": "ESS",
+      "coreConceptNumber": 1,
+      "coreConceptTitle": "Earth's Place in the Universe",
+      "coreConceptTitleZH": "地球在宇宙中的位置",
+      "subConceptLetter": "B",
+      "subConceptTitle": "Earth and the Solar System",
+      "subConceptTitleZH": "地球与太阳系",
+      "grade": "HS",
+      "bulletNumber": 1,
+      "content": "Kepler’s laws describe common features of the motions of orbiting objects, including their elliptical paths around the sun. Orbits may change due to the gravitational effects from, or collisions with, other objects in the solar system.",
+      "contentZH": "开普勒定律描述了轨道物体运动的共同特征，包括它们绕太阳的椭圆路径。由于太阳系中其他物体的引力效应或碰撞，轨道可能会发生变化。",
+      "relatedPEs": [
+        "HS-ESS1-4"
+      ]
+    },
+    {
+      "id": "DCI-ESS1.B-HS-2",
+      "domain": "ESS",
+      "coreConceptNumber": 1,
+      "coreConceptTitle": "Earth's Place in the Universe",
+      "coreConceptTitleZH": "地球在宇宙中的位置",
+      "subConceptLetter": "B",
+      "subConceptTitle": "Earth and the Solar System",
+      "subConceptTitleZH": "地球与太阳系",
+      "grade": "HS",
+      "bulletNumber": 2,
+      "content": "Cyclical changes in the shape of Earth’s orbit around the sun, together with changes in the tilt of the planet’s axis of rotation, both occurring over hundreds of thousands of years, have altered the intensity and distribution of sunlight falling on the earth. These phenomena cause a cycle of ice ages and other gradual climate changes.",
+      "contentZH": "地球绕太阳轨道形状的周期性变化，以及地球自转轴倾斜度的变化，都发生了数十万年，改变了落在地球上的阳光的强度和分布。这些现象导致冰河时代的循环和其他逐渐的气候变化。",
+      "relatedPEs": [
+        "HS-ESS2-4"
+      ]
+    },
+    {
+      "id": "DCI-ESS1.C-2-1",
+      "domain": "ESS",
+      "coreConceptNumber": 1,
+      "coreConceptTitle": "Earth's Place in the Universe",
+      "coreConceptTitleZH": "地球在宇宙中的位置",
+      "subConceptLetter": "C",
+      "subConceptTitle": "The History of Planet Earth",
+      "subConceptTitleZH": "地球的历史",
+      "grade": "2",
+      "bulletNumber": 1,
+      "content": "Some events happen very quickly; others occur very on prior experiences and progresses to the use of evidence and slowly, over a time period much longer than one can ideas in constructing evidence-based accounts of natural observe. ",
+      "contentZH": "有些事件发生得很快；有些事件发生得很快。其他的则非常依赖于先前的经验并进展到证据的使用，并且缓慢地，在比人们构建自然观察的基于证据的描述的想法要长得多的时间段内。",
+      "relatedPEs": [
+        "2-ESS1-1"
+      ]
+    },
+    {
+      "id": "DCI-ESS1.C-2-2",
+      "domain": "ESS",
+      "coreConceptNumber": 1,
+      "coreConceptTitle": "Earth's Place in the Universe",
+      "coreConceptTitleZH": "地球在宇宙中的位置",
+      "subConceptLetter": "C",
+      "subConceptTitle": "The History of Planet Earth",
+      "subConceptTitleZH": "地球的历史",
+      "grade": "2",
+      "bulletNumber": 2,
+      "content": "Make observations from several sources to construct an evidence-based account for natural phenomena.",
+      "contentZH": "从多个来源进行观察，为自然现象构建基于证据的解释。",
+      "relatedPEs": [
+        "2-ESS1-1"
+      ]
+    },
+    {
+      "id": "DCI-ESS1.C-4-1",
+      "domain": "ESS",
+      "coreConceptNumber": 1,
+      "coreConceptTitle": "Earth's Place in the Universe",
+      "coreConceptTitleZH": "地球在宇宙中的位置",
+      "subConceptLetter": "C",
+      "subConceptTitle": "The History of Planet Earth",
+      "subConceptTitleZH": "地球的历史",
+      "grade": "4",
+      "bulletNumber": 1,
+      "content": "Local, regional, and global patterns of rock formations reveal changes over time due to earth forces, such as earthquakes. The presence and location of certain fossil types indicate the order in which rock layers were formed.",
+      "contentZH": "局部、区域和全球岩层模式揭示了由于地球力（例如地震）而随时间发生的变化。某些化石类型的存在和位置表明了岩层形成的顺序。",
+      "relatedPEs": [
+        "4-ESS1-1"
+      ]
+    },
+    {
+      "id": "DCI-ESS1.C-MS-1",
+      "domain": "ESS",
+      "coreConceptNumber": 1,
+      "coreConceptTitle": "Earth's Place in the Universe",
+      "coreConceptTitleZH": "地球在宇宙中的位置",
+      "subConceptLetter": "C",
+      "subConceptTitle": "The History of Planet Earth",
+      "subConceptTitleZH": "地球的历史",
+      "grade": "MS",
+      "bulletNumber": 1,
+      "content": "The geologic time scale interpreted from rock strata provides a way to organize Earth's history. Analyses of rock strata and the fossil record provide only relative dates, not an absolute scale.",
+      "contentZH": "从岩层解释的地质时间尺度提供了一种组织地球历史的方法。对岩层和化石记录的分析仅提供相对日期，而不是绝对规模​​。",
+      "relatedPEs": [
+        "MS-ESS1-4"
+      ]
+    },
+    {
+      "id": "DCI-ESS1.C-HS-1",
+      "domain": "ESS",
+      "coreConceptNumber": 1,
+      "coreConceptTitle": "Earth's Place in the Universe",
+      "coreConceptTitleZH": "地球在宇宙中的位置",
+      "subConceptLetter": "C",
+      "subConceptTitle": "The History of Planet Earth",
+      "subConceptTitleZH": "地球的历史",
+      "grade": "HS",
+      "bulletNumber": 1,
+      "content": "Continental rocks, which can be older than 4 billion years, are generally much older than the rocks of the ocean floor, which are less than 200 million years old.",
+      "contentZH": "大陆岩石的年龄可能超过 40 亿年，通常比海底岩石的年龄还不到 2 亿年。",
+      "relatedPEs": [
+        "HS-ESS1-5"
+      ]
+    },
+    {
+      "id": "DCI-ESS1.C-HS-2",
+      "domain": "ESS",
+      "coreConceptNumber": 1,
+      "coreConceptTitle": "Earth's Place in the Universe",
+      "coreConceptTitleZH": "地球在宇宙中的位置",
+      "subConceptLetter": "C",
+      "subConceptTitle": "The History of Planet Earth",
+      "subConceptTitleZH": "地球的历史",
+      "grade": "HS",
+      "bulletNumber": 2,
+      "content": "Although active geologic processes, such as plate tectonics and erosion, have destroyed or altered most of the very early rock record on Earth, other objects in the solar system, such as lunar rocks, asteroids, and meteorites, have changed little over billions of years. Studying these objects can provide information about Earth’s formation and early history.",
+      "contentZH": "尽管板块构造和侵蚀等活跃的地质过程已经破坏或改变了地球上大部分早期的岩石记录，但太阳系中的其他物体，如月球岩石、小行星和陨石，在数十亿年的时间里几乎没有变化。研究这些物体可以提供有关地球形成和早期历史的信息。",
+      "relatedPEs": [
+        "HS-ESS1-6"
+      ]
+    },
+    {
+      "id": "DCI-ESS2.A-2-1",
+      "domain": "ESS",
+      "coreConceptNumber": 2,
+      "coreConceptTitle": "Earth's Systems",
+      "coreConceptTitleZH": "地球系统",
+      "subConceptLetter": "A",
+      "subConceptTitle": "Earth Materials and Systems",
+      "subConceptTitleZH": "地球物质与系统",
+      "grade": "2",
+      "bulletNumber": 1,
+      "content": "Wind and water can change the shape of the land.",
+      "contentZH": "风和水可以改变土地的形状。",
+      "relatedPEs": [
+        "2-ESS2-1"
+      ]
+    },
+    {
+      "id": "DCI-ESS2.A-4-1",
+      "domain": "ESS",
+      "coreConceptNumber": 2,
+      "coreConceptTitle": "Earth's Systems",
+      "coreConceptTitleZH": "地球系统",
+      "subConceptLetter": "A",
+      "subConceptTitle": "Earth Materials and Systems",
+      "subConceptTitleZH": "地球物质与系统",
+      "grade": "4",
+      "bulletNumber": 1,
+      "content": "Rainfall helps to shape the land and affects the types of living things in a region. Water, ice, wind, living organisms, and gravity break down rocks, soils, and sediments into smaller particles and move them around.",
+      "contentZH": "降雨有助于塑造土地并影响一个地区的生物类型。水、冰、风、生物体和重力将岩石、土壤和沉积物分解成更小的颗粒并移动它们。",
+      "relatedPEs": [
+        "4-ESS2-1"
+      ]
+    },
+    {
+      "id": "DCI-ESS2.A-5-1",
+      "domain": "ESS",
+      "coreConceptNumber": 2,
+      "coreConceptTitle": "Earth's Systems",
+      "coreConceptTitleZH": "地球系统",
+      "subConceptLetter": "A",
+      "subConceptTitle": "Earth Materials and Systems",
+      "subConceptTitleZH": "地球物质与系统",
+      "grade": "5",
+      "bulletNumber": 1,
+      "content": "Earth’s major systems are the geosphere (solid and molten rock, soil, and sediments), the hydrosphere (water and ice), the atmosphere (air), and the biosphere (living things, including humans). These systems interact in multiple ways to affect Earth’s surface materials and processes. The ocean supports a variety of ecosystems and organisms, shapes landforms, and influences climate. Winds and clouds in the atmosphere interact with the landforms to determine patterns of weather.",
+      "contentZH": "地球的主要系统是地圈（固体和熔岩、土壤和沉积物）、水圈（水和冰）、大气层（空气）和生物圈（包括人类在内的生物）。这些系统以多种方式相互作用，影响地球表面的材料和过程。海洋支持着各种生态系统和生物体，塑造地貌并影响气候。大气中的风和云与地貌相互作用，从而决定天气模式。",
+      "relatedPEs": [
+        "5-ESS2-1"
+      ]
+    },
+    {
+      "id": "DCI-ESS2.A-MS-1",
+      "domain": "ESS",
+      "coreConceptNumber": 2,
+      "coreConceptTitle": "Earth's Systems",
+      "coreConceptTitleZH": "地球系统",
+      "subConceptLetter": "A",
+      "subConceptTitle": "Earth’s Materials and Systems",
+      "subConceptTitleZH": "地球物质与系统",
+      "grade": "MS",
+      "bulletNumber": 1,
+      "content": "All Earth processes are the result of energy flowing and matter cycling within and among the planet’s systems. This energy is derived from the sun and Earth’s hot interior. The energy that flows and matter that cycles produce chemical and physical changes in Earth’s materials and living organisms.",
+      "contentZH": "所有地球过程都是地球系统内部和系统之间能量流动和物质循环的结果。这种能量来自太阳和地球炽热的内部。流动的能量和循环的物质会在地球材料和生物体中产生化学和物理变化。",
+      "relatedPEs": [
+        "MS-ESS2-1"
+      ]
+    },
+    {
+      "id": "DCI-ESS2.A-MS-2",
+      "domain": "ESS",
+      "coreConceptNumber": 2,
+      "coreConceptTitle": "Earth's Systems",
+      "coreConceptTitleZH": "地球系统",
+      "subConceptLetter": "A",
+      "subConceptTitle": "Earth’s Materials and Systems",
+      "subConceptTitleZH": "地球物质与系统",
+      "grade": "MS",
+      "bulletNumber": 2,
+      "content": "The planet’s systems interact over scales that range from microscopic to global in size, and they operate over fractions of a second to billions of years. These interactions have shaped Earth’s history and will determine its future.",
+      "contentZH": "地球上的系统在从微观到全球范围内相互作用，其运行时间从几分之一秒到数十亿年。这些相互作用塑造了地球的历史并将决定其未来。",
+      "relatedPEs": [
+        "MS-ESS2-2"
+      ]
+    },
+    {
+      "id": "DCI-ESS2.A-HS-1",
+      "domain": "ESS",
+      "coreConceptNumber": 2,
+      "coreConceptTitle": "Earth's Systems",
+      "coreConceptTitleZH": "地球系统",
+      "subConceptLetter": "A",
+      "subConceptTitle": "Earth Materials and Systems",
+      "subConceptTitleZH": "地球物质与系统",
+      "grade": "HS",
+      "bulletNumber": 1,
+      "content": "Earth’s systems, being dynamic and interacting, cause feedback effects that can increase or decrease the original changes.",
+      "contentZH": "地球系统是动态且相互作用的，会产生反馈效应，从而增加或减少原始变化。",
+      "relatedPEs": [
+        "HS-ESS2-2"
+      ]
+    },
+    {
+      "id": "DCI-ESS2.A-HS-2",
+      "domain": "ESS",
+      "coreConceptNumber": 2,
+      "coreConceptTitle": "Earth's Systems",
+      "coreConceptTitleZH": "地球系统",
+      "subConceptLetter": "A",
+      "subConceptTitle": "Earth Materials and Systems",
+      "subConceptTitleZH": "地球物质与系统",
+      "grade": "HS",
+      "bulletNumber": 2,
+      "content": "Evidence from deep probes and seismic waves, reconstructions of historical changes in Earth’s surface and its magnetic field, and an understanding of physical and chemical processes lead to a model of Earth with a hot but solid inner core, a liquid outer core, a solid mantle and crust. Motions of the mantle and its plates occur primarily through thermal convection, which involves the cycling of matter due to the outward flow of energy from Earth’s interior and gravitational movement of denser materials toward the interior.",
+      "contentZH": "来自深部探测器和地震波的证据、对地球表面及其磁场历史变化的重建以及对物理和化学过程的理解，形成了一个具有炽热但固态内核、液态外核、固态地幔和地壳的地球模型。地幔及其板块的运动主要通过热对流发生，热对流涉及由于能量从地球内部向外流动以及密度较大的物质向内部的引力运动而导致的物质循环。",
+      "relatedPEs": [
+        "HS-ESS2-3"
+      ]
+    },
+    {
+      "id": "DCI-ESS2.A-HS-3",
+      "domain": "ESS",
+      "coreConceptNumber": 2,
+      "coreConceptTitle": "Earth's Systems",
+      "coreConceptTitleZH": "地球系统",
+      "subConceptLetter": "A",
+      "subConceptTitle": "Earth Materials and Systems",
+      "subConceptTitleZH": "地球物质与系统",
+      "grade": "HS",
+      "bulletNumber": 3,
+      "content": "The geological record shows that changes to global and regional climate can be caused by interactions among changes in the sun’s energy output or Earth’s orbit, tectonic events, ocean circulation, volcanic activity, glaciers, vegetation, and human activities. These changes can occur on a variety of time scales from sudden (e.g., volcanic ash clouds) to intermediate (ice ages) to very long-term tectonic cycles.",
+      "contentZH": "地质记录表明，全球和区域气候的变化可能是由太阳能量输出或地球轨道变化、构造事件、海洋环流、火山活动、冰川、植被和人类活动之间的相互作用引起的。这些变化可能发生在各种时间尺度上，从突然的（例如火山灰云）到中间的（冰河时代）再到非常长期的构造循环。",
+      "relatedPEs": [
+        "HS-ESS2-4"
+      ]
+    },
+    {
+      "id": "DCI-ESS2.B-2-1",
+      "domain": "ESS",
+      "coreConceptNumber": 2,
+      "coreConceptTitle": "Earth's Systems",
+      "coreConceptTitleZH": "地球系统",
+      "subConceptLetter": "B",
+      "subConceptTitle": "Plate Tectonics and Large-Scale System Interactions",
+      "subConceptTitleZH": "板块构造与大尺度系统相互作用",
+      "grade": "2",
+      "bulletNumber": 1,
+      "content": "Maps show where things are located. One can map the shapes and kinds of land and water in any area.",
+      "contentZH": "地图显示事物所在的位置。人们可以绘制任何地区土地和水域的形状和种类的地图。",
+      "relatedPEs": [
+        "2-ESS2-2"
+      ]
+    },
+    {
+      "id": "DCI-ESS2.B-4-1",
+      "domain": "ESS",
+      "coreConceptNumber": 2,
+      "coreConceptTitle": "Earth's Systems",
+      "coreConceptTitleZH": "地球系统",
+      "subConceptLetter": "B",
+      "subConceptTitle": "Plate Tectonics and Large-Scale System Interactions",
+      "subConceptTitleZH": "板块构造与大尺度系统相互作用",
+      "grade": "4",
+      "bulletNumber": 1,
+      "content": "The locations of mountain ranges, deep ocean trenches, ocean floor structures, earthquakes, and volcanoes occur in patterns. Most earthquakes and volcanoes occur in bands that are often along the boundaries between continents and oceans. Major mountain chains form inside continents or near their edges. Maps can help locate the different land and water features areas of Earth.",
+      "contentZH": "山脉、深海海沟、海底结构、地震和火山的位置都有规律地出现。大多数地震和火山发生在通常沿着大陆和海洋边界的带状区域。主要山脉形成于大陆内部或靠近大陆边缘。地图可以帮助定位地球上不同的陆地和水域特征区域。",
+      "relatedPEs": [
+        "4-ESS2-2"
+      ]
+    },
+    {
+      "id": "DCI-ESS2.B-MS-1",
+      "domain": "ESS",
+      "coreConceptNumber": 2,
+      "coreConceptTitle": "Earth's Systems",
+      "coreConceptTitleZH": "地球系统",
+      "subConceptLetter": "B",
+      "subConceptTitle": "Plate Tectonics and Large-Scale System Interactions",
+      "subConceptTitleZH": "板块构造与大尺度系统相互作用",
+      "grade": "MS",
+      "bulletNumber": 1,
+      "content": "Maps of ancient land and water patterns, based on investigations of rocks and fossils, make clear how Earth’s plates have moved great distances, collided, and spread apart.",
+      "contentZH": "基于对岩石和化石的研究，绘制了古代陆地和水域格局的地图，清楚地表明了地球板块是如何移动很远的距离、碰撞和分开的。",
+      "relatedPEs": [
+        "MS-ESS2-3"
+      ]
+    },
+    {
+      "id": "DCI-ESS2.B-HS-1",
+      "domain": "ESS",
+      "coreConceptNumber": 2,
+      "coreConceptTitle": "Earth's Systems",
+      "coreConceptTitleZH": "地球系统",
+      "subConceptLetter": "B",
+      "subConceptTitle": "Plate Tectonics and Large-Scale System Interactions",
+      "subConceptTitleZH": "板块构造与大尺度系统相互作用",
+      "grade": "HS",
+      "bulletNumber": 1,
+      "content": "The radioactive decay of unstable isotopes continually generates new energy within Earth’s crust and mantle, providing the primary source of the heat that drives mantle convection. Plate tectonics can be viewed as the surface expression of mantle convection.",
+      "contentZH": "不稳定同位素的放射性衰变不断在地壳和地幔内产生新的能量，提供驱动地幔对流的主要热源。板块构造可以看作是地幔对流的表面表现。",
+      "relatedPEs": [
+        "HS-ESS2-3"
+      ]
+    },
+    {
+      "id": "DCI-ESS2.C-2-1",
+      "domain": "ESS",
+      "coreConceptNumber": 2,
+      "coreConceptTitle": "Earth's Systems",
+      "coreConceptTitleZH": "地球系统",
+      "subConceptLetter": "C",
+      "subConceptTitle": "The Roles of Water in Earth’s Surface Processes",
+      "subConceptTitleZH": "水在地表过程中的作用",
+      "grade": "2",
+      "bulletNumber": 1,
+      "content": "Water is found in the ocean, rivers, lakes, and ponds. Water exists as solid ice and in liquid form.",
+      "contentZH": "水存在于海洋、河流、湖泊和池塘中。水以固体冰和液体形式存在。",
+      "relatedPEs": [
+        "2-ESS2-3"
+      ]
+    },
+    {
+      "id": "DCI-ESS2.C-5-1",
+      "domain": "ESS",
+      "coreConceptNumber": 2,
+      "coreConceptTitle": "Earth's Systems",
+      "coreConceptTitleZH": "地球系统",
+      "subConceptLetter": "C",
+      "subConceptTitle": "The Roles of Water in Earth’s Surface Processes",
+      "subConceptTitleZH": "水在地表过程中的作用",
+      "grade": "5",
+      "bulletNumber": 1,
+      "content": "Nearly all of Earth’s available water is in the ocean. Most fresh water is in glaciers or underground; only a tiny fraction is in streams, lakes, wetlands, and the atmosphere.",
+      "contentZH": "地球上几乎所有可用的水都在海洋中。大多数淡水位于冰川或地下；只有一小部分存在于溪流、湖泊、湿地和大气中。",
+      "relatedPEs": [
+        "5-ESS2-2"
+      ]
+    },
+    {
+      "id": "DCI-ESS2.C-MS-1",
+      "domain": "ESS",
+      "coreConceptNumber": 2,
+      "coreConceptTitle": "Earth's Systems",
+      "coreConceptTitleZH": "地球系统",
+      "subConceptLetter": "C",
+      "subConceptTitle": "The Roles of Water in Earth’s Surface Processes",
+      "subConceptTitleZH": "水在地表过程中的作用",
+      "grade": "MS",
+      "bulletNumber": 1,
+      "content": "Water continually cycles among land, ocean, and atmosphere via transpiration, evaporation, condensation and crystallization, and precipitation, as well as downhill flows on land.",
+      "contentZH": "水通过蒸腾、蒸发、冷凝和结晶、降水以及陆地上的下坡流不断在陆地、海洋和大气之间循环。",
+      "relatedPEs": [
+        "MS-ESS2-4"
+      ]
+    },
+    {
+      "id": "DCI-ESS2.C-MS-2",
+      "domain": "ESS",
+      "coreConceptNumber": 2,
+      "coreConceptTitle": "Earth's Systems",
+      "coreConceptTitleZH": "地球系统",
+      "subConceptLetter": "C",
+      "subConceptTitle": "The Roles of Water in Earth’s Surface Processes",
+      "subConceptTitleZH": "水在地表过程中的作用",
+      "grade": "MS",
+      "bulletNumber": 2,
+      "content": "Global movements of water and its changes in form are propelled by sunlight and gravity.",
+      "contentZH": "水的全球运动及其形态的变化是由阳光和重力推动的。",
+      "relatedPEs": [
+        "MS-ESS2-4"
+      ]
+    },
+    {
+      "id": "DCI-ESS2.C-MS-3",
+      "domain": "ESS",
+      "coreConceptNumber": 2,
+      "coreConceptTitle": "Earth's Systems",
+      "coreConceptTitleZH": "地球系统",
+      "subConceptLetter": "C",
+      "subConceptTitle": "The Roles of Water in Earth’s Surface Processes",
+      "subConceptTitleZH": "水在地表过程中的作用",
+      "grade": "MS",
+      "bulletNumber": 3,
+      "content": "Variations in density due to variations in temperature and salinity drive a global pattern of interconnected ocean currents.",
+      "contentZH": "由于温度和盐度的变化而导致的密度变化驱动了全球相互关联的洋流模式。",
+      "relatedPEs": [
+        "MS-ESS2-6"
+      ]
+    },
+    {
+      "id": "DCI-ESS2.C-MS-4",
+      "domain": "ESS",
+      "coreConceptNumber": 2,
+      "coreConceptTitle": "Earth's Systems",
+      "coreConceptTitleZH": "地球系统",
+      "subConceptLetter": "C",
+      "subConceptTitle": "The Roles of Water in Earth’s Surface Processes",
+      "subConceptTitleZH": "水在地表过程中的作用",
+      "grade": "MS",
+      "bulletNumber": 4,
+      "content": "Water’s movements—both on the land and underground—cause weathering and erosion, which change the land’s surface features and create underground formations.",
+      "contentZH": "水在陆地和地下的运动会导致风化和侵蚀，从而改变土地的表面特征并形成地下构造。",
+      "relatedPEs": [
+        "MS-ESS2-2"
+      ]
+    },
+    {
+      "id": "DCI-ESS2.C-HS-1",
+      "domain": "ESS",
+      "coreConceptNumber": 2,
+      "coreConceptTitle": "Earth's Systems",
+      "coreConceptTitleZH": "地球系统",
+      "subConceptLetter": "C",
+      "subConceptTitle": "The Roles of Water in Earth’s Surface Processes",
+      "subConceptTitleZH": "水在地表过程中的作用",
+      "grade": "HS",
+      "bulletNumber": 1,
+      "content": "The abundance of liquid water on Earth’s surface and its unique combination of physical and chemical properties are central to the planet’s dynamics. These properties include water’s exceptional capacity to absorb, store, and release large amounts of energy, transmit sunlight, expand upon freezing, dissolve and transport materials, and lower the viscosities and melting points of rocks.",
+      "contentZH": "地球表面丰富的液态水及其独特的物理和化学特性组合是地球动力学的核心。这些特性包括水吸收、储存和释放大量能量、传输阳光、冻结时膨胀、溶解和运输材料以及降低岩石粘度和熔点的非凡能力。",
+      "relatedPEs": [
+        "HS-ESS2-5"
+      ]
+    },
+    {
+      "id": "DCI-ESS2.D-K-1",
+      "domain": "ESS",
+      "coreConceptNumber": 2,
+      "coreConceptTitle": "Earth's Systems",
+      "coreConceptTitleZH": "地球系统",
+      "subConceptLetter": "D",
+      "subConceptTitle": "Weather and Climate",
+      "subConceptTitleZH": "天气与气候",
+      "grade": "K",
+      "bulletNumber": 1,
+      "content": "Weather is the combination of sunlight, wind, snow or rain, and temperature in a particular region at a particular time. People measure these conditions to describe and record the weather and to notice patterns over time.",
+      "contentZH": "天气是特定时间特定地区的阳光、风、雪或雨以及温度的组合。人们测量这些条件来描述和记录天气并观察一段时间内的模式。",
+      "relatedPEs": [
+        "K-ESS2-1"
+      ]
+    },
+    {
+      "id": "DCI-ESS2.D-3-1",
+      "domain": "ESS",
+      "coreConceptNumber": 2,
+      "coreConceptTitle": "Earth's Systems",
+      "coreConceptTitleZH": "地球系统",
+      "subConceptLetter": "D",
+      "subConceptTitle": "Weather and Climate",
+      "subConceptTitleZH": "天气与气候",
+      "grade": "3",
+      "bulletNumber": 1,
+      "content": "Scientists record patterns of the weather across different times and areas so that they can make predictions about what kind of weather might happen next.",
+      "contentZH": "科学家记录不同时间和地区的天气模式，以便预测接下来可能发生的天气。",
+      "relatedPEs": [
+        "3-ESS2-1"
+      ]
+    },
+    {
+      "id": "DCI-ESS2.D-3-2",
+      "domain": "ESS",
+      "coreConceptNumber": 2,
+      "coreConceptTitle": "Earth's Systems",
+      "coreConceptTitleZH": "地球系统",
+      "subConceptLetter": "D",
+      "subConceptTitle": "Weather and Climate",
+      "subConceptTitleZH": "天气与气候",
+      "grade": "3",
+      "bulletNumber": 2,
+      "content": "Climate describes a range of an area's typical weather conditions and the extent to which those conditions vary over years.",
+      "contentZH": "气候描述了一个地区的一系列典型天气条件以及这些条件多年来变化的程度。",
+      "relatedPEs": [
+        "3-ESS2-2"
+      ]
+    },
+    {
+      "id": "DCI-ESS2.D-HS-1",
+      "domain": "ESS",
+      "coreConceptNumber": 2,
+      "coreConceptTitle": "Earth's Systems",
+      "coreConceptTitleZH": "地球系统",
+      "subConceptLetter": "D",
+      "subConceptTitle": "Weather and Climate",
+      "subConceptTitleZH": "天气与气候",
+      "grade": "HS",
+      "bulletNumber": 1,
+      "content": "The foundation for Earth’s global climate systems is the electromagnetic radiation from the sun, as well as its reflection, absorption, storage, and redistribution among the atmosphere, ocean, and land systems, and this energy’s re-radiation into space.",
+      "contentZH": "地球全球气候系统的基础是来自太阳的电磁辐射，及其在大气、海洋和陆地系统之间的反射、吸收、储存和重新分配，以及这种能量的重新辐射到太空。",
+      "relatedPEs": [
+        "HS-ESS2-2",
+        "HS-ESS2-4"
+      ]
+    },
+    {
+      "id": "DCI-ESS2.D-HS-2",
+      "domain": "ESS",
+      "coreConceptNumber": 2,
+      "coreConceptTitle": "Earth's Systems",
+      "coreConceptTitleZH": "地球系统",
+      "subConceptLetter": "D",
+      "subConceptTitle": "Weather and Climate",
+      "subConceptTitleZH": "天气与气候",
+      "grade": "HS",
+      "bulletNumber": 2,
+      "content": "Gradual atmospheric changes were due to plants and other organisms that captured carbon dioxide and released oxygen.",
+      "contentZH": "大气的逐渐变化是由于植物和其他生物体捕获二氧化碳并释放氧气造成的。",
+      "relatedPEs": [
+        "HS-ESS2-6",
+        "HS-ESS2-7"
+      ]
+    },
+    {
+      "id": "DCI-ESS2.D-HS-3",
+      "domain": "ESS",
+      "coreConceptNumber": 2,
+      "coreConceptTitle": "Earth's Systems",
+      "coreConceptTitleZH": "地球系统",
+      "subConceptLetter": "D",
+      "subConceptTitle": "Weather and Climate",
+      "subConceptTitleZH": "天气与气候",
+      "grade": "HS",
+      "bulletNumber": 3,
+      "content": "Changes in the atmosphere due to human activity have increased carbon dioxide concentrations and thus affect climate.",
+      "contentZH": "人类活动引起的大气变化增加了二氧化碳浓度，从而影响气候。",
+      "relatedPEs": [
+        "HS-ESS2-4",
+        "HS-ESS2-6"
+      ]
+    },
+    {
+      "id": "DCI-ESS2.E-K-1",
+      "domain": "ESS",
+      "coreConceptNumber": 2,
+      "coreConceptTitle": "Earth's Systems",
+      "coreConceptTitleZH": "地球系统",
+      "subConceptLetter": "E",
+      "subConceptTitle": "Biogeology",
+      "subConceptTitleZH": "生物地质学（生物-地质相互作用）",
+      "grade": "K",
+      "bulletNumber": 1,
+      "content": "Plants and animals can change their environment.",
+      "contentZH": "植物和动物可以改变它们的环境。",
+      "relatedPEs": [
+        "K-ESS2-2"
+      ]
+    },
+    {
+      "id": "DCI-ESS2.E-4-1",
+      "domain": "ESS",
+      "coreConceptNumber": 2,
+      "coreConceptTitle": "Earth's Systems",
+      "coreConceptTitleZH": "地球系统",
+      "subConceptLetter": "E",
+      "subConceptTitle": "Biogeology",
+      "subConceptTitleZH": "生物地质学（生物-地质相互作用）",
+      "grade": "4",
+      "bulletNumber": 1,
+      "content": "Living things affect the physical characteristics of their regions.",
+      "contentZH": "生物会影响其所在区域的物理特征。",
+      "relatedPEs": [
+        "4-ESS2-1"
+      ]
+    },
+    {
+      "id": "DCI-ESS2.E-HS-1",
+      "domain": "ESS",
+      "coreConceptNumber": 2,
+      "coreConceptTitle": "Earth's Systems",
+      "coreConceptTitleZH": "地球系统",
+      "subConceptLetter": "E",
+      "subConceptTitle": "Biogeology",
+      "subConceptTitleZH": "生物地质学（生物-地质相互作用）",
+      "grade": "HS",
+      "bulletNumber": 1,
+      "content": "The many dynamic and delicate feedbacks between the biosphere and other Earth systems cause a continual co-evolution of Earth’s surface and the life that exists on it.",
+      "contentZH": "生物圈和其他地球系统之间的许多动态和微妙的反馈导致地球表面和地球上存在的生命不断共同进化。",
+      "relatedPEs": [
+        "HS-ESS2-7"
+      ]
+    },
+    {
+      "id": "DCI-ESS3.A-K-1",
+      "domain": "ESS",
+      "coreConceptNumber": 3,
+      "coreConceptTitle": "Earth and Human Activity",
+      "coreConceptTitleZH": "地球与人类活动",
+      "subConceptLetter": "A",
+      "subConceptTitle": "Natural Resources",
+      "subConceptTitleZH": "自然资源",
+      "grade": "K",
+      "bulletNumber": 1,
+      "content": "Living things need water, air, and resources from the land, and they live in places that have the things they need. Humans use natural resources for everything they do.",
+      "contentZH": "生物需要水、空气和土地上的资源，而它们生活在拥有它们所需物质的地方。人类所做的一切都利用自然资源。",
+      "relatedPEs": [
+        "K-ESS3-1"
+      ]
+    },
+    {
+      "id": "DCI-ESS3.A-4-1",
+      "domain": "ESS",
+      "coreConceptNumber": 3,
+      "coreConceptTitle": "Earth and Human Activity",
+      "coreConceptTitleZH": "地球与人类活动",
+      "subConceptLetter": "A",
+      "subConceptTitle": "Natural Resources",
+      "subConceptTitleZH": "自然资源",
+      "grade": "4",
+      "bulletNumber": 1,
+      "content": "Energy and fuels that humans use are derived from natural sources, and their use affects the environment in multiple ways. Some resources are renewable over time, and others are not.",
+      "contentZH": "人类使用的能源和燃料来自自然资源，其使用以多种方式影响环境。有些资源可以随着时间的推移而再生，而另一些则不能。",
+      "relatedPEs": [
+        "4-ESS3-1"
+      ]
+    },
+    {
+      "id": "DCI-ESS3.A-MS-1",
+      "domain": "ESS",
+      "coreConceptNumber": 3,
+      "coreConceptTitle": "Earth and Human Activity",
+      "coreConceptTitleZH": "地球与人类活动",
+      "subConceptLetter": "A",
+      "subConceptTitle": "Natural Resources",
+      "subConceptTitleZH": "自然资源",
+      "grade": "MS",
+      "bulletNumber": 1,
+      "content": "Humans depend on Earth’s land, ocean, atmosphere, and biosphere for many different resources. Minerals, fresh water, and biosphere resources are limited, and many are not renewable or replaceable over human lifetimes. These resources are distributed unevenly around the planet as a result of past geologic processes.",
+      "contentZH": "人类依赖地球的陆地、海洋、大气和生物圈来获取许多不同的资源。矿物质、淡水和生物圈资源是有限的，而且许多资源在人的一生中是不可再生或替代的。由于过去的地质过程，这些资源在地球上分布不均匀。",
+      "relatedPEs": [
+        "MS-ESS3-1"
+      ]
+    },
+    {
+      "id": "DCI-ESS3.A-HS-1",
+      "domain": "ESS",
+      "coreConceptNumber": 3,
+      "coreConceptTitle": "Earth and Human Activity",
+      "coreConceptTitleZH": "地球与人类活动",
+      "subConceptLetter": "A",
+      "subConceptTitle": "Natural Resources",
+      "subConceptTitleZH": "自然资源",
+      "grade": "HS",
+      "bulletNumber": 1,
+      "content": "Resource availability has guided the development of human society.",
+      "contentZH": "资源的可用性引导着人类社会的发展。",
+      "relatedPEs": [
+        "HS-ESS3-1"
+      ]
+    },
+    {
+      "id": "DCI-ESS3.B-K-1",
+      "domain": "ESS",
+      "coreConceptNumber": 3,
+      "coreConceptTitle": "Earth and Human Activity",
+      "coreConceptTitleZH": "地球与人类活动",
+      "subConceptLetter": "B",
+      "subConceptTitle": "Natural Hazards",
+      "subConceptTitleZH": "自然灾害",
+      "grade": "K",
+      "bulletNumber": 1,
+      "content": "Some kinds of severe weather are more likely than others in a given region. Weather scientists forecast severe weather so that the communities can prepare for and respond to these events.",
+      "contentZH": "在特定地区，某些恶劣天气比其他恶劣天气更有可能发生。天气科学家预测恶劣天气，以便社区能够为这些事件做好准备和应对。",
+      "relatedPEs": [
+        "K-ESS3-2"
+      ]
+    },
+    {
+      "id": "DCI-ESS3.B-3-1",
+      "domain": "ESS",
+      "coreConceptNumber": 3,
+      "coreConceptTitle": "Earth and Human Activity",
+      "coreConceptTitleZH": "地球与人类活动",
+      "subConceptLetter": "B",
+      "subConceptTitle": "Natural Hazards",
+      "subConceptTitleZH": "自然灾害",
+      "grade": "3",
+      "bulletNumber": 1,
+      "content": "A variety of natural hazards result from natural processes. Humans cannot eliminate natural hazards but can take steps to reduce their impacts.",
+      "contentZH": "自然过程会产生各种自然灾害。人类无法消除自然灾害，但可以采取措施减少其影响。",
+      "relatedPEs": [
+        "3-ESS3-1"
+      ]
+    },
+    {
+      "id": "DCI-ESS3.B-4-1",
+      "domain": "ESS",
+      "coreConceptNumber": 3,
+      "coreConceptTitle": "Earth and Human Activity",
+      "coreConceptTitleZH": "地球与人类活动",
+      "subConceptLetter": "B",
+      "subConceptTitle": "Natural Hazards",
+      "subConceptTitleZH": "自然灾害",
+      "grade": "4",
+      "bulletNumber": 1,
+      "content": "A variety of hazards result from natural processes (e.g., earthquakes, tsunamis, volcanic eruptions). Humans cannot eliminate the hazards but can take steps to reduce their impacts.",
+      "contentZH": "自然过程（例如地震、海啸、火山爆发）会造成多种危害。人类无法消除危害，但可以采取措施减少其影响。",
+      "relatedPEs": [
+        "4-ESS3-2"
+      ]
+    },
+    {
+      "id": "DCI-ESS3.B-MS-1",
+      "domain": "ESS",
+      "coreConceptNumber": 3,
+      "coreConceptTitle": "Earth and Human Activity",
+      "coreConceptTitleZH": "地球与人类活动",
+      "subConceptLetter": "B",
+      "subConceptTitle": "Natural Hazards",
+      "subConceptTitleZH": "自然灾害",
+      "grade": "MS",
+      "bulletNumber": 1,
+      "content": "Mapping the history of natural hazards in a region, combined with an understanding of related geologic forces can help forecast the locations and likelihoods of future events.",
+      "contentZH": "绘制一个地区自然灾害的历史图，结合对相关地质力量的了解，可以帮助预测未来事件的位置和可能性。",
+      "relatedPEs": [
+        "MS-ESS3-2"
+      ]
+    },
+    {
+      "id": "DCI-ESS3.B-HS-1",
+      "domain": "ESS",
+      "coreConceptNumber": 3,
+      "coreConceptTitle": "Earth and Human Activity",
+      "coreConceptTitleZH": "地球与人类活动",
+      "subConceptLetter": "B",
+      "subConceptTitle": "Natural Hazards",
+      "subConceptTitleZH": "自然灾害",
+      "grade": "HS",
+      "bulletNumber": 1,
+      "content": "Natural hazards and other geologic events have shaped the course of human history; they have significantly altered the sizes of human populations and have driven human migrations.",
+      "contentZH": "自然灾害和其他地质事件塑造了人类历史的进程；它们极大地改变了人口规模并推动了人类迁徙。",
+      "relatedPEs": [
+        "HS-ESS3-1"
+      ]
+    },
+    {
+      "id": "DCI-ESS3.C-K-1",
+      "domain": "ESS",
+      "coreConceptNumber": 3,
+      "coreConceptTitle": "Earth and Human Activity",
+      "coreConceptTitleZH": "地球与人类活动",
+      "subConceptLetter": "C",
+      "subConceptTitle": "Human Impacts on Earth Systems",
+      "subConceptTitleZH": "人类对地球系统的影响",
+      "grade": "K",
+      "bulletNumber": 1,
+      "content": "Things that people do to live comfortably can affect the world around them. But they can make choices that reduce their impacts on the land, water, air, and other living things.",
+      "contentZH": "人们为了舒适的生活所做的事情会影响他们周围的世界。但他们可以做出选择，减少对土地、水、空气和其他生物的影响。",
+      "relatedPEs": [
+        "K-ESS2-2"
+      ]
+    },
+    {
+      "id": "DCI-ESS3.C-K-2",
+      "domain": "ESS",
+      "coreConceptNumber": 3,
+      "coreConceptTitle": "Earth and Human Activity",
+      "coreConceptTitleZH": "地球与人类活动",
+      "subConceptLetter": "C",
+      "subConceptTitle": "Human Impacts on Earth Systems",
+      "subConceptTitleZH": "人类对地球系统的影响",
+      "grade": "K",
+      "bulletNumber": 2,
+      "content": "Things that people do to live comfortably can affect the world around them. But they can make choices that reduce their impacts on the land, water, air, and other living things.",
+      "contentZH": "人们为了舒适的生活所做的事情会影响他们周围的世界。但他们可以做出选择，减少对土地、水、空气和其他生物的影响。",
+      "relatedPEs": [
+        "K-ESS3-3"
+      ]
+    },
+    {
+      "id": "DCI-ESS3.C-5-1",
+      "domain": "ESS",
+      "coreConceptNumber": 3,
+      "coreConceptTitle": "Earth and Human Activity",
+      "coreConceptTitleZH": "地球与人类活动",
+      "subConceptLetter": "C",
+      "subConceptTitle": "Human Impacts on Earth Systems",
+      "subConceptTitleZH": "人类对地球系统的影响",
+      "grade": "5",
+      "bulletNumber": 1,
+      "content": "Human activities in agriculture, industry, and everyday life have had major effects on the land, vegetation, streams, ocean, air, and even outer space. But individuals and communities are doing things to help protect Earth’s resources and environments.",
+      "contentZH": "人类在农业、工业和日常生活中的活动对土地、植被、溪流、海洋、空气甚至外太空产生了重大影响。但个人和社区正在采取行动帮助保护地球资源和环境。",
+      "relatedPEs": [
+        "5-ESS3-1"
+      ]
+    },
+    {
+      "id": "DCI-ESS3.C-MS-1",
+      "domain": "ESS",
+      "coreConceptNumber": 3,
+      "coreConceptTitle": "Earth and Human Activity",
+      "coreConceptTitleZH": "地球与人类活动",
+      "subConceptLetter": "C",
+      "subConceptTitle": "Human Impacts on Earth Systems",
+      "subConceptTitleZH": "人类对地球系统的影响",
+      "grade": "MS",
+      "bulletNumber": 1,
+      "content": "Human activities have significantly altered the biosphere, sometimes damaging or destroying natural habitats and causing the extinction of other species. But changes to Earth’s environments can have different impacts (negative and positive) for different living things.",
+      "contentZH": "人类活动显着改变了生物圈，有时破坏或破坏自然栖息地并导致其他物种灭绝。但地球环境的变化可能会对不同的生物产生不同的影响（负面和正面）。",
+      "relatedPEs": [
+        "MS-ESS3-3"
+      ]
+    },
+    {
+      "id": "DCI-ESS3.C-MS-2",
+      "domain": "ESS",
+      "coreConceptNumber": 3,
+      "coreConceptTitle": "Earth and Human Activity",
+      "coreConceptTitleZH": "地球与人类活动",
+      "subConceptLetter": "C",
+      "subConceptTitle": "Human Impacts on Earth Systems",
+      "subConceptTitleZH": "人类对地球系统的影响",
+      "grade": "MS",
+      "bulletNumber": 2,
+      "content": "Typically as human populations and per-capita consumption of natural resources increase, so do the negative impacts on Earth unless the activities and technologies involved are engineered otherwise.",
+      "contentZH": "通常，随着人口和人均自然资源消耗的增加，对地球的负面影响也会增加，除非所涉及的活动和技术另有设计。",
+      "relatedPEs": [
+        "MS-ESS3-4"
+      ]
+    },
+    {
+      "id": "DCI-ESS3.D-MS-1",
+      "domain": "ESS",
+      "coreConceptNumber": 3,
+      "coreConceptTitle": "Earth and Human Activity",
+      "coreConceptTitleZH": "地球与人类活动",
+      "subConceptLetter": "D",
+      "subConceptTitle": "Global Climate Change",
+      "subConceptTitleZH": "全球气候变化",
+      "grade": "MS",
+      "bulletNumber": 1,
+      "content": "Human activities, such as the release of greenhouse gases from burning fossil fuels, are major factors in the current rise in Earth’s mean surface temperature (global warming). Reducing the level of climate change and reducing human vulnerability to whatever climate changes do occur depend on the understanding of climate science, engineering capabilities, and other kinds of knowledge, such as understanding of human behavior and on applying that knowledge wisely in decisions and activities.",
+      "contentZH": "人类活动，例如燃烧化石燃料释放的温室气体，是当前地球平均表面温度上升（全球变暖）的主要因素。降低气候变化水平和降低人类对气候变化的脆弱性取决于对气候科学、工程能力和其他知识的理解，例如对人类行为的理解以及在决策和活动中明智地应用这些知识。",
+      "relatedPEs": [
+        "MS-ESS3-5"
+      ]
+    },
+    {
+      "id": "DCI-ESS3.D-HS-1",
+      "domain": "ESS",
+      "coreConceptNumber": 3,
+      "coreConceptTitle": "Earth and Human Activity",
+      "coreConceptTitleZH": "地球与人类活动",
+      "subConceptLetter": "D",
+      "subConceptTitle": "Global Climate Change",
+      "subConceptTitleZH": "全球气候变化",
+      "grade": "HS",
+      "bulletNumber": 1,
+      "content": "Though the magnitudes of human impacts are greater than they have ever been, so too are human abilities to model, predict, and manage current and future impacts.",
+      "contentZH": "尽管人类影响的程度比以往任何时候都要大，但人类建模、预测和管理当前和未来影响的能力也同样如此。",
+      "relatedPEs": [
+        "HS-ESS3-5"
+      ]
+    },
+    {
+      "id": "DCI-ESS3.D-HS-2",
+      "domain": "ESS",
+      "coreConceptNumber": 3,
+      "coreConceptTitle": "Earth and Human Activity",
+      "coreConceptTitleZH": "地球与人类活动",
+      "subConceptLetter": "D",
+      "subConceptTitle": "Global Climate Change",
+      "subConceptTitleZH": "全球气候变化",
+      "grade": "HS",
+      "bulletNumber": 2,
+      "content": "Through computer simulations and other studies, important discoveries are still being made about how the ocean, the atmosphere, and the biosphere interact and are modified in response to human activities.",
+      "contentZH": "通过计算机模拟和其他研究，关于海洋、大气和生物圈如何相互作用以及如何响应人类活动而发生改变的重要发现仍在不断取得。",
+      "relatedPEs": [
+        "HS-ESS3-6"
+      ]
+    },
+    {
+      "id": "DCI-ETS1.A-4-1",
+      "domain": "ETS",
+      "coreConceptNumber": 1,
+      "coreConceptTitle": "Engineering Design",
+      "coreConceptTitleZH": "工程设计",
+      "subConceptLetter": "A",
+      "subConceptTitle": "Defining Engineering Problems",
+      "subConceptTitleZH": "工程问题的界定",
+      "grade": "4",
+      "bulletNumber": 1,
+      "content": "Possible solutions to a problem are limited by available materials and resources (constraints). The success of a designed solution is determined by considering the desired features of a solution (criteria). Different proposals for solutions can be compared on the basis of how well each one meets the specified criteria for success or how well each takes the constraints into account.",
+      "contentZH": "问题的可能解决方案受到可用材料和资源（约束）的限制。设计的解决方案是否成功取决于考虑解决方案所需的功能（标准）。不同的解决方案建议可以根据每个解决方案满足指定成功标准的程度或每个解决方案考虑约束的程度进行比较。",
+      "relatedPEs": [
+        "4-PS3-4"
+      ]
+    },
+    {
+      "id": "DCI-ETS1.A-MS-1",
+      "domain": "ETS",
+      "coreConceptNumber": 1,
+      "coreConceptTitle": "Engineering Design",
+      "coreConceptTitleZH": "工程设计",
+      "subConceptLetter": "A",
+      "subConceptTitle": "Defining and Delimiting an Engineering Problem",
+      "subConceptTitleZH": "界定并限定一个工程问题",
+      "grade": "MS",
+      "bulletNumber": 1,
+      "content": "The more precisely a design task’s criteria and constraints can be defined, the more likely it is that the designed solution will be successful. Specification of constraints includes consideration of scientific principles and other relevant knowledge that is likely to limit possible solutions.",
+      "contentZH": "设计任务的标准和约束定义得越精确，设计的解决方案成功的可能性就越大。约束条件的说明包括对科学原理和其他可能限制可能解决方案的相关知识的考虑。",
+      "relatedPEs": [
+        "MS-PS3-3"
+      ]
+    },
+    {
+      "id": "DCI-ETS1.A-MS-2",
+      "domain": "ETS",
+      "coreConceptNumber": 1,
+      "coreConceptTitle": "Engineering Design",
+      "coreConceptTitleZH": "工程设计",
+      "subConceptLetter": "A",
+      "subConceptTitle": "Defining and Delimiting an Engineering Problem",
+      "subConceptTitleZH": "界定并限定一个工程问题",
+      "grade": "MS",
+      "bulletNumber": 2,
+      "content": "The more precisely a design task’s criteria and constraints can be defined, the more likely it is that the designed solution will be successful. Specification of constraints includes consideration of scientific principles and other relevant knowledge that are likely to limit possible solutions.",
+      "contentZH": "设计任务的标准和约束定义得越精确，设计的解决方案成功的可能性就越大。约束的规范包括对可能限制可能解决方案的科学原理和其他相关知识的考虑。",
+      "relatedPEs": [
+        "MS-ETS1-1"
+      ]
+    },
+    {
+      "id": "DCI-ETS1.A-HS-1",
+      "domain": "ETS",
+      "coreConceptNumber": 1,
+      "coreConceptTitle": "Engineering Design",
+      "coreConceptTitleZH": "工程设计",
+      "subConceptLetter": "A",
+      "subConceptTitle": "Defining and Delimiting Engineering Problems",
+      "subConceptTitleZH": "界定并限定工程问题",
+      "grade": "HS",
+      "bulletNumber": 1,
+      "content": "Criteria and constraints also include satisfying any requirements set by society, such as taking issues of risk mitigation into account, and they should be quantified to the extent possible and stated in such a way that one can tell if a given design meets them.",
+      "contentZH": "标准和约束还包括满足社会设定的任何要求，例如考虑风险缓解问题，并且应尽可能量化它们，并以人们可以判断给定设计是否满足这些要求的方式进行表述。",
+      "relatedPEs": [
+        "HS-PS2-3",
+        "HS-ETS1-1"
+      ]
+    },
+    {
+      "id": "DCI-ETS1.A-HS-2",
+      "domain": "ETS",
+      "coreConceptNumber": 1,
+      "coreConceptTitle": "Engineering Design",
+      "coreConceptTitleZH": "工程设计",
+      "subConceptLetter": "A",
+      "subConceptTitle": "Defining and Delimiting Engineering Problems",
+      "subConceptTitleZH": "界定并限定工程问题",
+      "grade": "HS",
+      "bulletNumber": 2,
+      "content": "Humanity faces major global challenges today, such as the need for supplies of clean water and food or for energy sources that minimize pollution, which can be addressed through engineering. These global challenges also may have manifestations in local communities.",
+      "contentZH": "人类今天面临着重大的全球挑战，例如需要清洁水和食物的供应，或者需要最大限度地减少污染的能源，这些可以通过工程来解决。这些全球性挑战也可能在当地社区有所体现。",
+      "relatedPEs": [
+        "HS-ETS1-1"
+      ]
+    },
+    {
+      "id": "DCI-ETS1.B-2-1",
+      "domain": "ETS",
+      "coreConceptNumber": 1,
+      "coreConceptTitle": "Engineering Design",
+      "coreConceptTitleZH": "工程设计",
+      "subConceptLetter": "B",
+      "subConceptTitle": "Developing Possible Solutions",
+      "subConceptTitleZH": "开发可能的解决方案",
+      "grade": "2",
+      "bulletNumber": 1,
+      "content": "Designs can be conveyed through sketches, drawings, or physical models. These representations are useful in communicating ideas for a problem's solutions to other people.",
+      "contentZH": "设计可以通过草图、图纸或物理模型来传达。这些表示对于向其他人传达问题解决方案的想法很有用。",
+      "relatedPEs": [
+        "K-2-ETS1-2"
+      ]
+    },
+    {
+      "id": "DCI-ETS1.B-4-1",
+      "domain": "ETS",
+      "coreConceptNumber": 1,
+      "coreConceptTitle": "Engineering Design",
+      "coreConceptTitleZH": "工程设计",
+      "subConceptLetter": "B",
+      "subConceptTitle": "Designing Solutions to Engineering Problems",
+      "subConceptTitleZH": "工程问题解决方案的设计",
+      "grade": "4",
+      "bulletNumber": 1,
+      "content": "Testing a solution involves investigating how well it performs under a range of likely conditions.",
+      "contentZH": "测试解决方案涉及调查其在一系列可能条件下的表现。",
+      "relatedPEs": [
+        "4-ESS3-2"
+      ]
+    },
+    {
+      "id": "DCI-ETS1.B-MS-1",
+      "domain": "ETS",
+      "coreConceptNumber": 1,
+      "coreConceptTitle": "Engineering Design",
+      "coreConceptTitleZH": "工程设计",
+      "subConceptLetter": "B",
+      "subConceptTitle": "Developing Possible Solutions",
+      "subConceptTitleZH": "开发可能的解决方案",
+      "grade": "MS",
+      "bulletNumber": 1,
+      "content": "A solution needs to be tested, and then modified on the basis of the test results, in order to improve it.",
+      "contentZH": "解决方案需要进行测试，然后根据测试结果进行修改，以改进它。",
+      "relatedPEs": [
+        "MS-PS1-6",
+        "MS-ETS1-4"
+      ]
+    },
+    {
+      "id": "DCI-ETS1.B-MS-2",
+      "domain": "ETS",
+      "coreConceptNumber": 1,
+      "coreConceptTitle": "Engineering Design",
+      "coreConceptTitleZH": "工程设计",
+      "subConceptLetter": "B",
+      "subConceptTitle": "Developing Possible Solutions",
+      "subConceptTitleZH": "开发可能的解决方案",
+      "grade": "MS",
+      "bulletNumber": 2,
+      "content": "A solution needs to be tested, and then modified on the basis of the test results in order to improve it. There are systematic processes for evaluating solutions with respect to how well they meet criteria and constraints of a problem.",
+      "contentZH": "解决方案需要进行测试，然后根据测试结果进行修改以改进它。有系统的流程来评估解决方案，以确定它们满足问题标准和约束的程度。",
+      "relatedPEs": [
+        "MS-PS3-3"
+      ]
+    },
+    {
+      "id": "DCI-ETS1.B-MS-3",
+      "domain": "ETS",
+      "coreConceptNumber": 1,
+      "coreConceptTitle": "Engineering Design",
+      "coreConceptTitleZH": "工程设计",
+      "subConceptLetter": "B",
+      "subConceptTitle": "Developing Possible Solutions",
+      "subConceptTitleZH": "开发可能的解决方案",
+      "grade": "MS",
+      "bulletNumber": 3,
+      "content": "There are systematic processes for evaluating solutions with respect to how well they meet the criteria and constraints of a problem.",
+      "contentZH": "有系统的流程来评估解决方案是否满足问题的标准和约束。",
+      "relatedPEs": [
+        "MS-LS2-5",
+        "MS-ETS1-2",
+        "MS-ETS1-3"
+      ]
+    },
+    {
+      "id": "DCI-ETS1.B-MS-4",
+      "domain": "ETS",
+      "coreConceptNumber": 1,
+      "coreConceptTitle": "Engineering Design",
+      "coreConceptTitleZH": "工程设计",
+      "subConceptLetter": "B",
+      "subConceptTitle": "Developing Possible Solutions",
+      "subConceptTitleZH": "开发可能的解决方案",
+      "grade": "MS",
+      "bulletNumber": 4,
+      "content": "Sometimes parts of different solutions can be combined to create a solution that is better than any of its predecessors.",
+      "contentZH": "有时，不同解决方案的各个部分可以组合起来创建一个比任何前身都更好的解决方案。",
+      "relatedPEs": [
+        "MS-ETS1-3"
+      ]
+    },
+    {
+      "id": "DCI-ETS1.B-MS-5",
+      "domain": "ETS",
+      "coreConceptNumber": 1,
+      "coreConceptTitle": "Engineering Design",
+      "coreConceptTitleZH": "工程设计",
+      "subConceptLetter": "B",
+      "subConceptTitle": "Developing Possible Solutions",
+      "subConceptTitleZH": "开发可能的解决方案",
+      "grade": "MS",
+      "bulletNumber": 5,
+      "content": "Models of all kinds are important for testing solutions.",
+      "contentZH": "各种模型对于测试解决方案都很重要。",
+      "relatedPEs": [
+        "MS-ETS1-4"
+      ]
+    },
+    {
+      "id": "DCI-ETS1.B-HS-1",
+      "domain": "ETS",
+      "coreConceptNumber": 1,
+      "coreConceptTitle": "Engineering Design",
+      "coreConceptTitleZH": "工程设计",
+      "subConceptLetter": "B",
+      "subConceptTitle": "Developing Possible Solutions",
+      "subConceptTitleZH": "开发可能的解决方案",
+      "grade": "HS",
+      "bulletNumber": 1,
+      "content": "When evaluating solutions, it is important to take into account a range of constraints, including cost, safety, reliability, and aesthetics, and to consider social, cultural, and environmental impacts.",
+      "contentZH": "在评估解决方案时，重要的是要考虑一系列限制，包括成本、安全性、可靠性和美观，并考虑社会、文化和环境影响。",
+      "relatedPEs": [
+        "HS-LS4-6",
+        "HS-ETS1-3"
+      ]
+    },
+    {
+      "id": "DCI-ETS1.B-HS-2",
+      "domain": "ETS",
+      "coreConceptNumber": 1,
+      "coreConceptTitle": "Engineering Design",
+      "coreConceptTitleZH": "工程设计",
+      "subConceptLetter": "B",
+      "subConceptTitle": "Developing Possible Solutions",
+      "subConceptTitleZH": "开发可能的解决方案",
+      "grade": "HS",
+      "bulletNumber": 2,
+      "content": "Both physical models and computers can be used in various ways to aid in the engineering design process. Computers are useful for a variety of purposes, such as running simulations to test different ways of solving a problem or to see which one is most efficient or economical; and in making a persuasive presentation to a client about how a given design will meet his or her needs.",
+      "contentZH": "物理模型和计算机都可以以多种方式使用来帮助工程设计过程。计算机可用于多种目的，例如运行模拟来测试解决问题的不同方法或查看哪种方法最有效或最经济；并向客户进行有说服力的演示，说明给定的设计将如何满足他或她的需求。",
+      "relatedPEs": [
+        "HS-LS4-6",
+        "HS-ETS1-4"
+      ]
+    },
+    {
+      "id": "DCI-ETS1.C-2-1",
+      "domain": "ETS",
+      "coreConceptNumber": 1,
+      "coreConceptTitle": "Engineering Design",
+      "coreConceptTitleZH": "工程设计",
+      "subConceptLetter": "C",
+      "subConceptTitle": "Optimizing the Design Solution",
+      "subConceptTitleZH": "优化设计方案",
+      "grade": "2",
+      "bulletNumber": 2,
+      "content": "Because there is always more than one possible solution to a problem, it is useful to compare and test designs.",
+      "contentZH": "由于问题总是有不止一种可能的解决方案，因此比较和测试设计很有用。",
+      "relatedPEs": [
+        "K-2-ETS1-3"
+      ]
+    },
+    {
+      "id": "DCI-ETS1.C-MS-1",
+      "domain": "ETS",
+      "coreConceptNumber": 1,
+      "coreConceptTitle": "Engineering Design",
+      "coreConceptTitleZH": "工程设计",
+      "subConceptLetter": "C",
+      "subConceptTitle": "Optimizing the Design Solution",
+      "subConceptTitleZH": "优化设计方案",
+      "grade": "MS",
+      "bulletNumber": 1,
+      "content": "Although one design may not perform the best across all tests, identifying the characteristics of the design that performed the best in each test can provide useful information for the redesign process—that is, some of the characteristics may be incorporated into the new design.",
+      "contentZH": "尽管一种设计可能无法在所有测试中都表现最佳，但识别在每次测试中表现最佳的设计特征可以为重新设计过程提供有用的信息，也就是说，某些特征可以合并到新设计中。",
+      "relatedPEs": [
+        "MS-PS1-6"
+      ]
+    },
+    {
+      "id": "DCI-ETS1.C-MS-2",
+      "domain": "ETS",
+      "coreConceptNumber": 1,
+      "coreConceptTitle": "Engineering Design",
+      "coreConceptTitleZH": "工程设计",
+      "subConceptLetter": "C",
+      "subConceptTitle": "Optimizing the Design Solution",
+      "subConceptTitleZH": "优化设计方案",
+      "grade": "MS",
+      "bulletNumber": 2,
+      "content": "Although one design may not perform the best across all tests, identifying the characteristics of the design that performed the best in each test can provide useful information for the redesign process—that is, some of those characteristics may be incorporated into the new design.",
+      "contentZH": "尽管一种设计可能无法在所有测试中都表现最佳，但识别在每次测试中表现最佳的设计特征可以为重新设计过程提供有用的信息，也就是说，其中一些特征可以合并到新设计中。",
+      "relatedPEs": [
+        "MS-ETS1-3"
+      ]
+    },
+    {
+      "id": "DCI-ETS1.C-MS-3",
+      "domain": "ETS",
+      "coreConceptNumber": 1,
+      "coreConceptTitle": "Engineering Design",
+      "coreConceptTitleZH": "工程设计",
+      "subConceptLetter": "C",
+      "subConceptTitle": "Optimizing the Design Solution",
+      "subConceptTitleZH": "优化设计方案",
+      "grade": "MS",
+      "bulletNumber": 3,
+      "content": "All human activity draws on natural resources and has both short and long-term consequences, positive as well as negative, for the health of people and the natural environment.",
+      "contentZH": "所有人类活动都依赖自然资源，并对人类健康和自然环境产生短期和长期、积极和消极的影响。",
+      "relatedPEs": [
+        "MS-ETS1-1"
+      ]
+    },
+    {
+      "id": "DCI-ETS1.C-MS-4",
+      "domain": "ETS",
+      "coreConceptNumber": 1,
+      "coreConceptTitle": "Engineering Design",
+      "coreConceptTitleZH": "工程设计",
+      "subConceptLetter": "C",
+      "subConceptTitle": "Optimizing the Design Solution",
+      "subConceptTitleZH": "优化设计方案",
+      "grade": "MS",
+      "bulletNumber": 4,
+      "content": "The uses of technologies and limitations on their use are driven by individual or societal needs, desires, and values; by the findings of scientific research; and by differences in such factors as climate, natural resources, and economic conditions.",
+      "contentZH": "技术的使用及其使用的限制是由个人或社会的需求、愿望和价值观驱动的；根据科学研究的结果；以及气候、自然资源和经济条件等因素的差异。",
+      "relatedPEs": [
+        "MS-ETS1-1"
+      ]
+    },
+    {
+      "id": "DCI-ETS1.C-HS-1",
+      "domain": "ETS",
+      "coreConceptNumber": 1,
+      "coreConceptTitle": "Engineering Design",
+      "coreConceptTitleZH": "工程设计",
+      "subConceptLetter": "C",
+      "subConceptTitle": "Optimizing the Design Solution",
+      "subConceptTitleZH": "优化设计方案",
+      "grade": "HS",
+      "bulletNumber": 1,
+      "content": "Criteria may need to be broken down into simpler ones that can be approached systematically, and decisions about the priority of certain criteria over others (trade-offs) may be needed.",
+      "contentZH": "标准可能需要分解为可以系统地处理的更简单的标准，并且可能需要确定某些标准相对于其他标准的优先级（权衡）。",
+      "relatedPEs": [
+        "HS-PS1-6"
+      ]
+    }
+  ]
+}

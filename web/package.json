@@ -1,0 +1,14 @@
+{
+  "name": "ngss-dci-explorer",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "node server.js"
+  },
+  "dependencies": {
+    "dotenv": "^16.6.1",
+    "express": "^4.21.2",
+    "multer": "^2.0.2",
+    "nodemailer": "^8.0.1"
+  }
+}

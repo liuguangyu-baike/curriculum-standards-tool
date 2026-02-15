@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>课标工具 - 智能匹配与分析</title>
+    <!-- Fuse.js for search functionality -->
+    <script src="https://cdn.jsdelivr.net/npm/fuse.js@7.0.0"></script>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- 顶部导航 -->
+    <header class="app-header">
+        <div class="header-content">
+            <h1 class="app-title">课标工具</h1>
+            <nav class="main-nav">
+                <button class="nav-tab active" data-page="browser">课标浏览器</button>
+                <button class="nav-tab" data-page="workbench">AI工作台</button>
+                <button class="nav-tab" data-page="feedback">使用反馈</button>
+            </nav>
+        </div>
+    </header>
+
+    <!-- 主内容区 -->
+    <main class="app-main">
+        <!-- 页面A: 课标浏览器 -->
+        <div id="page-browser" class="page active">
+            <!-- 搜索区 -->
+            <div class="search-section">
+                <div class="search-container">
+                    <!-- 关键词搜索模式 -->
+                    <div id="search-mode-keyword" class="search-mode active">
+                        <input
+                            type="text"
+                            id="keyword-input"
+                            class="search-input"
+                            placeholder="输入关键词搜索课标..."
+                        >
+                    </div>
+
+                    <!-- 智能匹配模式 -->
+                    <div id="search-mode-match" class="search-mode">
+                        <div class="match-input-group">
+                            <textarea
+                                id="match-input"
+                                class="match-textarea"
+                                rows="3"
+                                placeholder="描述你想讲的知识或已设计的活动，AI 将匹配对应课标..."
+                            ></textarea>
+                            <button id="match-btn" class="match-button">
+                                <svg class="icon" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                                    <path d="M8 1L8 15M1 8L15 8" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                                </svg>
+                                匹配课标
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- 模式切换标签 -->
+                    <div class="mode-tabs">
+                        <button class="mode-tab active" data-mode="keyword">关键词搜索</button>
+                        <button class="mode-tab" data-mode="match">智能匹配</button>
+                    </div>
+                </div>
+
+                <!-- 匹配结果横幅（仅智能匹配模式显示） -->
+                <div id="match-banner" class="match-banner">
+                    <svg class="icon" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                        <path d="M8 2L8 8L11 11" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        <circle cx="8" cy="8" r="6" stroke="currentColor" stroke-width="2"/>
+                    </svg>
+                    <span id="match-banner-text">为「...」匹配到 N 条相关课标</span>
+                </div>
+            </div>
+
+            <!-- 浏览器主内容 -->
+            <div class="browser-content">
+                <!-- 左侧筛选面板 -->
+                <aside class="filter-panel">
+                    <div class="filter-section">
+                        <h3 class="filter-title">数据源</h3>
+                        <div id="filter-sources" class="filter-options">
+                            <!-- 动态生成 -->
+                        </div>
+                    </div>
+
+                    <div class="filter-section">
+                        <h3 class="filter-title">领域</h3>
+                        <div id="filter-domains" class="filter-options">
+                            <!-- 动态生成 -->
+                        </div>
+                    </div>
+
+                    <div class="filter-section">
+                        <h3 class="filter-title">年级段</h3>
+                        <div id="filter-grades" class="filter-options">
+                            <!-- 动态生成 -->
+                        </div>
+                    </div>
+
+                    <button id="clear-filters" class="clear-filters-btn">清除筛选</button>
+                </aside>
+
+                <!-- 右侧结果列表 -->
+                <div class="results-container">
+                    <div class="results-header">
+                        <span id="results-count" class="results-count">共 0 条课标</span>
+                        <button id="select-all-btn" class="select-all-btn">全选</button>
+                    </div>
+
+                    <!-- 表头 -->
+                    <div class="results-table-header">
+                        <div class="header-checkbox">
+                            <input type="checkbox" id="header-checkbox" title="全选/取消全选">
+                        </div>
+                        <div class="header-source">来源</div>
+                        <div class="header-grade">年级</div>
+                        <div class="header-topic">主题</div>
+                        <div class="header-text">课标内容</div>
+                    </div>
+
+                    <div id="results-list" class="results-list">
+                        <!-- 动态生成结果行 -->
+                    </div>
+
+                    <div id="results-empty" class="results-empty">
+                        <p>暂无结果</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 底部固定栏 -->
+            <div class="bottom-bar">
+                <div class="bottom-bar-content">
+                    <div class="selected-info">
+                        <span class="selected-badge" id="selected-badge">0</span>
+                        <span class="selected-text">已选条目</span>
+                    </div>
+                    <button id="go-to-workbench" class="primary-button" disabled>
+                        进入工作台
+                        <svg class="icon" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                            <path d="M6 4L10 8L6 12" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- 页面C: 使用反馈 -->
+        <div id="page-feedback" class="page">
+            <div class="feedback-container">
+                <div class="feedback-content">
+                    <div class="feedback-header">
+                        <h2 class="feedback-title">使用反馈</h2>
+                        <p class="feedback-subtitle">你的意见是AI改进的动力</p>
+                    </div>
+
+                    <form id="feedback-form" class="feedback-form">
+                        <div class="form-group">
+                            <label for="feedback-name" class="form-label">称呼（可选）</label>
+                            <input
+                                type="text"
+                                id="feedback-name"
+                                class="form-input"
+                                placeholder="如需反馈，请留下大名"
+                            >
+                        </div>
+                        <div class="form-group">
+                            <label for="feedback-text" class="form-label">反馈内容 <span class="required">*</span></label>
+                            <textarea
+                                id="feedback-text"
+                                class="form-textarea"
+                                rows="8"
+                                placeholder="吐槽、建议、夸夸，都可以😁"
+                                required
+                            ></textarea>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="form-label">截图或图片（可选）</label>
+                            <div class="file-upload-area">
+                                <input
+                                    type="file"
+                                    id="feedback-images"
+                                    class="file-input"
+                                    accept="image/*"
+                                    multiple
+                                >
+                                <label for="feedback-images" class="file-upload-label">
+                                    <svg class="icon" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                        <path d="M21 15V19C21 19.5304 20.7893 20.0391 20.4142 20.4142C20.0391 20.7893 19.5304 21 19 21H5C4.46957 21 3.96086 20.7893 3.58579 20.4142C3.21071 20.0391 3 19.5304 3 19V15" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                        <path d="M17 8L12 3L7 8" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                        <path d="M12 3V15" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg>
+                                    <span>点击上传图片或拖拽到此处</span>
+                                    <span class="file-upload-hint">支持 PNG、JPG、GIF，最多 3 张</span>
+                                </label>
+                            </div>
+                            <div id="image-preview" class="image-preview"></div>
+                        </div>
+
+                        <div class="form-actions">
+                            <button type="submit" class="submit-button">
+                                <svg class="icon" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                                    <path d="M14.5 1.5L6.5 9.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <path d="M14.5 1.5L10 14.5L6.5 9.5L1.5 6L14.5 1.5Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                                提交反馈
+                            </button>
+                        </div>
+                    </form>
+
+                    <div id="feedback-success" class="feedback-message success">
+                        <svg class="icon" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                            <path d="M22 11.08V12C21.9988 14.1564 21.3005 16.2547 20.0093 17.9818C18.7182 19.7088 16.9033 20.9725 14.8354 21.5839C12.7674 22.1953 10.5573 22.1219 8.53447 21.3746C6.51168 20.6273 4.78465 19.2461 3.61096 17.4371C2.43727 15.628 1.87979 13.4881 2.02168 11.3363C2.16356 9.18455 2.99721 7.13631 4.39828 5.49706C5.79935 3.85781 7.69279 2.71537 9.79619 2.24013C11.8996 1.7649 14.1003 1.98232 16.07 2.85999" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M22 4L12 14.01L9 11.01" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                        <p>感谢反馈！您的意见已成功提交</p>
+                    </div>
+
+                    <div id="feedback-error" class="feedback-message error">
+                        <svg class="icon" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                            <circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2"/>
+                            <path d="M15 9L9 15M9 9L15 15" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                        </svg>
+                        <p id="feedback-error-text">提交失败，请稍后重试</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 页面B: AI工作台 -->
+        <div id="page-workbench" class="page">
+            <div class="workbench-content">
+                <!-- 左侧：已选条目面板 -->
+                <aside class="selected-panel">
+                    <div class="panel-header">
+                        <h2 class="panel-title">当前课标上下文</h2>
+                        <span id="context-count" class="context-count">0条</span>
+                    </div>
+
+                    <div id="selected-items-list" class="selected-items-list">
+                        <!-- 动态生成条目卡片 -->
+                    </div>
+
+                    <button id="add-more-items" class="add-more-button">
+                        <svg class="icon" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                            <path d="M8 3L8 13M3 8L13 8" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                        </svg>
+                        添加更多条目
+                    </button>
+                </aside>
+
+                <!-- 右侧：AI对话区 -->
+                <div class="chat-area">
+                    <!-- 意图栏 -->
+                    <div class="intent-bar">
+                        <span class="intent-prefix">基于已选课标</span>
+                        <div class="intent-buttons">
+                            <button class="intent-btn" data-intent="compare">比较</button>
+                            <button class="intent-btn" data-intent="extract">提炼</button>
+                            <button class="intent-btn" data-intent="knowledge">找知识</button>
+                            <button class="intent-btn" data-intent="activity">找活动</button>
+                        </div>
+                        <span class="intent-hint" id="intent-hint">基于左侧 0 条课标条目</span>
+                    </div>
+
+                    <!-- 对话内容区 -->
+                    <div id="chat-messages" class="chat-messages">
+                        <div class="chat-welcome">
+                            <p>👋 欢迎使用AI工作台</p>
+                            <p>选择意图按钮或直接输入问题，我将基于您选中的课标条目提供分析</p>
+                        </div>
+                        <!-- 对话区加载指示器 -->
+                        <div id="chat-loading" class="chat-loading">
+                            <div class="chat-loading-spinner"></div>
+                            <p>AI正在思考...</p>
+                        </div>
+                    </div>
+
+                    <!-- 输入区 -->
+                    <div class="chat-input-container">
+                        <input
+                            type="text"
+                            id="chat-input"
+                            class="chat-input"
+                            placeholder="基于已选课标继续提问..."
+                        >
+                        <button id="chat-send" class="send-button">
+                            <svg class="icon" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                                <path d="M2 10L18 2L10 18L8 11L2 10Z" fill="currentColor"/>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- 加载提示 -->
+    <div id="loading-overlay" class="loading-overlay">
+        <div class="loading-spinner"></div>
+        <p>加载中...</p>
+    </div>
+
+    <!-- Scripts -->
+    <script src="js/data.js"></script>
+    <script src="js/browser.js"></script>
+    <script src="js/filters.js"></script>
+    <script src="js/display.js"></script>
+    <script src="js/match.js"></script>
+    <script src="js/workbench.js"></script>
+    <script src="js/ai.js"></script>
+    <script src="js/feedback.js"></script>
+</body>
+</html>
