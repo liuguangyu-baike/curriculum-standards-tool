@@ -191,25 +191,23 @@
     saveConfig(cfg);
 
     const ctx = buildContextPayload(contextKey);
+
+    // DCI 上下文注入 system 消息（只发一次，不重复附在每条 user 消息里）
+    const ctxSection = ctx.items.length > 0
+      ? `\n\n当前课标数据（${ctx.dimension}维度，共${ctx.items.length}条）：\n${JSON.stringify(ctx.items)}`
+      : '';
     const system = [
       '你是课程标准分析助手。',
       '请只基于我提供的条目进行总结/归纳，不要引入外部知识或臆测。',
       '不要逐条复述每一条条目的具体表述；更关注整体的知识与能力要求的广度与深度。',
       '输出使用中文，条理清晰，尽量用要点列出。',
       systemHint ? `额外要求：${systemHint}` : ''
-    ].filter(Boolean).join('\n');
+    ].filter(Boolean).join('\n') + ctxSection;
 
     const messages = [
       { role: 'system', content: system },
       ...state.messages.filter(m => m.role !== 'system'),
-      {
-        role: 'user',
-        content:
-          `【上下文维度】${ctx.dimension}\n` +
-          `【条目数量】${ctx.items.length}\n` +
-          `【条目数据(JSON)】\n${JSON.stringify(ctx.items, null, 2)}\n\n` +
-          `【问题】${userText}`
-      }
+      { role: 'user', content: userText }
     ];
 
     setStatus('正在请求模型…');
@@ -297,11 +295,13 @@
       state.aiConfig = cfg;
       saveConfig(cfg);
 
+      // 组别数据注入 system（不重复放入 user 消息）
       const system = [
         '你是课程标准对比分析助手。',
         '请只基于我提供的组别条目进行对比，不要引入外部知识或臆测。',
         '不要逐条复述每一条条目的具体表述；更关注整体要求在广度与深度上的差异。',
-        '输出使用中文，条理清晰，优先使用要点。'
+        '输出使用中文，条理清晰，优先使用要点。',
+        `\n对比数据（${payload.dimension}维度，共${payload.groups.length}组）：\n${JSON.stringify(payload.groups)}`
       ].join('\n');
 
       setStatus('正在请求模型…');
@@ -316,14 +316,7 @@
           messages: [
             { role: 'system', content: system },
             ...state.messages.filter(m => m.role !== 'system'),
-            {
-              role: 'user',
-              content:
-                `【对比维度】${payload.dimension}\n` +
-                `【组别数量】${payload.groups.length}\n` +
-                `【组别数据(JSON)】\n${JSON.stringify(payload.groups, null, 2)}\n\n` +
-                `【任务】${prompt}`
-            }
+            { role: 'user', content: prompt }
           ]
         })
       });
