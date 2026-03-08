@@ -266,20 +266,28 @@ function clearChat() {
   appState.chatHistory = [];
 }
 
-// 显示对话区加载动画
+// 显示打字指示器（追加到对话底部）
 function showChatLoading() {
-  const loading = document.getElementById('chat-loading');
-  if (loading) {
-    loading.classList.add('visible');
-  }
+  const messagesContainer = document.getElementById('chat-messages');
+  if (!messagesContainer) return;
+
+  // 避免重复添加
+  if (messagesContainer.querySelector('.chat-typing-indicator')) return;
+
+  const indicator = document.createElement('div');
+  indicator.className = 'chat-message assistant chat-typing-indicator';
+  indicator.innerHTML = '<span class="typing-dots"><span>.</span><span>.</span><span>.</span></span>';
+  messagesContainer.appendChild(indicator);
+  messagesContainer.scrollTop = messagesContainer.scrollHeight;
 }
 
-// 隐藏对话区加载动画
+// 隐藏打字指示器
 function hideChatLoading() {
-  const loading = document.getElementById('chat-loading');
-  if (loading) {
-    loading.classList.remove('visible');
-  }
+  const messagesContainer = document.getElementById('chat-messages');
+  if (!messagesContainer) return;
+
+  const indicator = messagesContainer.querySelector('.chat-typing-indicator');
+  if (indicator) indicator.remove();
 }
 
 // 导出函数供其他模块使用
