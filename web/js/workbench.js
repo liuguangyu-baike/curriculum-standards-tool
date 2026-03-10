@@ -119,25 +119,16 @@ async function sendMessageWithContext(userMessage) {
   disableChatInput(true);
 
   try {
-    // 构建包含课标上下文的完整prompt
     const contextPrompt = buildContextPrompt(userMessage);
 
-    // 调用AI API
     const response = await fetch('/api/chat', {
       method: 'POST',
-      headers: {
-        'Content-Type': 'application/json'
-      },
+      headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({
+        stream: true,
         messages: [
-          {
-            role: 'system',
-            content: '你是一个课程标准分析专家。请基于提供的课标条目进行分析，回答要结构化、具体、有深度。'
-          },
-          {
-            role: 'user',
-            content: contextPrompt
-          }
+          { role: 'system', content: '你是一个课程标准分析专家。请基于提供的课标条目进行分析，回答要结构化、具体、有深度。' },
+          { role: 'user', content: contextPrompt }
         ]
       })
     });
@@ -146,17 +137,19 @@ async function sendMessageWithContext(userMessage) {
       throw new Error(`API请求失败: ${response.status}`);
     }
 
-    const data = await response.json();
-    const assistantMessage = data.text || '抱歉，未能获取回复';
-
-    // 显示AI回复
-    addChatMessage('assistant', assistantMessage);
-
-    // 保存到对话历史
-    appState.chatHistory.push(
-      { role: 'user', content: userMessage },
-      { role: 'assistant', content: assistantMessage }
-    );
+    const contentType = response.headers.get('content-type') || '';
+    if (contentType.includes('text/event-stream')) {
+      hideChatLoading();
+      await readStreamResponse(response);
+    } else {
+      const data = await response.json();
+      const assistantMessage = data.text || '抱歉，未能获取回复';
+      addChatMessage('assistant', assistantMessage);
+      appState.chatHistory.push(
+        { role: 'user', content: userMessage },
+        { role: 'assistant', content: assistantMessage }
+      );
+    }
 
   } catch (error) {
     console.error('发送消息失败:', error);
@@ -193,6 +186,57 @@ ID: ${item.id}
 ${userMessage}`;
 
   return fullPrompt;
+}
+
+// 流式读取 SSE 响应，逐字渲染到对话气泡
+async function readStreamResponse(response) {
+  const reader = response.body.getReader();
+  const decoder = new TextDecoder();
+  let buffer = '';
+  let fullText = '';
+
+  // 创建空的 assistant 消息气泡
+  const messagesContainer = document.getElementById('chat-messages');
+  const welcome = messagesContainer?.querySelector('.chat-welcome');
+  if (welcome) welcome.remove();
+
+  const messageDiv = document.createElement('div');
+  messageDiv.className = 'chat-message assistant';
+  messageDiv.innerHTML = '';
+  messagesContainer.appendChild(messageDiv);
+
+  while (true) {
+    const { done, value } = await reader.read();
+    if (done) break;
+
+    buffer += decoder.decode(value, { stream: true });
+    const lines = buffer.split('\n');
+    buffer = lines.pop() || '';
+
+    for (const line of lines) {
+      const trimmed = line.trim();
+      if (!trimmed || !trimmed.startsWith('data:')) continue;
+      const payload = trimmed.slice(5).trim();
+      if (payload === '[DONE]') continue;
+      try {
+        const chunk = JSON.parse(payload);
+        const delta = chunk?.choices?.[0]?.delta?.content || '';
+        if (delta) {
+          fullText += delta;
+          messageDiv.innerHTML = formatMessageContent(fullText);
+          messagesContainer.scrollTop = messagesContainer.scrollHeight;
+        }
+      } catch {}
+    }
+  }
+
+  if (!fullText) fullText = '(无输出)';
+  messageDiv.innerHTML = formatMessageContent(fullText);
+
+  appState.chatHistory.push(
+    { role: 'user', content: '(见上文)' },
+    { role: 'assistant', content: fullText }
+  );
 }
 
 // 添加聊天消息

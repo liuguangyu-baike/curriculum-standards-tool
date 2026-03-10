@@ -24,6 +24,7 @@ export default async (request) => {
     const userModel = String(body.model || '').trim();
     const userKey = String(body.apiKey || '').trim();
     const messages = Array.isArray(body.messages) ? body.messages : [];
+    const useStream = body.stream !== false;
 
     const baseUrl = userBaseUrl || normalizeBaseUrl(Deno.env.get('DEEPSEEK_BASE_URL') || 'https://api.deepseek.com/v1');
     const model = userModel || Deno.env.get('DEEPSEEK_MODEL') || 'deepseek-chat';
@@ -40,14 +41,26 @@ export default async (request) => {
         'Content-Type': 'application/json',
         'Authorization': `Bearer ${apiKey}`
       },
-      body: JSON.stringify({ model, messages, stream: false, temperature: 0.2 })
+      body: JSON.stringify({ model, messages, stream: useStream, temperature: 0.2 })
     });
 
-    const text = await upstream.text();
     if (!upstream.ok) {
+      const text = await upstream.text();
       return new Response(text, { status: upstream.status, headers: corsHeaders });
     }
 
+    if (useStream) {
+      return new Response(upstream.body, {
+        status: 200,
+        headers: {
+          ...corsHeaders,
+          'Content-Type': 'text/event-stream',
+          'Cache-Control': 'no-cache',
+        }
+      });
+    }
+
+    const text = await upstream.text();
     const data = JSON.parse(text);
     const out = data?.choices?.[0]?.message?.content ?? '';
     return json({ text: out, raw: data });

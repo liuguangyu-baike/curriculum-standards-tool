@@ -22,7 +22,6 @@
 
   const state = {
     aiConfig: loadConfig(),
-    // 最近一次渲染的“可用上下文”
     ctx: {
       dcisAll: [],
       dcisSelected: [],
@@ -76,7 +75,7 @@
     const box = qs('aiMessages');
     if (!box) return;
     if (state.messages.length === 0) {
-      box.innerHTML = `<div class="text-xs text-slate-400 font-medium">暂无对话。你可以先选择上下文，然后提问或点“一键总结”。</div>`;
+      box.innerHTML = `<div class="text-xs text-slate-400 font-medium">\u6682\u65e0\u5bf9\u8bdd\u3002\u4f60\u53ef\u4ee5\u5148\u9009\u62e9\u4e0a\u4e0b\u6587\uff0c\u7136\u540e\u63d0\u95ee\u6216\u70b9\u201c\u4e00\u952e\u603b\u7ed3\u201d\u3002</div>`;
       return;
     }
     box.innerHTML = state.messages
@@ -85,7 +84,7 @@
         const bubble = isUser
           ? 'bg-indigo-600 text-white border-indigo-600'
           : 'bg-white text-slate-800 border-slate-200';
-        const label = isUser ? '你' : 'AI';
+        const label = isUser ? '\u4f60' : 'AI';
         return `
           <div class="flex ${isUser ? 'justify-end' : 'justify-start'}">
             <div class="max-w-[85%] border rounded-2xl px-4 py-3 shadow-sm ${bubble}">
@@ -118,7 +117,6 @@
   function applyProviderPreset(provider) {
     const preset = PROVIDER_PRESETS[provider] || PROVIDER_PRESETS.custom;
     const cfg = collectConfigFromForm();
-    // 只覆盖 baseUrl/model；key 保留
     qs('aiBaseUrl').value = preset.baseUrl ?? cfg.baseUrl;
     qs('aiModel').value = preset.model ?? cfg.model;
   }
@@ -128,18 +126,17 @@
     if (!sel) return;
     const opts = [];
     if (state.ctx.dcisSelected.length > 0) {
-      opts.push({ key: 'selected:dci', label: `已勾选（DCI）- ${state.ctx.dcisSelected.length} 条` });
+      opts.push({ key: 'selected:dci', label: `\u5df2\u52fe\u9009\uff08DCI\uff09- ${state.ctx.dcisSelected.length} \u6761` });
     }
-    opts.push({ key: 'all:dci', label: `全部（DCI）- ${state.ctx.dcisAll.length} 条` });
+    opts.push({ key: 'all:dci', label: `\u5168\u90e8\uff08DCI\uff09- ${state.ctx.dcisAll.length} \u6761` });
     state.ctx.groups.forEach(g => {
-      opts.push({ key: `${g.key}:dci`, label: `${g.label}（DCI）- ${g.dcis.length} 条` });
+      opts.push({ key: `${g.key}:dci`, label: `${g.label}\uff08DCI\uff09- ${g.dcis.length} \u6761` });
     });
 
     sel.innerHTML = opts.map(o => `<option value="${escapeHtml(o.key)}">${escapeHtml(o.label)}</option>`).join('');
   }
 
   function buildContextPayload(contextKey) {
-    // 目前仅 DCI 维度，未来可扩展为 pe/sep/ccc
     const [key, dim] = String(contextKey || 'all:dci').split(':');
     if (dim !== 'dci') return { dimension: dim, items: [] };
 
@@ -153,7 +150,6 @@
       items = g ? g.dcis : [];
     }
 
-    // 结构化上下文（尽量短）
     const compact = items.map(d => ({
       id: d.id,
       domain: d.domain,
@@ -185,32 +181,54 @@
     return { dimension: 'dci', groups };
   }
 
-  async function callChat(userText, contextKey, { systemHint } = {}) {
+  // ---- 流式 SSE 读取 ----
+
+  async function readSSEStream(resp) {
+    const reader = resp.body.getReader();
+    const decoder = new TextDecoder();
+    let result = '';
+    let buffer = '';
+
+    const msgIndex = state.messages.length;
+    state.messages.push({ role: 'assistant', content: '' });
+    renderMessages();
+
+    while (true) {
+      const { done, value } = await reader.read();
+      if (done) break;
+
+      buffer += decoder.decode(value, { stream: true });
+      const lines = buffer.split('\n');
+      buffer = lines.pop() || '';
+
+      for (const line of lines) {
+        const trimmed = line.trim();
+        if (!trimmed || !trimmed.startsWith('data:')) continue;
+        const payload = trimmed.slice(5).trim();
+        if (payload === '[DONE]') continue;
+        try {
+          const chunk = JSON.parse(payload);
+          const delta = chunk?.choices?.[0]?.delta?.content || '';
+          if (delta) {
+            result += delta;
+            state.messages[msgIndex].content = result;
+            renderMessages();
+          }
+        } catch {}
+      }
+    }
+
+    return result || '(\u65e0\u8f93\u51fa)';
+  }
+
+  // ---- 通用请求：发 stream=true，拿到 SSE 流式回复 ----
+
+  async function streamChat(requestMessages) {
     const cfg = collectConfigFromForm();
     state.aiConfig = cfg;
     saveConfig(cfg);
 
-    const ctx = buildContextPayload(contextKey);
-
-    // DCI 上下文注入 system 消息（只发一次，不重复附在每条 user 消息里）
-    const ctxSection = ctx.items.length > 0
-      ? `\n\n当前课标数据（${ctx.dimension}维度，共${ctx.items.length}条）：\n${JSON.stringify(ctx.items)}`
-      : '';
-    const system = [
-      '你是课程标准分析助手。',
-      '请只基于我提供的条目进行总结/归纳，不要引入外部知识或臆测。',
-      '不要逐条复述每一条条目的具体表述；更关注整体的知识与能力要求的广度与深度。',
-      '输出使用中文，条理清晰，尽量用要点列出。',
-      systemHint ? `额外要求：${systemHint}` : ''
-    ].filter(Boolean).join('\n') + ctxSection;
-
-    const messages = [
-      { role: 'system', content: system },
-      ...state.messages.filter(m => m.role !== 'system'),
-      { role: 'user', content: userText }
-    ];
-
-    setStatus('正在请求模型…');
+    setStatus('\u6b63\u5728\u8bf7\u6c42\u6a21\u578b\u2026');
     const resp = await fetch('/api/chat', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
@@ -219,18 +237,51 @@
         baseUrl: cfg.baseUrl,
         model: cfg.model,
         apiKey: cfg.apiKey || undefined,
-        messages
+        stream: true,
+        messages: requestMessages
       })
     });
 
     if (!resp.ok) {
       const errText = await resp.text().catch(() => '');
-      throw new Error(`请求失败 (${resp.status}) ${errText}`);
+      throw new Error(`\u8bf7\u6c42\u5931\u8d25 (${resp.status}) ${errText}`);
     }
+
+    const contentType = resp.headers.get('content-type') || '';
+    if (contentType.includes('text/event-stream')) {
+      return await readSSEStream(resp);
+    }
+    // fallback: 非流式
     const data = await resp.json();
-    const out = data?.text || '';
-    return out;
+    return data?.text || '';
   }
+
+  // ---- callChat: 构建含 DCI 上下文的消息 ----
+
+  async function callChat(userText, contextKey, { systemHint } = {}) {
+    const ctx = buildContextPayload(contextKey);
+
+    const ctxSection = ctx.items.length > 0
+      ? `\n\n\u5f53\u524d\u8bfe\u6807\u6570\u636e\uff08${ctx.dimension}\u7ef4\u5ea6\uff0c\u5171${ctx.items.length}\u6761\uff09\uff1a\n${JSON.stringify(ctx.items)}`
+      : '';
+    const system = [
+      '\u4f60\u662f\u8bfe\u7a0b\u6807\u51c6\u5206\u6790\u52a9\u624b\u3002',
+      '\u8bf7\u53ea\u57fa\u4e8e\u6211\u63d0\u4f9b\u7684\u6761\u76ee\u8fdb\u884c\u603b\u7ed3/\u5f52\u7eb3\uff0c\u4e0d\u8981\u5f15\u5165\u5916\u90e8\u77e5\u8bc6\u6216\u81c6\u6d4b\u3002',
+      '\u4e0d\u8981\u9010\u6761\u590d\u8ff0\u6bcf\u4e00\u6761\u6761\u76ee\u7684\u5177\u4f53\u8868\u8ff0\uff1b\u66f4\u5173\u6ce8\u6574\u4f53\u7684\u77e5\u8bc6\u4e0e\u80fd\u529b\u8981\u6c42\u7684\u5e7f\u5ea6\u4e0e\u6df1\u5ea6\u3002',
+      '\u8f93\u51fa\u4f7f\u7528\u4e2d\u6587\uff0c\u6761\u7406\u6e05\u6670\uff0c\u5c3d\u91cf\u7528\u8981\u70b9\u5217\u51fa\u3002',
+      systemHint ? `\u989d\u5916\u8981\u6c42\uff1a${systemHint}` : ''
+    ].filter(Boolean).join('\n') + ctxSection;
+
+    const messages = [
+      { role: 'system', content: system },
+      ...state.messages.filter(m => m.role !== 'system'),
+      { role: 'user', content: userText }
+    ];
+
+    return await streamChat(messages);
+  }
+
+  // ---- UI 交互 ----
 
   async function onSend() {
     const input = qs('aiInput');
@@ -244,94 +295,82 @@
 
     try {
       const out = await callChat(text, ctxKey);
-      state.messages.push({ role: 'assistant', content: out || '(无输出)' });
-      setStatus('完成', 'ok');
+      const lastMsg = state.messages[state.messages.length - 1];
+      if (lastMsg?.role !== 'assistant') {
+        state.messages.push({ role: 'assistant', content: out || '(\u65e0\u8f93\u51fa)' });
+      }
+      setStatus('\u5b8c\u6210', 'ok');
       renderMessages();
     } catch (e) {
-      setStatus(e.message || '请求失败', 'error');
+      setStatus(e.message || '\u8bf7\u6c42\u5931\u8d25', 'error');
     }
   }
 
   async function onSummarize(contextKey) {
     const prompt = [
-      '请从“知识要求（概念与主题的覆盖范围）”和“能力要求（思维/探究/建模等要求的层级）”两个维度，概括该组 DCI 的整体要求。',
-      '重点关注：广度（覆盖哪些核心概念/子概念/主题块）与深度（理解层次、解释/推理/应用等层级）。',
-      '不要逐条复述每条 DCI 的具体内容，而是提炼组内共同的进阶主线与关键门槛。',
-      '最后给出：该组可能的“学习进阶路径”（从浅到深 3-5 级）与“课程设计要点”（3-5 条）。'
+      '\u8bf7\u4ece\u201c\u77e5\u8bc6\u8981\u6c42\uff08\u6982\u5ff5\u4e0e\u4e3b\u9898\u7684\u8986\u76d6\u8303\u56f4\uff09\u201d\u548c\u201c\u80fd\u529b\u8981\u6c42\uff08\u601d\u7ef4/\u63a2\u7a76/\u5efa\u6a21\u7b49\u8981\u6c42\u7684\u5c42\u7ea7\uff09\u201d\u4e24\u4e2a\u7ef4\u5ea6\uff0c\u6982\u62ec\u8be5\u7ec4 DCI \u7684\u6574\u4f53\u8981\u6c42\u3002',
+      '\u91cd\u70b9\u5173\u6ce8\uff1a\u5e7f\u5ea6\uff08\u8986\u76d6\u54ea\u4e9b\u6838\u5fc3\u6982\u5ff5/\u5b50\u6982\u5ff5/\u4e3b\u9898\u5757\uff09\u4e0e\u6df1\u5ea6\uff08\u7406\u89e3\u5c42\u6b21\u3001\u89e3\u91ca/\u63a8\u7406/\u5e94\u7528\u7b49\u5c42\u7ea7\uff09\u3002',
+      '\u4e0d\u8981\u9010\u6761\u590d\u8ff0\u6bcf\u6761 DCI \u7684\u5177\u4f53\u5185\u5bb9\uff0c\u800c\u662f\u63d0\u70bc\u7ec4\u5185\u5171\u540c\u7684\u8fdb\u9636\u4e3b\u7ebf\u4e0e\u5173\u952e\u95e8\u69db\u3002',
+      '\u6700\u540e\u7ed9\u51fa\uff1a\u8be5\u7ec4\u53ef\u80fd\u7684\u201c\u5b66\u4e60\u8fdb\u9636\u8def\u5f84\u201d\uff08\u4ece\u6d45\u5230\u6df1 3-5 \u7ea7\uff09\u4e0e\u201c\u8bfe\u7a0b\u8bbe\u8ba1\u8981\u70b9\u201d\uff083-5 \u6761\uff09\u3002'
     ].join('\n');
-    state.messages.push({ role: 'user', content: `（一键总结本组DCI）\n${prompt}` });
+    state.messages.push({ role: 'user', content: `\uff08\u4e00\u952e\u603b\u7ed3\u672c\u7ec4DCI\uff09\n${prompt}` });
     renderMessages();
     try {
-      const out = await callChat(prompt, contextKey, { systemHint: '请按“知识广度 / 能力与认知深度 / 学习进阶路径 / 课程设计要点”四段输出。' });
-      state.messages.push({ role: 'assistant', content: out || '(无输出)' });
-      setStatus('完成', 'ok');
+      const out = await callChat(prompt, contextKey, { systemHint: '\u8bf7\u6309\u201c\u77e5\u8bc6\u5e7f\u5ea6 / \u80fd\u529b\u4e0e\u8ba4\u77e5\u6df1\u5ea6 / \u5b66\u4e60\u8fdb\u9636\u8def\u5f84 / \u8bfe\u7a0b\u8bbe\u8ba1\u8981\u70b9\u201d\u56db\u6bb5\u8f93\u51fa\u3002' });
+      const lastMsg = state.messages[state.messages.length - 1];
+      if (lastMsg?.role !== 'assistant') {
+        state.messages.push({ role: 'assistant', content: out || '(\u65e0\u8f93\u51fa)' });
+      }
+      setStatus('\u5b8c\u6210', 'ok');
       renderMessages();
     } catch (e) {
-      setStatus(e.message || '请求失败', 'error');
+      setStatus(e.message || '\u8bf7\u6c42\u5931\u8d25', 'error');
     }
   }
 
   async function onCompareAllGroups() {
     const keys = (state.ctx.groups || []).map(g => g.key);
     if (keys.length < 2) {
-      setStatus('需要至少2个分组（且启用分组展示）', 'error');
+      setStatus('\u9700\u8981\u81f3\u5c112\u4e2a\u5206\u7ec4\uff08\u4e14\u542f\u7528\u5206\u7ec4\u5c55\u793a\uff09', 'error');
       return;
     }
 
     const payload = buildComparePayload(keys);
     const prompt = [
-      '请对比不同组别在“知识要求广度”和“能力要求深度”上的差异。',
-      '要求：',
-      '1) 不要逐条复述条目；以组为单位总结。',
-      '2) 先分别列出每一组别的知识广度/能力深度/关键门槛/典型进阶特征。',
-      '3) 再给“差异解读”：指出不同组别在知识和能力的深度、广度上有哪些明显区别。',
+      '\u8bf7\u5bf9\u6bd4\u4e0d\u540c\u7ec4\u522b\u5728\u201c\u77e5\u8bc6\u8981\u6c42\u5e7f\u5ea6\u201d\u548c\u201c\u80fd\u529b\u8981\u6c42\u6df1\u5ea6\u201d\u4e0a\u7684\u5dee\u5f02\u3002',
+      '\u8981\u6c42\uff1a',
+      '1) \u4e0d\u8981\u9010\u6761\u590d\u8ff0\u6761\u76ee\uff1b\u4ee5\u7ec4\u4e3a\u5355\u4f4d\u603b\u7ed3\u3002',
+      '2) \u5148\u5206\u522b\u5217\u51fa\u6bcf\u4e00\u7ec4\u522b\u7684\u77e5\u8bc6\u5e7f\u5ea6/\u80fd\u529b\u6df1\u5ea6/\u5173\u952e\u95e8\u69db/\u5178\u578b\u8fdb\u9636\u7279\u5f81\u3002',
+      '3) \u518d\u7ed9\u201c\u5dee\u5f02\u89e3\u8bfb\u201d\uff1a\u6307\u51fa\u4e0d\u540c\u7ec4\u522b\u5728\u77e5\u8bc6\u548c\u80fd\u529b\u7684\u6df1\u5ea6\u3001\u5e7f\u5ea6\u4e0a\u6709\u54ea\u4e9b\u660e\u663e\u533a\u522b\u3002',
     ].join('\n');
 
-    state.messages.push({ role: 'user', content: `（组别对比）\n${prompt}` });
+    state.messages.push({ role: 'user', content: `\uff08\u7ec4\u522b\u5bf9\u6bd4\uff09\n${prompt}` });
     renderMessages();
 
     try {
-      const cfg = collectConfigFromForm();
-      state.aiConfig = cfg;
-      saveConfig(cfg);
-
-      // 组别数据注入 system（不重复放入 user 消息）
       const system = [
-        '你是课程标准对比分析助手。',
-        '请只基于我提供的组别条目进行对比，不要引入外部知识或臆测。',
-        '不要逐条复述每一条条目的具体表述；更关注整体要求在广度与深度上的差异。',
-        '输出使用中文，条理清晰，优先使用要点。',
-        `\n对比数据（${payload.dimension}维度，共${payload.groups.length}组）：\n${JSON.stringify(payload.groups)}`
+        '\u4f60\u662f\u8bfe\u7a0b\u6807\u51c6\u5bf9\u6bd4\u5206\u6790\u52a9\u624b\u3002',
+        '\u8bf7\u53ea\u57fa\u4e8e\u6211\u63d0\u4f9b\u7684\u7ec4\u522b\u6761\u76ee\u8fdb\u884c\u5bf9\u6bd4\uff0c\u4e0d\u8981\u5f15\u5165\u5916\u90e8\u77e5\u8bc6\u6216\u81c6\u6d4b\u3002',
+        '\u4e0d\u8981\u9010\u6761\u590d\u8ff0\u6bcf\u4e00\u6761\u6761\u76ee\u7684\u5177\u4f53\u8868\u8ff0\uff1b\u66f4\u5173\u6ce8\u6574\u4f53\u8981\u6c42\u5728\u5e7f\u5ea6\u4e0e\u6df1\u5ea6\u4e0a\u7684\u5dee\u5f02\u3002',
+        '\u8f93\u51fa\u4f7f\u7528\u4e2d\u6587\uff0c\u6761\u7406\u6e05\u6670\uff0c\u4f18\u5148\u4f7f\u7528\u8981\u70b9\u3002',
+        `\n\u5bf9\u6bd4\u6570\u636e\uff08${payload.dimension}\u7ef4\u5ea6\uff0c\u5171${payload.groups.length}\u7ec4\uff09\uff1a\n${JSON.stringify(payload.groups)}`
       ].join('\n');
 
-      setStatus('正在请求模型…');
-      const resp = await fetch('/api/chat', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({
-          provider: cfg.provider,
-          baseUrl: cfg.baseUrl,
-          model: cfg.model,
-          apiKey: cfg.apiKey || undefined,
-          messages: [
-            { role: 'system', content: system },
-            ...state.messages.filter(m => m.role !== 'system'),
-            { role: 'user', content: prompt }
-          ]
-        })
-      });
+      const messages = [
+        { role: 'system', content: system },
+        ...state.messages.filter(m => m.role !== 'system'),
+        { role: 'user', content: prompt }
+      ];
 
-      if (!resp.ok) {
-        const errText = await resp.text().catch(() => '');
-        throw new Error(`请求失败 (${resp.status}) ${errText}`);
+      const out = await streamChat(messages);
+      const lastMsg = state.messages[state.messages.length - 1];
+      if (lastMsg?.role !== 'assistant') {
+        state.messages.push({ role: 'assistant', content: out || '(\u65e0\u8f93\u51fa)' });
       }
-      const data = await resp.json();
-      const out = data?.text || '';
-      state.messages.push({ role: 'assistant', content: out || '(无输出)' });
-      setStatus('完成', 'ok');
+      setStatus('\u5b8c\u6210', 'ok');
       renderMessages();
     } catch (e) {
-      setStatus(e.message || '请求失败', 'error');
+      setStatus(e.message || '\u8bf7\u6c42\u5931\u8d25', 'error');
     }
   }
 
@@ -348,7 +387,7 @@
       const cfg = collectConfigFromForm();
       state.aiConfig = cfg;
       saveConfig(cfg);
-      setStatus('已保存到本机浏览器', 'ok');
+      setStatus('\u5df2\u4fdd\u5b58\u5230\u672c\u673a\u6d4f\u89c8\u5668', 'ok');
     });
 
     qs('aiClearKey').addEventListener('click', () => {
@@ -356,7 +395,7 @@
       const cfg = collectConfigFromForm();
       state.aiConfig = cfg;
       saveConfig(cfg);
-      setStatus('已清除Key（仅本机）', 'ok');
+      setStatus('\u5df2\u6e05\u9664Key\uff08\u4ec5\u672c\u673a\uff09', 'ok');
     });
 
     qs('aiSend').addEventListener('click', onSend);
@@ -366,15 +405,13 @@
 
     qs('aiClearChat').addEventListener('click', () => {
       state.messages = [];
-      setStatus('已清空对话', 'ok');
+      setStatus('\u5df2\u6e05\u7a7a\u5bf9\u8bdd', 'ok');
       renderMessages();
     });
 
-    // “对比全部分组”按钮在表格右上角（仅启用分组时显示）
     const compareBtn = document.getElementById('compareAllGroupsBtn');
     if (compareBtn) compareBtn.addEventListener('click', onCompareAllGroups);
 
-    // 分组表头上的“一键总结”按钮（事件委托）
     document.addEventListener('click', (e) => {
       const el = e.target;
       if (!(el instanceof HTMLElement)) return;
@@ -384,23 +421,19 @@
       }
     });
 
-    // 监听渲染上下文更新
     document.addEventListener('resultsContextUpdated', (e) => {
       const detail = e.detail || {};
       state.ctx.dcisAll = Array.isArray(detail.dcisAll) ? detail.dcisAll : [];
       state.ctx.groups = Array.isArray(detail.groups) ? detail.groups : [];
       updateContextSelect();
-      // toggle compare button
       const btn = document.getElementById('compareAllGroupsBtn');
       if (btn) {
         const ok = state.ctx.groups.length >= 2;
         btn.classList.toggle('hidden', !ok);
       }
-      // 初次渲染时给一个状态提示
-      if (state.ctx.dcisAll.length > 0) setStatus('就绪：请选择上下文并提问（Ctrl+Enter发送）');
+      if (state.ctx.dcisAll.length > 0) setStatus('\u5c31\u7eea\uff1a\u8bf7\u9009\u62e9\u4e0a\u4e0b\u6587\u5e76\u63d0\u95ee\uff08Ctrl+Enter\u53d1\u9001\uff09');
     });
 
-    // 监听勾选的DCI列表更新
     document.addEventListener('selectedDCIsUpdated', (e) => {
       const detail = e.detail || {};
       state.ctx.dcisSelected = Array.isArray(detail.selectedDCIs) ? detail.selectedDCIs : [];
@@ -410,7 +443,6 @@
 
   document.addEventListener('DOMContentLoaded', () => {
     setConfigForm(state.aiConfig);
-    // 如果 provider 是 deepseek/openai 等，补全 preset
     applyProviderPreset(state.aiConfig.provider);
     setConfigForm(state.aiConfig);
 
@@ -423,4 +455,3 @@
     summarize: onSummarize
   };
 })();
-

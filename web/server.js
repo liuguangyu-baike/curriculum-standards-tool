@@ -71,6 +71,7 @@ app.post('/api/chat', async (req, res) => {
     if (!apiKey) return res.status(400).json({ error: 'Missing apiKey (and server default is empty)' });
     if (messages.length === 0) return res.status(400).json({ error: 'Missing messages' });
 
+    const useStream = body.stream === true;
     const url = `${baseUrl}/chat/completions`;
     const upstream = await fetch(url, {
       method: 'POST',
@@ -81,16 +82,32 @@ app.post('/api/chat', async (req, res) => {
       body: JSON.stringify({
         model,
         messages,
-        stream: false,
+        stream: useStream,
         temperature: 0.2
       })
     });
 
-    const text = await upstream.text();
     if (!upstream.ok) {
+      const text = await upstream.text();
       return res.status(upstream.status).send(text);
     }
 
+    if (useStream) {
+      res.setHeader('Content-Type', 'text/event-stream');
+      res.setHeader('Cache-Control', 'no-cache');
+      res.setHeader('Connection', 'keep-alive');
+      const reader = upstream.body.getReader();
+      const push = async () => {
+        while (true) {
+          const { done, value } = await reader.read();
+          if (done) { res.end(); return; }
+          res.write(Buffer.from(value));
+        }
+      };
+      return push();
+    }
+
+    const text = await upstream.text();
     const data = JSON.parse(text);
     const out = data?.choices?.[0]?.message?.content ?? '';
     return res.json({ text: out, raw: data });
