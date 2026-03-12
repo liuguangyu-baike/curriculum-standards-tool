@@ -221,6 +221,17 @@
     return result || '(\u65e0\u8f93\u51fa)';
   }
 
+  // ---- 服务端配置缓存 ----
+  let _srvCfg = null;
+  async function ensureServerConfig() {
+    if (_srvCfg) return _srvCfg;
+    try {
+      const r = await fetch('/api/config');
+      if (r.ok) _srvCfg = await r.json();
+    } catch {}
+    return _srvCfg;
+  }
+
   // ---- 通用请求：发 stream=true，拿到 SSE 流式回复 ----
 
   async function streamChat(requestMessages) {
@@ -229,18 +240,28 @@
     saveConfig(cfg);
 
     setStatus('\u6b63\u5728\u8bf7\u6c42\u6a21\u578b\u2026');
-    const resp = await fetch('/api/chat', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({
-        provider: cfg.provider,
-        baseUrl: cfg.baseUrl,
-        model: cfg.model,
-        apiKey: cfg.apiKey || undefined,
-        stream: true,
-        messages: requestMessages
-      })
-    });
+
+    const apiKey = cfg.apiKey || (await ensureServerConfig())?.apiKey || '';
+    const baseUrl = (cfg.baseUrl || _srvCfg?.baseUrl || 'https://api.deepseek.com/v1').replace(/\/+$/, '');
+    const model = cfg.model || _srvCfg?.model || 'deepseek-chat';
+
+    let resp;
+    if (apiKey) {
+      resp = await fetch(`${baseUrl}/chat/completions`, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json', 'Authorization': `Bearer ${apiKey}` },
+        body: JSON.stringify({ model, messages: requestMessages, stream: true, temperature: 0.2 })
+      });
+    } else {
+      resp = await fetch('/api/chat', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          provider: cfg.provider, baseUrl: cfg.baseUrl, model: cfg.model,
+          stream: true, messages: requestMessages
+        })
+      });
+    }
 
     if (!resp.ok) {
       const errText = await resp.text().catch(() => '');
@@ -251,9 +272,13 @@
     if (contentType.includes('text/event-stream')) {
       return await readSSEStream(resp);
     }
-    // fallback: 非流式
-    const data = await resp.json();
-    return data?.text || '';
+    const raw = await resp.text();
+    if (raw.trimStart().startsWith('data:')) {
+      const fakeResp = new Response(raw, { headers: { 'content-type': 'text/event-stream' } });
+      return await readSSEStream(fakeResp);
+    }
+    const data = JSON.parse(raw);
+    return data?.choices?.[0]?.message?.content || data?.text || '';
   }
 
   // ---- callChat: 构建含 DCI 上下文的消息 ----

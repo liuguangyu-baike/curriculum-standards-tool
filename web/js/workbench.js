@@ -1,12 +1,29 @@
 // AI工作台功能模块
 
-// 读取 ai.js 存储的 API 配置（如有）
+// AI 配置：启动时从服务端获取，缓存在内存中
+let _serverAIConfig = null;
+
+async function fetchServerConfig() {
+  if (_serverAIConfig) return _serverAIConfig;
+  try {
+    const resp = await fetch('/api/config');
+    if (resp.ok) {
+      _serverAIConfig = await resp.json();
+    }
+  } catch {}
+  return _serverAIConfig;
+}
+
+// 读取 AI 配置：优先用户本地设置 > 服务端下发
 function getAIConfig() {
   try {
     const raw = localStorage.getItem('ngss_ai_config_v1');
-    if (raw) return JSON.parse(raw);
+    if (raw) {
+      const local = JSON.parse(raw);
+      if (local?.apiKey) return local;
+    }
   } catch {}
-  return null;
+  return _serverAIConfig;
 }
 
 // 意图prompt模板
@@ -45,6 +62,7 @@ const intentPrompts = {
 // 初始化工作台
 function initWorkbench() {
   console.log('初始化AI工作台...');
+  fetchServerConfig().then(() => console.log('AI配置已加载'));
 
   // 绑定意图按钮
   document.querySelectorAll('.intent-btn').forEach(btn => {
@@ -134,6 +152,7 @@ async function sendMessageWithContext(userMessage) {
       { role: 'user', content: contextPrompt }
     ];
 
+    await fetchServerConfig();
     const aiCfg = getAIConfig();
     const apiKey = aiCfg?.apiKey || '';
     const baseUrl = (aiCfg?.baseUrl || 'https://api.deepseek.com/v1').replace(/\/+$/, '');

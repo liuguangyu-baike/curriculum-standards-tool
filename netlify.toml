@@ -15,3 +15,7 @@
 [[edge_functions]]
   function = "feedback"
   path = "/api/feedback"
+
+[[edge_functions]]
+  function = "config"
+  path = "/api/config"
