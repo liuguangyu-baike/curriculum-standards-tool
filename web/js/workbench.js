@@ -187,6 +187,7 @@ async function sendMessageWithContext(userMessage) {
 
   } catch (error) {
     console.error('发送消息失败:', error);
+    hideChatLoading();
     addChatMessage('assistant', `发生错误: ${error.message}`);
   } finally {
     hideChatLoading();
@@ -230,6 +231,7 @@ async function readStreamResponse(response) {
   let fullText = '';
   let isSSE = false;
   let rawChunks = '';
+  let streamError = null;
 
   const messagesContainer = document.getElementById('chat-messages');
   const welcome = messagesContainer?.querySelector('.chat-welcome');
@@ -240,38 +242,43 @@ async function readStreamResponse(response) {
   messageDiv.innerHTML = '';
   messagesContainer.appendChild(messageDiv);
 
-  while (true) {
-    const { done, value } = await reader.read();
-    if (done) break;
+  try {
+    while (true) {
+      const { done, value } = await reader.read();
+      if (done) break;
 
-    const chunk = decoder.decode(value, { stream: true });
-    rawChunks += chunk;
+      const chunk = decoder.decode(value, { stream: true });
+      rawChunks += chunk;
 
-    if (!isSSE && rawChunks.length > 0) {
-      isSSE = rawChunks.trimStart().startsWith('data:');
-    }
+      if (!isSSE && rawChunks.length > 0) {
+        isSSE = rawChunks.trimStart().startsWith('data:');
+      }
 
-    if (isSSE) {
-      buffer += chunk;
-      const lines = buffer.split('\n');
-      buffer = lines.pop() || '';
+      if (isSSE) {
+        buffer += chunk;
+        const lines = buffer.split('\n');
+        buffer = lines.pop() || '';
 
-      for (const line of lines) {
-        const trimmed = line.trim();
-        if (!trimmed || !trimmed.startsWith('data:')) continue;
-        const payload = trimmed.slice(5).trim();
-        if (payload === '[DONE]') continue;
-        try {
-          const parsed = JSON.parse(payload);
-          const delta = parsed?.choices?.[0]?.delta?.content || '';
-          if (delta) {
-            fullText += delta;
-            messageDiv.innerHTML = formatMessageContent(fullText);
-            messagesContainer.scrollTop = messagesContainer.scrollHeight;
-          }
-        } catch {}
+        for (const line of lines) {
+          const trimmed = line.trim();
+          if (!trimmed || !trimmed.startsWith('data:')) continue;
+          const payload = trimmed.slice(5).trim();
+          if (payload === '[DONE]') continue;
+          try {
+            const parsed = JSON.parse(payload);
+            const delta = parsed?.choices?.[0]?.delta?.content || '';
+            if (delta) {
+              fullText += delta;
+              messageDiv.innerHTML = formatMessageContent(fullText);
+              messagesContainer.scrollTop = messagesContainer.scrollHeight;
+            }
+          } catch {}
+        }
       }
     }
+  } catch (err) {
+    streamError = err;
+    console.warn('流式读取中断:', err.message);
   }
 
   // 非 SSE 格式：尝试解析为 JSON（兼容非流式后端）
@@ -285,6 +292,11 @@ async function readStreamResponse(response) {
   }
 
   if (!fullText) fullText = '(无输出)';
+
+  if (streamError && fullText.length > 0) {
+    fullText += '\n\n---\n⚠️ 传输中断，以上为已接收内容。';
+  }
+
   messageDiv.innerHTML = formatMessageContent(fullText);
 
   appState.chatHistory.push(

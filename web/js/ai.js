@@ -193,28 +193,37 @@
     state.messages.push({ role: 'assistant', content: '' });
     renderMessages();
 
-    while (true) {
-      const { done, value } = await reader.read();
-      if (done) break;
+    try {
+      while (true) {
+        const { done, value } = await reader.read();
+        if (done) break;
 
-      buffer += decoder.decode(value, { stream: true });
-      const lines = buffer.split('\n');
-      buffer = lines.pop() || '';
+        buffer += decoder.decode(value, { stream: true });
+        const lines = buffer.split('\n');
+        buffer = lines.pop() || '';
 
-      for (const line of lines) {
-        const trimmed = line.trim();
-        if (!trimmed || !trimmed.startsWith('data:')) continue;
-        const payload = trimmed.slice(5).trim();
-        if (payload === '[DONE]') continue;
-        try {
-          const chunk = JSON.parse(payload);
-          const delta = chunk?.choices?.[0]?.delta?.content || '';
-          if (delta) {
-            result += delta;
-            state.messages[msgIndex].content = result;
-            renderMessages();
-          }
-        } catch {}
+        for (const line of lines) {
+          const trimmed = line.trim();
+          if (!trimmed || !trimmed.startsWith('data:')) continue;
+          const payload = trimmed.slice(5).trim();
+          if (payload === '[DONE]') continue;
+          try {
+            const chunk = JSON.parse(payload);
+            const delta = chunk?.choices?.[0]?.delta?.content || '';
+            if (delta) {
+              result += delta;
+              state.messages[msgIndex].content = result;
+              renderMessages();
+            }
+          } catch {}
+        }
+      }
+    } catch (err) {
+      console.warn('\u6d41\u5f0f\u8bfb\u53d6\u4e2d\u65ad:', err.message);
+      if (result.length > 0) {
+        result += '\n\n---\n\u26a0\ufe0f \u4f20\u8f93\u4e2d\u65ad\uff0c\u4ee5\u4e0a\u4e3a\u5df2\u63a5\u6536\u5185\u5bb9\u3002';
+        state.messages[msgIndex].content = result;
+        renderMessages();
       }
     }
 
