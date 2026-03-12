@@ -1,5 +1,14 @@
 // AI工作台功能模块
 
+// 读取 ai.js 存储的 API 配置（如有）
+function getAIConfig() {
+  try {
+    const raw = localStorage.getItem('ngss_ai_config_v1');
+    if (raw) return JSON.parse(raw);
+  } catch {}
+  return null;
+}
+
 // 意图prompt模板
 const intentPrompts = {
   compare: `请对比分析这些课标条目，重点关注：
@@ -120,18 +129,35 @@ async function sendMessageWithContext(userMessage) {
 
   try {
     const contextPrompt = buildContextPrompt(userMessage);
+    const chatMessages = [
+      { role: 'system', content: '你是一个课程标准分析专家。请基于提供的课标条目进行分析，回答要结构化、具体、有深度。' },
+      { role: 'user', content: contextPrompt }
+    ];
 
-    const response = await fetch('/api/chat', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({
-        stream: true,
-        messages: [
-          { role: 'system', content: '你是一个课程标准分析专家。请基于提供的课标条目进行分析，回答要结构化、具体、有深度。' },
-          { role: 'user', content: contextPrompt }
-        ]
-      })
-    });
+    const aiCfg = getAIConfig();
+    const apiKey = aiCfg?.apiKey || '';
+    const baseUrl = (aiCfg?.baseUrl || 'https://api.deepseek.com/v1').replace(/\/+$/, '');
+    const model = aiCfg?.model || 'deepseek-chat';
+
+    let response;
+    if (apiKey) {
+      // 浏览器直连 DeepSeek API（无超时限制）
+      response = await fetch(`${baseUrl}/chat/completions`, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'Authorization': `Bearer ${apiKey}`
+        },
+        body: JSON.stringify({ model, messages: chatMessages, stream: true, temperature: 0.2 })
+      });
+    } else {
+      // 走后端代理
+      response = await fetch('/api/chat', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ stream: true, messages: chatMessages })
+      });
+    }
 
     if (!response.ok) {
       throw new Error(`API请求失败: ${response.status}`);
