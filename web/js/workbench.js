@@ -137,19 +137,8 @@ async function sendMessageWithContext(userMessage) {
       throw new Error(`API请求失败: ${response.status}`);
     }
 
-    const contentType = response.headers.get('content-type') || '';
-    if (contentType.includes('text/event-stream')) {
-      hideChatLoading();
-      await readStreamResponse(response);
-    } else {
-      const data = await response.json();
-      const assistantMessage = data.text || '抱歉，未能获取回复';
-      addChatMessage('assistant', assistantMessage);
-      appState.chatHistory.push(
-        { role: 'user', content: userMessage },
-        { role: 'assistant', content: assistantMessage }
-      );
-    }
+    hideChatLoading();
+    await readStreamResponse(response);
 
   } catch (error) {
     console.error('发送消息失败:', error);
@@ -188,14 +177,15 @@ ${userMessage}`;
   return fullPrompt;
 }
 
-// 流式读取 SSE 响应，逐字渲染到对话气泡
+// 流式读取响应，支持 SSE 流和普通 JSON 两种格式
 async function readStreamResponse(response) {
   const reader = response.body.getReader();
   const decoder = new TextDecoder();
   let buffer = '';
   let fullText = '';
+  let isSSE = false;
+  let rawChunks = '';
 
-  // 创建空的 assistant 消息气泡
   const messagesContainer = document.getElementById('chat-messages');
   const welcome = messagesContainer?.querySelector('.chat-welcome');
   if (welcome) welcome.remove();
@@ -209,24 +199,43 @@ async function readStreamResponse(response) {
     const { done, value } = await reader.read();
     if (done) break;
 
-    buffer += decoder.decode(value, { stream: true });
-    const lines = buffer.split('\n');
-    buffer = lines.pop() || '';
+    const chunk = decoder.decode(value, { stream: true });
+    rawChunks += chunk;
 
-    for (const line of lines) {
-      const trimmed = line.trim();
-      if (!trimmed || !trimmed.startsWith('data:')) continue;
-      const payload = trimmed.slice(5).trim();
-      if (payload === '[DONE]') continue;
-      try {
-        const chunk = JSON.parse(payload);
-        const delta = chunk?.choices?.[0]?.delta?.content || '';
-        if (delta) {
-          fullText += delta;
-          messageDiv.innerHTML = formatMessageContent(fullText);
-          messagesContainer.scrollTop = messagesContainer.scrollHeight;
-        }
-      } catch {}
+    if (!isSSE && rawChunks.length > 0) {
+      isSSE = rawChunks.trimStart().startsWith('data:');
+    }
+
+    if (isSSE) {
+      buffer += chunk;
+      const lines = buffer.split('\n');
+      buffer = lines.pop() || '';
+
+      for (const line of lines) {
+        const trimmed = line.trim();
+        if (!trimmed || !trimmed.startsWith('data:')) continue;
+        const payload = trimmed.slice(5).trim();
+        if (payload === '[DONE]') continue;
+        try {
+          const parsed = JSON.parse(payload);
+          const delta = parsed?.choices?.[0]?.delta?.content || '';
+          if (delta) {
+            fullText += delta;
+            messageDiv.innerHTML = formatMessageContent(fullText);
+            messagesContainer.scrollTop = messagesContainer.scrollHeight;
+          }
+        } catch {}
+      }
+    }
+  }
+
+  // 非 SSE 格式：尝试解析为 JSON（兼容非流式后端）
+  if (!isSSE && rawChunks) {
+    try {
+      const data = JSON.parse(rawChunks);
+      fullText = data?.text || data?.choices?.[0]?.message?.content || rawChunks;
+    } catch {
+      fullText = rawChunks;
     }
   }
 
